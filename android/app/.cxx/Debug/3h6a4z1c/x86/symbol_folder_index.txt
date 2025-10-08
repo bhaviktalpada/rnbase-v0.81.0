@@ -1,0 +1,1 @@
+/Users/Mackbook/Github/React-Native/AppSetup0810/android/app/build/intermediates/cxx/Debug/3h6a4z1c/obj/x86
