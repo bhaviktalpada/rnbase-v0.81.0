@@ -25,9 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13B07F961A680F5B00A75B9A /* husmmain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "husmmain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "husmmain/Images.xcassets"; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "husmmain/Info.plist"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* husmmain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = husmmain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = husmmain/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = husmmain/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = husmmain/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3244B3D62E92B85400E55F97 /* BootSplash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BootSplash.storyboard; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-husmmain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-husmmain.debug.xcconfig"; path = "Target Support Files/Pods-husmmain/Pods-husmmain.debug.xcconfig"; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = husmmain/AppDelegate.swift; sourceTree = "<group>"; };
 		80374D92A9F549CD9757D369 /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-SemiBold.ttf"; path = "../assets/fonts/Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		80C509675FC34D1E9E20B2D7 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Regular.ttf"; path = "../assets/fonts/Outfit-Regular.ttf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "husmmain/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = husmmain/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AE9BF55016C4366A40DA241 /* Outfit-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraLight.ttf"; path = "../assets/fonts/Outfit-ExtraLight.ttf"; sourceTree = "<group>"; };
 		A67C08173E1D454E9B1E0CE1 /* Outfit-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Black.ttf"; path = "../assets/fonts/Outfit-Black.ttf"; sourceTree = "<group>"; };
 		CA4F13D5AA0043A883288CE7 /* Outfit-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraBold.ttf"; path = "../assets/fonts/Outfit-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 				3244B3D62E92B85400E55F97 /* BootSplash.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 			);
-			name = "husmmain";
+			name = husmmain;
 			sourceTree = "<group>";
 		};
 		2C3D5B13F2D04DA2A254C409 /* Resources */ = {
@@ -155,8 +155,8 @@
 			);
 			dependencies = (
 			);
-			name = "husmmain";
-			productName = "husmmain";
+			name = husmmain;
+			productName = husmmain;
 			productReference = 13B07F961A680F5B00A75B9A /* husmmain.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -309,8 +309,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "husmmain/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "husm-main";
+				INFOPLIST_FILE = husmmain/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "husm-main";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,8 +322,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hinduutsavsamitiapp";
-				PRODUCT_NAME = "husmmain";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinduutsavsamitiapp;
+				PRODUCT_NAME = husmmain;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -337,8 +337,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "husmmain/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "husm-main";
+				INFOPLIST_FILE = husmmain/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "husm-main";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,8 +350,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hinduutsavsamitiapp";
-				PRODUCT_NAME = "husmmain";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinduutsavsamitiapp;
+				PRODUCT_NAME = husmmain;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
