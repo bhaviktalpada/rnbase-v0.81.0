@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "MyApp0810.app"
-               BlueprintName = "MyApp0810"
-               ReferencedContainer = "container:MyApp0810.xcodeproj">
+               BuildableName = "husmmain.app"
+               BlueprintName = "husmmain"
+               ReferencedContainer = "container:husmmain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "MyApp0810Tests.xctest"
-               BlueprintName = "MyApp0810Tests"
-               ReferencedContainer = "container:MyApp0810.xcodeproj">
+               BuildableName = "husmmainTests.xctest"
+               BlueprintName = "husmmainTests"
+               ReferencedContainer = "container:husmmain.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MyApp0810.app"
-            BlueprintName = "MyApp0810"
-            ReferencedContainer = "container:MyApp0810.xcodeproj">
+            BuildableName = "husmmain.app"
+            BlueprintName = "husmmain"
+            ReferencedContainer = "container:husmmain.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MyApp0810.app"
-            BlueprintName = "MyApp0810"
-            ReferencedContainer = "container:MyApp0810.xcodeproj">
+            BuildableName = "husmmain.app"
+            BlueprintName = "husmmain"
+            ReferencedContainer = "container:husmmain.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

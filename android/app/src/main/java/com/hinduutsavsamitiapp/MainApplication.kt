@@ -1,4 +1,4 @@
-package com.myapp0810
+package com.hinduutsavsamitiapp
 
 import android.app.Application
 import com.facebook.react.PackageList
