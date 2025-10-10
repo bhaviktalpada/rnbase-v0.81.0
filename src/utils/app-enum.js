@@ -9,6 +9,13 @@ export const CAMERA_TYPE = {
   front: 'front',
 };
 
+export const USER_ROLE_NAME = {
+  MasterAdmin: 'MasterAdmin',
+  Owner: 'Owner',
+  User: 'User',
+  Guest: 'Guest',
+};
+
 export const STATUSBAR_TYPE = {
   DARK: 'dark-content',
   LIGHT: 'light-content',

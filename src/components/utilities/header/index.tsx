@@ -1,5 +1,4 @@
 import React from 'react';
-import { APP } from '@/constants';
 import { normalizeText } from '@/utils';
 import {
   StyleSheet,
@@ -14,6 +13,7 @@ import {
 } from 'react-native-safe-area-context';
 import AppRegularText from '../app-regular-text';
 import { COLORS } from '@/theme';
+import { APP } from '@/utils/constants';
 //import { COLORS } from '@/theme';
 
 
@@ -135,10 +135,11 @@ const MainHeader: React.FC<MainHeaderProps> = ({
                         return (
                           <View style={styles.badgeContainer(numericCount)}>
                             <AppRegularText
+                              size={APP.APP_NOTIFICATION_COUNT_FONT_SIZE}
                               numberOfLines={1}
                               fontFamily={'Bold'}
                               color={COLORS.white}
-                              size={APP.APP_NOTIFICATION_COUNT_FONT_SIZE}
+                              
                             >
                               {display}
                             </AppRegularText>

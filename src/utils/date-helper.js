@@ -61,11 +61,6 @@ export const current_Date_DayJs_For_Calender = () => {
 export const format_Date = (date, format) => {
   const f_Date = dayjs(date).format(format);
   return f_Date == 'Invalid Date' ? '' : f_Date;
-  // const f_Date = moment(date, format);
-  // show_log('date, format', date, format);
-  // show_log('f_Date', f_Date.toDate());
-  // return;
-  // return f_Date == 'Invalid Date' ? '' : f_Date.toISOString();
 };
 export const format_Date_utc_to_utc = (date, format) => {
   const f_Date = moment(date).utc().format(format);

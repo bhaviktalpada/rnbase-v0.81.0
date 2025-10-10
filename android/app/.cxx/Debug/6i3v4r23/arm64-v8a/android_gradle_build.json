@@ -1,7 +1,9 @@
 {
   "buildFiles": [
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/MMKV/Core/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/CMakeLists.txt",
@@ -12,6 +14,7 @@
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
   ],
@@ -67,6 +70,16 @@
       "abi": "arm64-v8a",
       "artifactName": "react_codegen_RNBootSplashSpec"
     },
+    "react_codegen_RNCWebViewSpec::@eb48929f9f7453740a6c": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_RNCWebViewSpec"
+    },
+    "react_codegen_RNDatePickerSpecs::@c00f981c6e74346c63d4": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_RNDatePickerSpecs"
+    },
     "react_codegen_RNMmkvSpec::@7541eabbae598da31a69": {
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
@@ -76,6 +89,11 @@
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
       "artifactName": "react_codegen_RNPermissionsSpec"
+    },
+    "react_codegen_lottiereactnative::@0fa4dc904d7e359a99fb": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_lottiereactnative"
     },
     "react_codegen_pagerview::@7032a8921530ec438d60": {
       "toolchain": "toolchain",

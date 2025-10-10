@@ -17,12 +17,6 @@ export function accurateNormalize(size) {
   } else {
     finalNewSize = Math.round(PixelRatio.roundToNearestPixel(newSize)) - 2;
   }
-  // show_log(
-  //   "accurateNormalize",
-  //   getDeviceNameSync(),
-  //   "Font size = ",
-  //   finalNewSize
-  // );
   return finalNewSize;
 }
 
@@ -34,12 +28,7 @@ export function accurateNormalizeVertical(size) {
   } else {
     finalNewSize = Math.round(PixelRatio.roundToNearestPixel(newSize));
   }
-  // show_log(
-  //   "accurateNormalizeVertical",
-  //   getDeviceNameSync(),
-  //   "Font size = ",
-  //   finalNewSize
-  // );
+
   return finalNewSize;
 }
 

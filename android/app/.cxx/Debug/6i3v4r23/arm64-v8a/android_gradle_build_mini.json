@@ -1,7 +1,9 @@
 {
   "buildFiles": [
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/MMKV/Core/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/CMakeLists.txt",
@@ -12,6 +14,7 @@
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
   ],
@@ -47,6 +50,11 @@
     },
     "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec": {
       "artifactName": "react_codegen_rngesturehandler_codegen",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "react_codegen_RNCWebViewSpec::@eb48929f9f7453740a6c": {
+      "artifactName": "react_codegen_RNCWebViewSpec",
       "abi": "arm64-v8a",
       "runtimeFiles": []
     },
@@ -125,8 +133,18 @@
         "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a18451f415b73841e30da63b3d9805af/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
       ]
     },
+    "react_codegen_lottiereactnative::@0fa4dc904d7e359a99fb": {
+      "artifactName": "react_codegen_lottiereactnative",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
     "react_codegen_RNMmkvSpec::@7541eabbae598da31a69": {
       "artifactName": "react_codegen_RNMmkvSpec",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "react_codegen_RNDatePickerSpecs::@c00f981c6e74346c63d4": {
+      "artifactName": "react_codegen_RNDatePickerSpecs",
       "abi": "arm64-v8a",
       "runtimeFiles": []
     }

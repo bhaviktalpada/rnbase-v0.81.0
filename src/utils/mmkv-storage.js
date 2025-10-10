@@ -1,5 +1,5 @@
 import {MMKV} from 'react-native-mmkv';
-import {show_log} from '../constants/logger';
+import {show_log} from './logger';
 
 const myMMkvStore = new MMKV();
 

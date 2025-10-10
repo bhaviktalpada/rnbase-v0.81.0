@@ -2,7 +2,6 @@
 import React from 'react';
 import { View, StyleSheet, StatusBar } from 'react-native';
 import {
-  SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import MainHeader from '../header';
@@ -18,6 +17,7 @@ export default function BaseContainer({
   bottomSafeColor = bgColor,
 }) {
   const inset = useSafeAreaInsets();
+
   return (
     <>
       <View
@@ -28,8 +28,7 @@ export default function BaseContainer({
           bgColor,
         )}
       >
-        <MainHeader LeftIcon={BackIconSvg}/>
-        <SafeAreaView>{children}</SafeAreaView>
+        {children}
       </View>
 
       {isTopSafeArea ? (
@@ -61,7 +60,7 @@ const styles = StyleSheet.create({
   wrapperView: (inset, isTopSafeArea, isBottomSafeArea, bgColor) => ({
     flex: 1,
     backgroundColor: bgColor,
-    //marginTop: isTopSafeArea ? inset.top : 0,
+    marginTop: isTopSafeArea ? inset.top : 0,
     marginBottom: isBottomSafeArea ? inset.bottom : 0,
   }),
   bottomSafeColorStyle: (color, inset) => ({

@@ -1,5 +1,5 @@
 import { createNavigationContainerRef } from "@react-navigation/native";
-import { SCREEN } from "../constants/screen-name";
+import { SCREEN } from "./screen-name";
 
 export const globNavigationRef = createNavigationContainerRef();
 
@@ -11,6 +11,6 @@ export function globNavigateTo(name, params) {
 
 export function globNavigationReset() {
   if (globNavigationRef.isReady()) {
-    globNavigationRef.navigate(SCREEN.landingScreen);
+    globNavigationRef.navigate(SCREEN.LandingScreen);
   }
 }

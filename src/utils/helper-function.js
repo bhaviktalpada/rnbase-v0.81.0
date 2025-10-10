@@ -1,7 +1,8 @@
 import {globNavigationRef} from './root-navigation';
 import {CommonActions} from '@react-navigation/native';
-import {SCREEN} from '../constants/screen-name';
-import {FILE_MIME_TYPES, FILE_TYPE} from '../constants/constants';
+import RNFS from 'react-native-fs';
+import {SCREEN} from './screen-name';
+import {FILE_MIME_TYPES, FILE_TYPE} from './constants';
 import {
   setIsUserLogIn,
   setNotificationCount,
@@ -15,9 +16,9 @@ import {NavigateTo} from './helper-navigation';
 import {PERMISSIONS, RESULTS, request} from 'react-native-permissions';
 import {Platform} from 'react-native';
 
-import RNFS from 'react-native-fs';
+
 import {DATE_FORMAT, format_Date} from './date-helper';
-import {show_log} from '@/constants';
+import { show_log } from './logger';
 
 export function getFileType(mimeType) {
   const type = mimeType.toLowerCase();
@@ -95,7 +96,6 @@ export function isJsonString(str = '') {
 
 export function isLastScreen(navigation) {
   const routes = navigation.getState().routes || [];
-  // show_log('isLastScreen: routes', routes);
   const routesLength = routes?.length;
   return routesLength == 1 ? true : false;
 }
@@ -112,7 +112,7 @@ export function containsHttp(str) {
 }
 
 export function resetNavigationStack(screenName) {
-  const screen_name = screenName ? screenName : SCREEN.landingScreen;
+  const screen_name = screenName ? screenName : SCREEN.LandingScreen;
   globNavigationRef?.dispatch(
     CommonActions.reset({
       index: 0,
@@ -141,7 +141,7 @@ export function logoutHelper() {
   dispatch(setNotificationCount(null));
   dispatch(setUserRefreshToken(null));
 
-  NavigateTo(SCREEN.landingScreen);
+  NavigateTo(SCREEN.LandingScreen);
 }
 
 export const formatBedsBathValue = value => {

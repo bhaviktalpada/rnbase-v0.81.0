@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "RNDatePickerSpecs_autolinked_build",
+		"source" : "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni"
+	}
+}

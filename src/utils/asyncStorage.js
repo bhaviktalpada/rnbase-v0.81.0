@@ -1,8 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const STORE_KEY = {
+  FCM_TOKEN: 'STORE_FCM_TOKEN',
   DEVICE_INFO: 'STORE_DEVICE_INFO',
   LOGIN_TOKEN: 'STORE_LOGIN_TOKEN',
+  REFRESH_TOKEN: 'STORE_REFRESH_TOKEN',
 };
 
 async function asyncStorageSave(key, value) {
