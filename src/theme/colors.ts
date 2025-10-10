@@ -44,7 +44,7 @@ export const COLORS = {
   colorGray99: '#999999',
   colorLightGray99: 'rgba(153, 153, 153, 0.1)',
   background_lite: 'rgba(242, 243, 247, 0.9)',
-  headerColor: '#007377',
+  headerColor: 'transparent',
   gray_lite: '#E7E7E7',
   grayFontColor: '#A5A5A5',
   borderColorE8ECF0: '#E8ECF0',

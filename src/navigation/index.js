@@ -19,6 +19,7 @@ import LanguageHelper from "../utils/LanguageHelper";
 import { setColorScheme } from "../redux/reducers/color-theme-reducer";
 import LoginScreen from "@/screens/auth/login";
 import LandingScreen from "@/screens/auth/landing";
+import WebContentController from "@/screens/auth/webview-controller";
 import ForceUpdateScreen from '@/screens/force-update-screen';
 import HomeScreen from "@/screens/home-screen/home-screen";
 import { NoInternet } from "@/components/utilities";
@@ -134,6 +135,7 @@ const Route = () => {
           <Stack.Screen name={SCREEN.LandingScreen} component={LandingScreen} />
           <Stack.Screen name={SCREEN.homeScreen} component={HomeScreen} />
           <Stack.Screen name={SCREEN.LoginScreen} component={LoginScreen} />
+          <Stack.Screen name={SCREEN.WebContentController} component={WebContentController} />
         </Stack.Navigator>
       )}
     </NavigationContainer>

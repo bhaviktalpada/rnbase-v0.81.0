@@ -1,24 +1,22 @@
-import React from 'react';
-import { normalizeText } from '@/utils';
+import React from "react";
+import { normalizeText } from "@/utils";
 import {
   StyleSheet,
   StyleSheetProperties,
   TouchableOpacity,
   useWindowDimensions,
   View,
-} from 'react-native';
-import { scale } from 'react-native-size-matters';
-import {
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
-import AppRegularText from '../app-regular-text';
-import { COLORS } from '@/theme';
-import { APP } from '@/utils/constants';
+} from "react-native";
+import { scale } from "react-native-size-matters";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import AppRegularText from "../app-regular-text";
+import { COLORS, FONT_SIZE } from "@/theme";
+import { APP } from "@/utils/constants";
+import AppMediumText from "../app-medium-text";
 //import { COLORS } from '@/theme';
 
-
 type MainHeaderProps = {
-  LeftIcon?: any;
+  LeftSVGIcon?: any;
   iconColor?: string;
   leftTitle?: string;
   firstRightIcon?: any;
@@ -27,6 +25,7 @@ type MainHeaderProps = {
   rightButtonIcon?: any;
   rightButtonColor?: string;
   borderBottomColor?: string;
+  showBottomBorder?: boolean;
   profileSource?: any;
   iconSize?: number;
   leftIconSize?: number;
@@ -48,7 +47,7 @@ type MainHeaderProps = {
 };
 
 const MainHeader: React.FC<MainHeaderProps> = ({
-  LeftIcon,
+  LeftSVGIcon,
   iconColor = COLORS.black,
   leftTitle,
   firstRightIcon,
@@ -57,6 +56,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({
   rightButtonIcon,
   rightButtonColor = COLORS.colorRed,
   borderBottomColor = COLORS.colorLightestGrayE0,
+  showBottomBorder = false,
   profileSource,
   iconSize,
   leftIconSize = 16,
@@ -80,15 +80,15 @@ const MainHeader: React.FC<MainHeaderProps> = ({
   const inset = useSafeAreaInsets();
   const { width, height } = useWindowDimensions();
   const isLandscape = width > height;
-  console.log('isLandscape:', isLandscape);
-  
+  console.log("isLandscape:", isLandscape);
+
   return (
     <>
       <View style={styles.mainContainer(inset)}>
         <View style={styles.mainSubContainer(inset)}>
           <View style={{ flex: 1 }}>
             <View style={styles.innerViewLeft}>
-              {LeftIcon && (
+              {LeftSVGIcon && (
                 <TouchableOpacity
                   onPress={() => {
                     backCallBack();
@@ -96,17 +96,17 @@ const MainHeader: React.FC<MainHeaderProps> = ({
                   }}
                   style={styles.leftIconContainer}
                 >
-                  <LeftIcon
-                    fill={COLORS.white}
+                  <LeftSVGIcon
+                    fill={COLORS.black}
                     height={leftIconSize}
                     width={leftIconSize}
                   />
                 </TouchableOpacity>
               )}
               {!isSearchActive && (
-                <AppRegularText fontFamily={'Medium'} color={COLORS.black}>
+                <AppMediumText size={FONT_SIZE[20]} fontFamily={"Medium"} color={COLORS.black}>
                   {leftTitle}
-                </AppRegularText>
+                </AppMediumText>
               )}
             </View>
             <View style={styles.innerViewRight}>
@@ -121,9 +121,9 @@ const MainHeader: React.FC<MainHeaderProps> = ({
                       let numericCount = 0;
                       if (Array.isArray(totalNotifications)) {
                         numericCount = totalNotifications.length;
-                      } else if (typeof totalNotifications === 'string') {
+                      } else if (typeof totalNotifications === "string") {
                         numericCount = Number(totalNotifications) || 0;
-                      } else if (typeof totalNotifications === 'number') {
+                      } else if (typeof totalNotifications === "number") {
                         numericCount = totalNotifications;
                       }
 
@@ -137,9 +137,8 @@ const MainHeader: React.FC<MainHeaderProps> = ({
                             <AppRegularText
                               size={APP.APP_NOTIFICATION_COUNT_FONT_SIZE}
                               numberOfLines={1}
-                              fontFamily={'Bold'}
+                              fontFamily={"Bold"}
                               color={COLORS.white}
-                              
                             >
                               {display}
                             </AppRegularText>
@@ -155,8 +154,9 @@ const MainHeader: React.FC<MainHeaderProps> = ({
           </View>
         </View>
       </View>
-
-      <View style={styles.borderBottomStyle(borderBottomColor)}></View>
+      {showBottomBorder && (
+        <View style={styles.borderBottomStyle(borderBottomColor)} />
+      )}
     </>
   );
 };
@@ -184,11 +184,11 @@ type Style = {
 
 const styles = StyleSheet.create<Style>({
   mainContainer: (inset): any => ({
-    width: '100%',
+    width: "100%",
     height: scale(44) + inset.top,
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
     backgroundColor: COLORS.headerColor,
   }),
   mainSubContainer: (inset): any => ({
@@ -198,15 +198,15 @@ const styles = StyleSheet.create<Style>({
     flex: 1,
     marginTop: inset.top,
     paddingHorizontal: scale(15),
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
     backgroundColor: COLORS.headerColor,
   }),
   innerViewLeft: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "flex-start",
   },
   leftIconContainer: {
     marginRight: scale(3),
@@ -214,9 +214,9 @@ const styles = StyleSheet.create<Style>({
     paddingVertical: scale(10),
   },
   innerViewRight: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "flex-end",
   },
   rightIconContainer: {
     marginRight: scale(10),
@@ -226,7 +226,7 @@ const styles = StyleSheet.create<Style>({
   badgeContainer: (notiCount: any): any => ({
     height: scale(18),
     width: scale(notiCount > 2 ? 22 : 18),
-    position: 'absolute',
+    position: "absolute",
     zIndex: 1,
     right: scale(2),
     marginTop: scale(3),
@@ -234,23 +234,23 @@ const styles = StyleSheet.create<Style>({
     borderRadius: scale(18),
     borderWidth: scale(1),
     borderColor: COLORS.white,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   }),
   profileContainer: {
     height: scale(25),
     width: scale(25),
     borderRadius: scale(15),
-    overflow: 'hidden',
-    alignItems: 'center',
-    justifyContent: 'center',
+    overflow: "hidden",
+    alignItems: "center",
+    justifyContent: "center",
     //borderWidth: scale(1),
     //borderColor: COLORS.colorLightestGrayE0,
   },
   imgStyle: {
     height: scale(25),
     width: scale(25),
-    alignItems: 'center',
+    alignItems: "center",
     //borderRadius: scale(15),
   },
   searchCloseIcon: {
@@ -259,21 +259,21 @@ const styles = StyleSheet.create<Style>({
     flex: 1,
   },
   borderBottomStyle: (bgcolor: any): any => ({
-    width: '100%',
+    width: "100%",
     height: scale(1),
     backgroundColor: bgcolor,
   }),
   rightBtnTouchableView: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   activeView: {
     backgroundColor: COLORS.colorGreen,
     width: 10,
     height: 10,
     borderRadius: 5,
-    position: 'absolute',
+    position: "absolute",
     right: -6,
     top: -5,
   },
@@ -282,7 +282,7 @@ const styles = StyleSheet.create<Style>({
     color: Color,
   }),
   menuOption: {
-    width: 'auto',
+    width: "auto",
     padding: scale(5),
     borderRadius: scale(5),
     paddingHorizontal: scale(10),

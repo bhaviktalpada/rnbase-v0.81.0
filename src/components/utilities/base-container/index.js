@@ -1,31 +1,38 @@
-
-import React from 'react';
-import { View, StyleSheet, StatusBar } from 'react-native';
-import {
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
-import MainHeader from '../header';
-import { BackIconSvg } from '@/assets/svg';
-import { COLORS } from '@/theme';
+import React from "react";
+import { View, StyleSheet, StatusBar, Image } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import MainHeader from "../header";
+import { BackIconSvg } from "@/assets/svg";
+import { COLORS } from "@/theme";
+import { IMAGES } from "@/utils/images-path";
 
 export default function BaseContainer({
   children,
-  isTopSafeArea = true,
+  isTopSafeArea = false,
+  showBgImage = true,
   isBottomSafeArea = true,
-  bgColor = COLORS.background_lite,
+  bgColor = COLORS.transparent,
   headerBGColor = COLORS.headerColor,
   bottomSafeColor = bgColor,
+  bgImage = IMAGES.app_bg_container,
 }) {
   const inset = useSafeAreaInsets();
 
   return (
     <>
+      {showBgImage ? (
+        <Image
+          style={styles.bgImageStyle}
+          source={bgImage}
+          resizeMode="cover"
+        />
+      ) : null}
       <View
         style={styles.wrapperView(
           inset,
           isTopSafeArea,
           isBottomSafeArea,
-          bgColor,
+          bgColor
         )}
       >
         {children}
@@ -34,7 +41,7 @@ export default function BaseContainer({
       {isTopSafeArea ? (
         <View style={styles.headerTopView(headerBGColor, inset)}>
           <StatusBar
-            barStyle={'dark-content'}
+            barStyle={"dark-content"}
             backgroundColor={headerBGColor}
           />
         </View>
@@ -49,14 +56,14 @@ export default function BaseContainer({
 const styles = StyleSheet.create({
   headerTopView: (headerBGColor, inset) => ({
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     height: inset.top,
-    width: '100%',
-    position: 'absolute',
+    width: "100%",
+    position: "absolute",
     backgroundColor: headerBGColor,
   }),
-
+  bgImageStyle: { position: "absolute", height: "100%", width: "100%" },
   wrapperView: (inset, isTopSafeArea, isBottomSafeArea, bgColor) => ({
     flex: 1,
     backgroundColor: bgColor,
@@ -64,10 +71,10 @@ const styles = StyleSheet.create({
     marginBottom: isBottomSafeArea ? inset.bottom : 0,
   }),
   bottomSafeColorStyle: (color, inset) => ({
-    width: '100%',
+    width: "100%",
     height: inset.bottom,
     backgroundColor: color,
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
   }),
 });

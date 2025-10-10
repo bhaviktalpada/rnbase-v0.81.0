@@ -1,22 +1,21 @@
-
-import {  COLORS, FONT_SIZE, FONTS } from '@/theme';
-import { normalizeText } from '@/utils';
-import React from 'react';
-import { Text, TextProps, StyleSheet, TextStyle } from 'react-native';
+import { COLORS, FONT_SIZE, FONTS } from "@/theme";
+import { normalizeText } from "@/utils";
+import React from "react";
+import { Text, TextProps, StyleSheet, TextStyle } from "react-native";
 
 type FontWeight = keyof typeof FONTS;
 type FontSize = keyof typeof FONT_SIZE;
 
 interface AppTextProps extends TextProps {
-  fontFamily?: FontWeight;
   size?: FontSize;
+  fontFamily?: FontWeight;
   color?: string;
   numberOfLines?: number;
   style?: TextStyle | TextStyle[];
 }
 
 export default function AppMediumText({
-  size = 14,
+  size = FONT_SIZE[16],
   color = COLORS.black, // fallback to default text color
   style,
   children,
@@ -25,7 +24,7 @@ export default function AppMediumText({
 }: AppTextProps) {
   return (
     <Text
-    numberOfLines={numberOfLines}
+      numberOfLines={numberOfLines}
       style={[
         styles.base,
         {
