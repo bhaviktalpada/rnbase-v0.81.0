@@ -13,7 +13,6 @@ import AppRegularText from "../app-regular-text";
 import { COLORS, FONT_SIZE } from "@/theme";
 import { APP } from "@/utils/constants";
 import AppMediumText from "../app-medium-text";
-//import { COLORS } from '@/theme';
 
 type MainHeaderProps = {
   LeftSVGIcon?: any;

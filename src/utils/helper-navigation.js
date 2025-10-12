@@ -11,6 +11,7 @@ export function globalNavigate(name, param) {
 export function NavigateTo(screenName, screenParam) {
   globalNavigationRef?.current?.navigate(screenName, screenParam);
 }
+
 export function PushTo(screenName, screenParam) {
   globalNavigationRef?.current?.dispatch(
     StackActions.push(screenName, screenParam),

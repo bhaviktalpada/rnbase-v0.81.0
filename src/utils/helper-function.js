@@ -1,4 +1,4 @@
-import {globNavigationRef} from './root-navigation';
+import {globNavigationRef} from './helper-navigation';
 import {CommonActions} from '@react-navigation/native';
 import RNFS from 'react-native-fs';
 import {SCREEN} from './screen-name';

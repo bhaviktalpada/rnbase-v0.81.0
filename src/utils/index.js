@@ -1,12 +1,11 @@
 export {getFormattedAddress} from './address-helper';
-export * from './asyncStorage';
-export {default as DATE_FORMAT} from './date-helper';
 export {LOG_API_RES} from './helper-function';
-export * from './helper-navigation';
-export * from './mmkv-storage';
-export {normalizeText} from './responsive-text';
-export {default as accurateNormalize} from './responsive-text-3';
-export * from './root-navigation';
+export {normalizeText} from './text-normalize';
 export {handleApiError} from './service-helper';
 export {toastConfig} from './toast-config';
+export * from './asyncStorage';
+export {default as DATE_FORMAT} from './date-helper';
+export * from './helper-navigation';
+export * from './mmkv-storage';
+export * from './helper-navigation';
 export * from './validation';

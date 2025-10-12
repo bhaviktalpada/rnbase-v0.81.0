@@ -23,9 +23,10 @@ const LocalizeText = new LocalizedStrings({
       address: "Address",
       optional: "optional",
     },
-    button: {
+    buttons: {
       update: "Update",
       cancel: "Cancel",
+      done: "Done",
     },
     general: {
       search: "Search",

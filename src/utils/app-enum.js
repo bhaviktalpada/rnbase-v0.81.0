@@ -39,3 +39,10 @@ export const FONT_FAMILY = {
   medium: 'Medium',
   semibold: 'SemiBold',
 };
+
+
+export const FILE_TYPE = {
+  Image: 'Photo',
+  Video: 'Video',
+  File: 'File',
+};

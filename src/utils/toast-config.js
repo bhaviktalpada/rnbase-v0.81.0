@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import * as RnToast from 'react-native-toast-message';
 import { getModerateScaleValue } from '@/theme/global-styles';
-import { normalizeText } from './responsive-text';
+import { normalizeText } from './text-normalize';
 import { COLORS, FONTS } from '@/theme';
 
 // return null

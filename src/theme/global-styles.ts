@@ -1,5 +1,5 @@
 import { moderateScale } from 'react-native-size-matters';
-import { normalizeText } from '../utils/responsive-text';
+import { normalizeText } from '../utils/text-normalize';
 import { FONTS } from './typography';
 import { COLORS } from './colors';
 
