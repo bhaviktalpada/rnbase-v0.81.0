@@ -74,6 +74,7 @@ const CustomTextField = ({
   const [, setRefresh] = useState();
 
   const inputAccessoryViewID = "uniqueID";
+  var textPlaceholder = placeholder ? placeholder : "Enter " + label;
 
   is_editing(isEditing);
   // const keyboardDidShowListener = Keyboard.addListener(
@@ -95,7 +96,7 @@ const CustomTextField = ({
   //   };
   // }, []);
 
-  var textPlaceholder = placeholder ? placeholder : "Enter " + label;
+  
 
   // function onPressEye() {
   //   if (disableEyeTouch) {
@@ -216,7 +217,7 @@ const CustomTextField = ({
                 onPress={() => Keyboard.dismiss()}
               >
                 <AppMediumText style={styles.doneButton}>
-                  {LocalizeText.buttons.done}
+                  {LocalizeText.button.done}
                 </AppMediumText>
               </TouchableOpacity>
             </View>

@@ -6,7 +6,7 @@ import { BaseContainer } from "@/components/utilities";
 import { COLORS } from "@/theme";
 import MainHeader from "@/components/utilities/header";
 import { BackIconSvg } from "@/assets/svg";
-import LocalizeText from "@/localization/text-localize";
+import LocalizeText from "@/utils/text-localize";
 import styles from "./styles";
 
 export default function WebContentController({ navigation, route }) {

@@ -2,29 +2,42 @@ import { Appearance, Platform } from "react-native";
 import React, { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StackNavigationProp } from '@react-navigation/stack';
+import { getApp } from "@react-native-firebase/app";
+import {
+  getMessaging,
+  requestPermission,
+  getToken,
+  onTokenRefresh,
+  AuthorizationStatus,
+} from "@react-native-firebase/messaging";
+import PushNotification from 'react-native-push-notification';
+import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import NetInfo from "@react-native-community/netinfo";
 import DeviceInfo from "react-native-device-info";
 import { useDispatch, useSelector } from "react-redux";
 import VersionCheck from "react-native-version-check";
-import { globalNavigationRef } from "../utils/helper-navigation";
-import { SCREEN } from "../utils/screen-name";
+import { globalNavigationRef } from "@/utils/helper-navigation";
+//import { firebaseConfig } from "@/utils//firebase-config";
+import LanguageHelper from "@/utils/LanguageHelper";
+import { SCREEN } from "@/utils/screen-name";
+import { show_log } from "@/utils/logger";
 import {
   setConnectionType,
   setDeviceInfo,
   toggleNetState,
 } from "../redux/reducers/netInfo-reducer";
-import LanguageHelper from "../utils/LanguageHelper";
-
 import { setColorScheme } from "../redux/reducers/color-theme-reducer";
 import LoginScreen from "@/screens/auth/login";
 import LandingScreen from "@/screens/auth/landing";
 import WebContentController from "@/screens/auth/webview-controller";
-import ForceUpdateScreen from '@/screens/force-update-screen';
+import ForceUpdateScreen from "@/screens/force-update-screen";
 import HomeScreen from "@/screens/home-screen/home-screen";
+import CustomerOnboardingScreen from "@/screens/customer-onboard";
 import { NoInternet } from "@/components/utilities";
-import LocalizeText from "@/localization/text-localize";
-import { show_log } from "@/utils/logger";
+import LocalizeText from "@/utils/text-localize";
+import { APP } from "@/utils/constants";
+import { FCMToken } from "@/redux/actions/app-actions";
+import AdminDashboardScreen from "@/screens/admin/owner-dashboard";
 
 
 const Route = () => {
@@ -36,42 +49,35 @@ const Route = () => {
   const [updateAvail, setUpdateAvail] = useState(false);
 
   useEffect(() => {
+    //handleInitFirebase(); // Firebase
     checkUpdate();
     setColorToStore();
-
     const NetInfoSubscriber = NetInfo.addEventListener((state) => {
       var netLog = state.isConnected
         ? `Routes.js => Device is online & connected with ${state.type.toUpperCase()}`
         : `Routes.js => Device is offline & connected with ${state.type.toUpperCase()}`;
-
       show_log("netLog", netLog);
-
       var c_type = state.type.toUpperCase();
       dispatch(toggleNetState(state.isConnected));
       dispatch(setConnectionType(c_type));
-
       if (state.isConnected == true) {
         setConnected(true);
       } else {
         setConnected(false);
       }
     });
-
     // Device information
     deviceInformation();
-
     // Language Set
     LanguageHelper.getCurrentLanguage().then((lang) => {
       LocalizeText.setLanguage(lang);
     });
-
     // Appearance (color scheme) listener
     const colorSchemeListener = Appearance.addChangeListener(
       ({ colorScheme }) => {
         dispatch(setColorScheme(colorScheme)); // store in Redux or state
       }
     );
-
     return () => {
       NetInfoSubscriber(); // cleanup network listener
       colorSchemeListener.remove(); // cleanup appearance listener
@@ -79,10 +85,90 @@ const Route = () => {
   }, []);
 
   useEffect(() => {
-    handleInitFirebase();
+    const fetchToken = async () => {
+      console.log("*** Start Fetch Token");
+
+      const app = getApp(); // ✅ New modular API
+
+      console.log("*** Get App Res", app);
+      const messaging = getMessaging(app);
+      console.log("*** Get Messaging Obj", messaging);
+
+      // Request permission (for iOS)
+      const authStatus = await requestPermission(messaging);
+
+      console.log("*** Get Auth Status", authStatus);
+      const enabled =
+        authStatus === AuthorizationStatus.AUTHORIZED ||
+        authStatus === AuthorizationStatus.PROVISIONAL;
+      console.log("*** Enable Permission", enabled);
+      if (enabled) {
+        const token = await getToken(messaging);
+        console.log("FCM Token:", token);
+        dispatch(FCMToken());
+        //Alert.alert("FCM Token", token);
+      } else {
+        dispatch(FCMToken('para,'));
+      }
+
+      // Listen for token refresh
+      onTokenRefresh(messaging, (token) => {
+        console.log("New Token:", token);
+      });
+    };
+
+    fetchToken();
+    configureTPushNotification();
   }, []);
 
-  const handleInitFirebase = () => {};
+  // const requestUserPermission = async () => {
+  //   console.log("Requesting Notification***>");
+
+  //   // 1. Get the Messaging service instance
+  //   const messagingService = getMessaging();
+
+  //   // 2. Request permission using the imported function
+  //   const authStatus = await requestPermission(messagingService);
+
+  //   // 3. AuthorizationStatus is still accessed via the service instance's import
+  //   const enabled =
+  //     authStatus === AuthorizationStatus.AUTHORIZED ||
+  //     authStatus === AuthorizationStatus.PROVISIONAL;
+
+  //   if (enabled) {
+  //     console.log("Notification permission granted.***");
+  //     // *** FIX: Explicitly register for remote messages on iOS ***
+
+  //     if (isDeviceRegisteredForRemoteMessages(messagingService)) {
+  //       console.log("*** YES REGISTER");
+  //     }
+
+  //     await getFcmToken(); // This should be the modular version
+  //   } else {
+  //     console.log("Notification permission denied.");
+  //   }
+  // };
+
+  // const getFcmToken = async () => {
+  //   try {
+  //     console.log("Start fetching FCM");
+
+  //     // 1. Get the Messaging service instance
+  //     //    If you are using the default Firebase App, you can call getMessaging() with no arguments.
+  //     //    If using a secondary app instance, pass it to getMessaging(app).
+  //     const messagingService = getMessaging();
+
+  //     // 2. Use the imported getToken function on the service instance
+  //     const token = await getToken(messagingService);
+
+  //     if (token) {
+  //       console.log("FCM Token:", token);
+  //       // Optionally send token to backend
+  //     }
+  //   } catch (error) {
+  //     console.log("Error fetching FCM token:", error);
+  //   }
+  // };
 
   function setColorToStore() {
     dispatch(setColorScheme(colorScheme));
@@ -105,9 +191,43 @@ const Route = () => {
     dispatch(setDeviceInfo(deviceInfo));
   };
 
-  if (!connected) {
-    return <NoInternet />;
-  }
+  const configureTPushNotification = () => {
+    try {
+      PushNotification.configure({
+        onRegister: function (value) {
+          console.log('onRegister:', value);
+        },
+        onNotification: function (value) {
+          console.log('onNotification****', JSON.stringify(value));
+
+          navigateFromRoute(userRole, value, '', dispatch);
+          if (Platform.OS === PLATFORM_MOBILE.IOS) {
+            value.finish(PushNotificationIOS.FetchResult.NoData);
+          }
+        },
+        onAction: function (value) {
+          console.log('onAction:', value);
+        },
+        onRegistrationError: function (value) {
+          if (APP.SHOW_LOG) {
+            console.log('onRegistrationError:', value);
+          }
+        },
+        onRemoteFetch: function (value) {
+          console.log('onRemoteFetch:', value);
+        },
+        // popInitialNotification: true,
+        requestPermissions: true,
+        permissions: {
+          alert: true,
+          badge: true,
+          sound: true,
+        },
+      });
+    } catch (e) {
+      console.log('configureTPushNotification: Error', e);
+    }
+  };
 
   const checkUpdate = async () => {
     await VersionCheck.needUpdate().then((res) => {
@@ -118,11 +238,14 @@ const Route = () => {
     });
   };
 
+  if (!connected) {
+    return <NoInternet />;
+  }
+
   return (
     <NavigationContainer ref={globalNavigationRef}>
       {updateAvail == true ? (
-        <Stack.Navigator
-          screenOptions={{headerShown: false}}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen
             name={SCREEN.ForceUpdateScreen}
             component={ForceUpdateScreen}
@@ -135,7 +258,18 @@ const Route = () => {
           <Stack.Screen name={SCREEN.LandingScreen} component={LandingScreen} />
           <Stack.Screen name={SCREEN.homeScreen} component={HomeScreen} />
           <Stack.Screen name={SCREEN.LoginScreen} component={LoginScreen} />
-          <Stack.Screen name={SCREEN.WebContentController} component={WebContentController} />
+          <Stack.Screen
+            name={SCREEN.WebContentController}
+            component={WebContentController}
+          />
+          <Stack.Screen
+          name={SCREEN.CustomerOnboardingScreen}
+          component={CustomerOnboardingScreen}
+        />
+          <Stack.Screen
+          name={SCREEN.AdminDashboardScreen}
+          component={AdminDashboardScreen}
+        />
         </Stack.Navigator>
       )}
     </NavigationContainer>

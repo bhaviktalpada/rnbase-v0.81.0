@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCUi-iUoi7Uti3ggNkya5Y7YZO6gQBVIH8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>359071570131</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hinduutsavsamitiapp</string>
+	<key>PROJECT_ID</key>
+	<string>gameon-9d0d8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gameon-9d0d8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:359071570131:ios:646bb8e9898ebd07695c26</string>
+	<key>DATABASE_URL</key>
+	<string>https://gameon-9d0d8.firebaseio.com</string>
+</dict>
+</plist>

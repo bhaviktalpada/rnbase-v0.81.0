@@ -2,24 +2,23 @@ import React, { useEffect, useState } from "react";
 import { ActivityIndicator, StyleSheet } from "react-native";
 import { CommonActions } from "@react-navigation/routers";
 
+//Hooks
+import { useDispatch, useSelector } from "react-redux";
+import * as types from '@redux/actions/action-list'
+import { asyncStorageRemove, STORE_KEY } from "@/utils";
+
+// Firebase / API
+import { getAllUsers, getPostCategory } from "@/utils/firebase-db-helper";
+import {getRequest, TRAIL_URLS} from "@/api-services";
+
 //Component
 import { BaseContainer } from "@/components/utilities";
 
-//Hooks
-import { useDispatch, useSelector } from "react-redux";
-import { COLORS } from "@/theme";
-import { asyncStorageRemove, STORE_KEY } from "@/utils";
-
-import {getRequest, TRAIL_URLS} from "@/api-services";
+// Utils | Constants
 import { USER_ROLE_NAME } from "@/utils/app-enum";
 import { SCREEN } from "@/utils/screen-name";
 import { APP } from "@/utils/constants";
-//Constants
-// import {
-//   getAllUsers,
-//   getPostCategory,
-// } from "../../../utils/firebase-db-helper";
-// import * as types from "../../../redux/actions/action-list";
+import { COLORS } from "@/theme";
 
 export default function LandingScreen({ navigation, route }) {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ export default function LandingScreen({ navigation, route }) {
 
   const [loading, setLoading] = useState(true);
   const netConnected = useSelector((v) => v.netInfoReducer.isConnected);
-  const isUserLoginDone = useSelector((v) => v?.appReducer?.isUserLogin);
+  const isUserLoginDone = useSelector((v) => v?.userInfoReducer?.isUserLogin);
   const userRole = useSelector((v) => v?.appReducer?.userRole);
 
   useEffect(() => {
@@ -41,7 +40,7 @@ export default function LandingScreen({ navigation, route }) {
       storageCleanUp();
       navigateTo(SCREEN.LoginScreen);
     } else {
-      //   console.log('isUserLoginDone', isUserLoginDone);
+        console.log('isUserLoginDone', isUserLoginDone);
       console.log("userRole", userRole);
       if (isUserLoginDone) {
         getMasterData();
@@ -57,7 +56,7 @@ export default function LandingScreen({ navigation, route }) {
   }
 
   function onResponse(res) {
-    //console.log('res', res);
+    console.log('*** On Master Data Res:', res);
     const allKeys = Object.keys(res);
     const allCategory = [];
     allKeys.forEach((key, index) => {
@@ -68,14 +67,15 @@ export default function LandingScreen({ navigation, route }) {
   }
 
   function onAllUserResponse(res) {
-    //console.log('res', res);
+    console.log('*** On All User res:', res);
     dispatch({ type: types.APP_USERS_DATA, data: res });
 
     dbConnectionStart();
     if (userRole === USER_ROLE_NAME.Owner) {
       navigateTo(SCREEN.AdminDashboardScreen);
     } else {
-      navigateTo(SCREEN.CustomerOnboardingScreen);
+      navigateTo(SCREEN.AdminDashboardScreen);
+      //navigateTo(SCREEN.CustomerOnboardingScreen);
     }
   }
 
@@ -95,10 +95,10 @@ export default function LandingScreen({ navigation, route }) {
           }
         })
         .catch((e) => {
-          console.log("Error", e);
+          console.log("*** Error", e);
         });
     } else {
-      console.log(" INTERNET NOT AVAILABLE");
+      console.log("*** INTERNET NOT AVAILABLE");
     }
   }
 

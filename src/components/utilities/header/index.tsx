@@ -13,6 +13,8 @@ import AppRegularText from "../app-regular-text";
 import { COLORS, FONT_SIZE } from "@/theme";
 import { APP } from "@/utils/constants";
 import AppMediumText from "../app-medium-text";
+import FastImage from "react-native-fast-image";
+import { IMAGES } from "@/utils/images-path";
 
 type MainHeaderProps = {
   LeftSVGIcon?: any;
@@ -43,6 +45,25 @@ type MainHeaderProps = {
   filterOptions?: any;
   isActiveFilter?: boolean;
   backCallBack?: () => void;
+};
+
+type Style = {
+  mainContainer: StyleSheetProperties;
+  mainSubContainer: StyleSheetProperties;
+  innerViewLeft: object;
+  leftIconContainer: object;
+  innerViewRight: object;
+  rightIconContainer: object;
+  profileContainer: object;
+  imgStyle: object;
+  searchCloseIcon: object;
+  rightBtnTouchableView: object;
+  activeView: object;
+  menuOption: object;
+  // function styles
+  badgeContainer: (notiCount: any) => object;
+  borderBottomStyle: (bgcolor: any) => object;
+  labelStyle: (Color?: string, size?: number) => object;
 };
 
 const MainHeader: React.FC<MainHeaderProps> = ({
@@ -85,7 +106,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({
     <>
       <View style={styles.mainContainer(inset)}>
         <View style={styles.mainSubContainer(inset)}>
-          <View style={{ flex: 1 }}>
+          <View style={{ flex: 1, flexDirection: "row" }}>
             <View style={styles.innerViewLeft}>
               {LeftSVGIcon && (
                 <TouchableOpacity
@@ -103,11 +124,16 @@ const MainHeader: React.FC<MainHeaderProps> = ({
                 </TouchableOpacity>
               )}
               {!isSearchActive && (
-                <AppMediumText size={FONT_SIZE[20]} fontFamily={"Medium"} color={COLORS.black}>
+                <AppMediumText
+                  size={FONT_SIZE[20]}
+                  fontFamily={"Medium"}
+                  color={COLORS.black}
+                >
                   {leftTitle}
                 </AppMediumText>
               )}
             </View>
+
             <View style={styles.innerViewRight}>
               {!isSearchActive && firstRightIcon && (
                 <>
@@ -151,6 +177,19 @@ const MainHeader: React.FC<MainHeaderProps> = ({
               )}
             </View>
           </View>
+          {profileSource && (
+            <TouchableOpacity
+              onPress={onPressProfile}
+              style={styles.profileContainer}
+            >
+              <FastImage
+                defaultSource={IMAGES.ic_user_avatar}
+                style={styles.imgStyle}
+                source={profileSource}
+                resizeMode="cover"
+              />
+            </TouchableOpacity>
+          )}
         </View>
       </View>
       {showBottomBorder && (
@@ -161,25 +200,6 @@ const MainHeader: React.FC<MainHeaderProps> = ({
 };
 
 export default MainHeader;
-
-type Style = {
-  mainContainer: StyleSheetProperties;
-  mainSubContainer: StyleSheetProperties;
-  innerViewLeft: object;
-  leftIconContainer: object;
-  innerViewRight: object;
-  rightIconContainer: object;
-  profileContainer: object;
-  imgStyle: object;
-  searchCloseIcon: object;
-  rightBtnTouchableView: object;
-  activeView: object;
-  menuOption: object;
-  // function styles
-  badgeContainer: (notiCount: any) => object;
-  borderBottomStyle: (bgcolor: any) => object;
-  labelStyle: (Color?: string, size?: number) => object;
-};
 
 const styles = StyleSheet.create<Style>({
   mainContainer: (inset): any => ({
@@ -216,6 +236,7 @@ const styles = StyleSheet.create<Style>({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "flex-end",
+    backgroundColor: "red",
   },
   rightIconContainer: {
     marginRight: scale(10),

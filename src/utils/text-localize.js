@@ -23,10 +23,10 @@ const LocalizeText = new LocalizedStrings({
       address: "Address",
       optional: "optional",
     },
-    buttons: {
+    button: {
       update: "Update",
       cancel: "Cancel",
-      done: "Done",
+      done: "Done"
     },
     general: {
       search: "Search",
@@ -195,6 +195,7 @@ const LocalizeText = new LocalizedStrings({
     button: {
       update: "અપડેટ",
       cancel: "રદ કરો",
+      done: "Done"
     },
     general: {
       search: "શોધો",

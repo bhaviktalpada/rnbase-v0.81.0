@@ -12,7 +12,7 @@ import { API_REQUEST_METHOD, toastTypes } from "../utils/app-enum";
 import { globalNavigate } from "../utils/helper-navigation";
 import { APP } from "../utils/constants";
 import { SCREEN } from "../utils/screen-name";
-import LocalizeText from "../utils/text-localize";
+import LocalizeText from "@/utils/text-localize";
 
 const DOMAIN = {
   //Local server

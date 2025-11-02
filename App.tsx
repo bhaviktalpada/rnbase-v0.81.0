@@ -17,7 +17,6 @@ import Route from "@/navigation";
 import BootSplash from "react-native-bootsplash";
 import { STATUSBAR_TYPE } from "@/utils/app-enum";
 import { COLORS } from "@/theme";
-import ForceUpdateScreen from "@/screens/force-update-screen";
 
 function App(): React.JSX.Element {
   const barStyle = "light-content";

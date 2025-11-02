@@ -30,7 +30,7 @@ import {
 } from '../../utils/app-enum';
 import {APP} from '../../utils/constants';
 import {getFileType} from '../../utils/helper-function';
-import LocalizeText from '../../utils/text-localize';
+import LocalizeText from "@/utils/text-localize";
 import {normalizeText} from '../../utils/text-normalize';
 import {FONTS} from '../../theme/typography';
 import {COLORS} from '../../theme/colors';

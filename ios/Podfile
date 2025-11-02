@@ -16,6 +16,9 @@ end
 
 target 'husmmain' do
   config = use_native_modules!
+  
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -29,7 +32,7 @@ target 'husmmain' do
       installer,
       config[:reactNativePath],
       :mac_catalyst_enabled => false,
-      # :ccache_enabled => true
+#       :ccache_enabled => true
     )
   end
 end

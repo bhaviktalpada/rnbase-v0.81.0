@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "359071570131",
+    "firebase_url": "https://gameon-9d0d8.firebaseio.com",
+    "project_id": "gameon-9d0d8",
+    "storage_bucket": "gameon-9d0d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359071570131:android:f44e07033eee2af4695c26",
+        "android_client_info": {
+          "package_name": "com.hinduutsavsamiti"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcyXYcwk_n18VlhV29A6q84HzjRLTykbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

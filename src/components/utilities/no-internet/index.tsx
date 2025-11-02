@@ -4,7 +4,7 @@ import styles from './styles';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import BaseContainer from '../base-container';
 import { NoInternetSvgComponent } from '@/assets/svg';
-import LocalizeText from '@/localization/text-localize';
+import LocalizeText from "@/utils/text-localize";
 import AppRegularText from '../app-regular-text';
 import { COLORS } from '@/theme';
 

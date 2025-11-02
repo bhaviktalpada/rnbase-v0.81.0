@@ -1,65 +1,20 @@
 import React from "react";
-import Svg, { Path, SvgProps, Circle } from "react-native-svg";
+import { SvgXml } from "react-native-svg";
 
-type IconProps = SvgProps & {
-  width?: number;
-  height?: number;
-  fill?: string;
-};
+const xml = `
+  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="13" cy="13" r="12.5" fill="white" stroke="#E0E0E0"/>
+<path d="M16 13.4971C16 13.693 15.925 13.8889 15.7826 14.0378L11.2615 18.7708C10.9691 19.0764 10.5042 19.0764 10.2193 18.7708C9.9269 18.473 9.9269 17.9872 10.2193 17.6816L14.2231 13.4971L10.2193 9.31256C9.9344 9.01478 9.9344 8.5211 10.2193 8.22333C10.5042 7.92556 10.9766 7.92556 11.2615 8.22333L15.7826 12.9485C15.925 13.0974 16 13.2933 16 13.4892V13.4971Z" fill="#999999"/>
+</svg>
+`;
 
 const SvgNavigateArrow: React.FC<IconProps> = ({
-  width={width}
-      height={height}
+  width = 26,
+  height = 26,
   fill = "#ffffff",
   ...props
 }) => {
-  return (
-    <Svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-
-<defs>
-
-<style>.cls-1{fill:#9af43b;}.cls-1,.cls-2,.cls-4,.cls-5{stroke:#54596e;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}.cls-2{fill:#999;}.cls-3,.cls-6{fill:#54596e;}.cls-3{opacity:0.2;}.cls-4{fill:#ffffff;}.cls-5{fill:none;}</style>
-
-</defs>
-
-<title>grave</title>
-
-<G id="grave">
-
-<Path class="cls-1" d="M15,37a7,7,0,0,0-7,7,6.53,6.53,0,0,0,.08,1H8a7,7,0,1,0,7,7,6.53,6.53,0,0,0-.08-1H15a7,7,0,0,0,0-14Z"/>
-
-<Path class="cls-1" d="M49,37a7,7,0,0,1,7,7,6.53,6.53,0,0,1-.08,1H56a7,7,0,1,1-7,7,6.53,6.53,0,0,1,.08-1H49a7,7,0,0,1,0-14Z"/>
-
-<Path class="cls-2" d="M11.3,51H51.7A4.3,4.3,0,0,1,56,55.3V59a0,0,0,0,1,0,0H7a0,0,0,0,1,0,0V55.3A4.3,4.3,0,0,1,11.3,51Z"/>
-
-<Path class="cls-3" d="M51.7,51h-6A4.31,4.31,0,0,1,50,55.3V59h6V55.3A4.31,4.31,0,0,0,51.7,51Z"/>
-
-<Path class="cls-4" d="M43,14c0-.33,0-.66,0-1a11,11,0,0,0-22,0c0,.34,0,.67.05,1H16.22A2.23,2.23,0,0,0,14,16.22V51H50V16.22A2.23,2.23,0,0,0,47.78,14Z"/>
-
-<Path class="cls-3" d="M47.78,14H43c0-.33,0-.66,0-1A11,11,0,0,0,32,2a10.83,10.83,0,0,0-2.5.3A11,11,0,0,1,38,13c0,.34,0,.67,0,1h4.83A2.23,2.23,0,0,1,45,16.22V51h5V16.22A2.23,2.23,0,0,0,47.78,14Z"/>
-
-<line class="cls-5" x1="20" y1="40" x2="20" y2="45"/>
-
-<line class="cls-5" x1="34" y1="40" x2="34" y2="45"/>
-
-<rect class="cls-5" x="20" y="35" width="6" height="5"/>
-
-<rect class="cls-5" x="34" y="35" width="6" height="5"/>
-
-<line class="cls-5" x1="26" y1="45" x2="24" y2="40"/>
-
-<line class="cls-5" x1="30" y1="35" x2="30" y2="45"/>
-
-<Circle class="cls-6" cx="22.5" cy="19.5" r="1.5"/>
-
-<Circle class="cls-6" cx="37.5" cy="19.5" r="1.5"/>
-
-<Path class="cls-5" d="M26,28v-.5A3.5,3.5,0,0,1,29.5,24h0A3.5,3.5,0,0,1,33,27.5V28"/>
-
-</G>
-
-</Svg>
-  );
+  return <SvgXml xml={xml} width={width} height={height} fill={fill} />;
 };
 
 export { SvgNavigateArrow };
