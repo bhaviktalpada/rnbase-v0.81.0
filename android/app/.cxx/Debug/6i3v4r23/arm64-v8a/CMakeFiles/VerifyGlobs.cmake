@@ -137,25 +137,75 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/CMakeFiles/cmake.verify_globs")
 endif()
 
-# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/*.cpp")
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB
-  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/RNMmkvSpec-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/RNGoogleMobileAdsSpec-generated.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
   file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/CMakeFiles/cmake.verify_globs")
 endif()
 
-# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/react/renderer/components/RNMmkvSpec/*.cpp")
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/*.cpp")
 set(OLD_GLOB
-  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/react/renderer/components/RNMmkvSpec/ComponentDescriptors.cpp"
-  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/react/renderer/components/RNMmkvSpec/EventEmitters.cpp"
-  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/react/renderer/components/RNMmkvSpec/Props.cpp"
-  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/react/renderer/components/RNMmkvSpec/RNMmkvSpecJSI-generated.cpp"
-  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/react/renderer/components/RNMmkvSpec/ShadowNodes.cpp"
-  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/react/renderer/components/RNMmkvSpec/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/RNGoogleMobileAdsSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/RNCImageCropPickerSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/RNCImageCropPickerSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/RNImagePickerSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/RNImagePickerSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/States.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -299,6 +349,8 @@ set(OLD_GLOB
   "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSBottomTabsState.cpp"
   "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSFullWindowOverlayShadowNode.cpp"
   "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSSafeAreaViewShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSSafeAreaViewState.cpp"
   "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.cpp"
   "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderConfigShadowNode.cpp"
   "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderConfigState.cpp"

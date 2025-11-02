@@ -44,29 +44,14 @@ CMAKE_ANDROID_NDK:UNINITIALIZED=/Users/Mackbook/Library/Android/sdk/ndk/27.1.122
 //Archiver
 CMAKE_AR:FILEPATH=/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar
 
-//ASM compiler
-CMAKE_ASM_COMPILER:FILEPATH=/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang
-
-//LLVM archiver
-CMAKE_ASM_COMPILER_AR:FILEPATH=/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar
-
-//Generate index for LLVM archive
-CMAKE_ASM_COMPILER_RANLIB:FILEPATH=/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib
-
 //Flags used by the compiler during all build types.
 CMAKE_ASM_FLAGS:STRING=
 
 //Flags used by the compiler during debug builds.
 CMAKE_ASM_FLAGS_DEBUG:STRING=
 
-//Flags used by the ASM compiler during MINSIZEREL builds.
-CMAKE_ASM_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
-
 //Flags used by the compiler during release builds.
 CMAKE_ASM_FLAGS_RELEASE:STRING=
-
-//Flags used by the ASM compiler during RELWITHDEBINFO builds.
-CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
@@ -279,15 +264,6 @@ REACT_ANDROID_DIR:UNINITIALIZED=/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_mo
 ReactAndroid_DIR:PATH=/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/ReactAndroid
 
 //Value Computed by CMake
-ReactNativeMmkv_BINARY_DIR:STATIC=/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/RNMmkvSpec_cxxmodule_autolinked_build
-
-//Value Computed by CMake
-ReactNativeMmkv_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-ReactNativeMmkv_SOURCE_DIR:STATIC=/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android
-
-//Value Computed by CMake
 appmodules_BINARY_DIR:STATIC=/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a
 
 //Value Computed by CMake
@@ -296,29 +272,8 @@ appmodules_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 appmodules_SOURCE_DIR:STATIC=/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup
 
-//Value Computed by CMake
-core_BINARY_DIR:STATIC=/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/RNMmkvSpec_cxxmodule_autolinked_build/core
-
-//Value Computed by CMake
-core_IS_TOP_LEVEL:STATIC=OFF
-
-//Dependencies for the target
-core_LIB_DEPENDS:STATIC=general;/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libz.so;
-
-//Value Computed by CMake
-core_SOURCE_DIR:STATIC=/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/MMKV/Core
-
 //The directory containing a CMake configuration file for fbjni.
 fbjni_DIR:PATH=/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/fbjni
-
-//Path to a library.
-log-lib:FILEPATH=/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so
-
-//Dependencies for the target
-react-native-mmkv_LIB_DEPENDS:STATIC=general;core;general;/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so;general;android;
-
-//Path to a library.
-zlib:FILEPATH=/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libz.so
 
 
 ########################
@@ -329,23 +284,6 @@ zlib:FILEPATH=/Users/Mackbook/Library/Android/sdk/ndk/27.1.12297006/toolchains/l
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_COMPILER
-CMAKE_ASM_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_COMPILER_AR
-CMAKE_ASM_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_COMPILER_RANLIB
-CMAKE_ASM_COMPILER_RANLIB-ADVANCED:INTERNAL=1
-CMAKE_ASM_COMPILER_WORKS:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS
-CMAKE_ASM_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_DEBUG
-CMAKE_ASM_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_MINSIZEREL
-CMAKE_ASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_RELEASE
-CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_RELWITHDEBINFO
-CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a
 //Major version of cmake used to create the current loaded cache

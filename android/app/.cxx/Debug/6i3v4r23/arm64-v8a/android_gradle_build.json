@@ -5,9 +5,9 @@
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
-    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/MMKV/Core/CMakeLists.txt",
-    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/CMakeLists.txt",
-    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
@@ -39,36 +39,23 @@
       "artifactName": "appmodules",
       "output": "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libappmodules.so",
       "runtimeFiles": [
-        "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact-native-mmkv.so",
         "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact_codegen_safeareacontext.so",
         "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact_codegen_rnscreens.so",
         "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact_codegen_rnsvg.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a18451f415b73841e30da63b3d9805af/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
-      ]
-    },
-    "core::@1b9a7d546b295b7d0867": {
-      "toolchain": "toolchain",
-      "abi": "arm64-v8a",
-      "artifactName": "core",
-      "output": "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/arm64-v8a/RNMmkvSpec_cxxmodule_autolinked_build/core/libcore.a"
-    },
-    "react-native-mmkv::@4ae6a1e65d3e68ba0197": {
-      "toolchain": "toolchain",
-      "abi": "arm64-v8a",
-      "artifactName": "react-native-mmkv",
-      "output": "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact-native-mmkv.so",
-      "runtimeFiles": [
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a18451f415b73841e30da63b3d9805af/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/d0d29904d635f14eddd3711e23e81988/transformed/jetified-fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
       ]
     },
     "react_codegen_RNBootSplashSpec::@05d5bd8b08339ce1ebaa": {
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
       "artifactName": "react_codegen_RNBootSplashSpec"
+    },
+    "react_codegen_RNCImageCropPickerSpec::@702b02f8d2524609d414": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_RNCImageCropPickerSpec"
     },
     "react_codegen_RNCWebViewSpec::@eb48929f9f7453740a6c": {
       "toolchain": "toolchain",
@@ -80,10 +67,15 @@
       "abi": "arm64-v8a",
       "artifactName": "react_codegen_RNDatePickerSpecs"
     },
-    "react_codegen_RNMmkvSpec::@7541eabbae598da31a69": {
+    "react_codegen_RNGoogleMobileAdsSpec::@c00c605517d10bc7886c": {
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
-      "artifactName": "react_codegen_RNMmkvSpec"
+      "artifactName": "react_codegen_RNGoogleMobileAdsSpec"
+    },
+    "react_codegen_RNImagePickerSpec::@f66ee9a2efecfb28bee4": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_RNImagePickerSpec"
     },
     "react_codegen_RNPermissionsSpec::@7ad697819b753921c957": {
       "toolchain": "toolchain",
@@ -121,9 +113,9 @@
       "artifactName": "react_codegen_rnscreens",
       "output": "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact_codegen_rnscreens.so",
       "runtimeFiles": [
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a18451f415b73841e30da63b3d9805af/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/d0d29904d635f14eddd3711e23e81988/transformed/jetified-fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
       ]
     },
     "react_codegen_rnsvg::@4f40eb209d0c0b4a3b65": {
@@ -132,9 +124,9 @@
       "artifactName": "react_codegen_rnsvg",
       "output": "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact_codegen_rnsvg.so",
       "runtimeFiles": [
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a18451f415b73841e30da63b3d9805af/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/d0d29904d635f14eddd3711e23e81988/transformed/jetified-fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
       ]
     },
     "react_codegen_rnworklets::@68f58d84d4754f193387": {
@@ -148,9 +140,9 @@
       "artifactName": "react_codegen_safeareacontext",
       "output": "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a/libreact_codegen_safeareacontext.so",
       "runtimeFiles": [
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a18451f415b73841e30da63b3d9805af/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
-        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/eb6d09c91acf843499bdca80e0a66fd6/transformed/react-android-0.81.0-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/d0d29904d635f14eddd3711e23e81988/transformed/jetified-fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/Mackbook/.gradle/caches/8.14.3/transforms/a6d79a3f2992afd5331fc801f11bdcf5/transformed/jetified-react-android-0.81.5-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
       ]
     }
   },
