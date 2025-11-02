@@ -1,1 +1,0 @@
-/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/intermediates/cxx/Debug/6i3v4r23/obj/arm64-v8a
