@@ -1,5 +1,5 @@
 import { Keyboard, View } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import auth from "@react-native-firebase/auth";
 import { CommonActions } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -36,6 +36,7 @@ import {
   getUserDetail,
   saveUserDetail,
 } from "@/utils/firebase-db-helper";
+import { setAppUserData, setIsUserLogIn, setMasterData, setUserInfo, setUserRole } from "@/redux/reducers/userInfo-reducer";
 
 
 export default function LoginScreen({ navigation }) {
@@ -135,7 +136,8 @@ export default function LoginScreen({ navigation }) {
   function continueAsGuest() {
     Keyboard.dismiss();
     setLoadingGuest(true);
-    dispatch({ type: types.USER_ROLE, data: USER_ROLE_NAME.Guest });
+    dispatch(setUserRole(USER_ROLE_NAME.Guest));
+    dispatch(setIsUserLogIn(true));
     getPostCategory(onResponse);
   }
 
@@ -151,9 +153,9 @@ export default function LoginScreen({ navigation }) {
 
     updateUserInfo(userInfo);
 
-    dispatch({ type: types.USER_ROLE, data: userInfo.role });
-    dispatch({ type: types.LOGIN_USER, data: userInfo });
-    dispatch({ type: types.IS_USER_LOGIN, data: true });
+    dispatch(setUserInfo(userInfo));
+    dispatch(setIsUserLogIn(true));
+    dispatch(setUserRole(userInfo.role));
     loginUserRole = userInfo.role;
     getPostCategory(onResponse);
   }
@@ -182,7 +184,7 @@ export default function LoginScreen({ navigation }) {
       const object = res[key];
       allCategory.push(object);
     });
-    dispatch({ type: types.APP_MASTER_DATA, data: allCategory });
+    dispatch(setMasterData(allCategory));
     getAllUsers(onAllUserResponse);
 
     setLoadingGuest(false);
@@ -190,7 +192,7 @@ export default function LoginScreen({ navigation }) {
 
   function onAllUserResponse(res) {
     //console.log('res', res);
-    dispatch({ type: types.APP_USERS_DATA, data: res });
+    dispatch(setAppUserData(res));
     console.log("loginUserRole", loginUserRole);
     if (loginUserRole === USER_ROLE_NAME.Owner) {
       replaceNavigationStack(SCREEN.AdminDashboardScreen);

@@ -5,7 +5,6 @@ import { BaseContainer } from "@/components/utilities";
 
 import { COLORS } from "@/theme";
 import MainHeader from "@/components/utilities/header";
-import { BackIconSvg } from "@/assets/svg";
 import LocalizeText from "@/utils/text-localize";
 import styles from "./styles";
 
@@ -24,7 +23,7 @@ export default function WebContentController({ navigation, route }) {
           route.params.option ? route.params.option : 'Web Container'
         }
         navigation={navigation}
-        LeftSVGIcon={BackIconSvg}
+        showLeftIcon
       />
       <View style={{flex: 1, backgroundColor: COLORS.transparent}}>
         {uri ? (

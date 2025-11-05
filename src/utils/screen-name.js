@@ -5,7 +5,7 @@ export const SCREEN = {
   CustomerDashboardScreen: "customer-dashboard-screen",
   UserProfileScreen: "user-profile-screen",
   CustomerOnboardingScreen: "customer-onboard-screen",
-  ChangeLanguage: "change-language-screen",
+  ChangeLanguageScreen: "change-language-screen",
   SettingsController: "settings-screen",
   WebContentController: "web-content-controller-screen",
   ChartViewScreen: "chart-view-screen",
@@ -25,5 +25,4 @@ export const SCREEN = {
   bottomTab: 'bottom-tab',
   drawerTab: 'drawer-tab',
   homeScreen: 'home-screen',
-  
 };

@@ -1,8 +1,6 @@
 import React from "react";
 import { View, StyleSheet, StatusBar, Image } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MainHeader from "../header";
-import { BackIconSvg } from "@/assets/svg";
 import { COLORS } from "@/theme";
 import { IMAGES } from "@/utils/images-path";
 

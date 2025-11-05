@@ -10,15 +10,13 @@ import {
   onTokenRefresh,
   AuthorizationStatus,
 } from "@react-native-firebase/messaging";
-import PushNotification from 'react-native-push-notification';
-import PushNotificationIOS from '@react-native-community/push-notification-ios';
+import PushNotification from "react-native-push-notification";
+import PushNotificationIOS from "@react-native-community/push-notification-ios";
 import NetInfo from "@react-native-community/netinfo";
 import DeviceInfo from "react-native-device-info";
 import { useDispatch, useSelector } from "react-redux";
 import VersionCheck from "react-native-version-check";
 import { globalNavigationRef } from "@/utils/helper-navigation";
-//import { firebaseConfig } from "@/utils//firebase-config";
-import LanguageHelper from "@/utils/LanguageHelper";
 import { SCREEN } from "@/utils/screen-name";
 import { show_log } from "@/utils/logger";
 import {
@@ -27,18 +25,21 @@ import {
   toggleNetState,
 } from "../redux/reducers/netInfo-reducer";
 import { setColorScheme } from "../redux/reducers/color-theme-reducer";
-import LoginScreen from "@/screens/auth/login";
-import LandingScreen from "@/screens/auth/landing";
 import WebContentController from "@/screens/auth/webview-controller";
+import AdminDashboardScreen from "@/screens/admin/owner-dashboard";
+import CustomerOnboardingScreen from "@/screens/customer-onboard";
 import ForceUpdateScreen from "@/screens/force-update-screen";
 import HomeScreen from "@/screens/home-screen/home-screen";
-import CustomerOnboardingScreen from "@/screens/customer-onboard";
-import { NoInternet } from "@/components/utilities";
-import LocalizeText from "@/utils/text-localize";
-import { APP } from "@/utils/constants";
-import { FCMToken } from "@/redux/actions/app-actions";
-import AdminDashboardScreen from "@/screens/admin/owner-dashboard";
+import SettingsController from "@/screens/settings-screen";
+import ChangeLanguageScreen from "@/screens/change-language";
+import UserProfileScreen from "@/screens/auth/profile";
+import LandingScreen from "@/screens/auth/landing";
+import SignupScreen from "@/screens/auth/signup";
+import LoginScreen from "@/screens/auth/login";
 
+import { FCMToken } from "@/redux/actions/app-actions";
+import { NoInternet } from "@/components/utilities";
+import { APP } from "@/utils/constants";
 
 const Route = () => {
   const Stack = createNativeStackNavigator();
@@ -68,10 +69,7 @@ const Route = () => {
     });
     // Device information
     deviceInformation();
-    // Language Set
-    LanguageHelper.getCurrentLanguage().then((lang) => {
-      LocalizeText.setLanguage(lang);
-    });
+
     // Appearance (color scheme) listener
     const colorSchemeListener = Appearance.addChangeListener(
       ({ colorScheme }) => {
@@ -108,7 +106,7 @@ const Route = () => {
         dispatch(FCMToken());
         //Alert.alert("FCM Token", token);
       } else {
-        dispatch(FCMToken('para,'));
+        dispatch(FCMToken("para,"));
       }
 
       // Listen for token refresh
@@ -195,26 +193,26 @@ const Route = () => {
     try {
       PushNotification.configure({
         onRegister: function (value) {
-          console.log('onRegister:', value);
+          console.log("onRegister:", value);
         },
         onNotification: function (value) {
-          console.log('onNotification****', JSON.stringify(value));
+          console.log("onNotification****", JSON.stringify(value));
 
-          navigateFromRoute(userRole, value, '', dispatch);
+          navigateFromRoute(userRole, value, "", dispatch);
           if (Platform.OS === PLATFORM_MOBILE.IOS) {
             value.finish(PushNotificationIOS.FetchResult.NoData);
           }
         },
         onAction: function (value) {
-          console.log('onAction:', value);
+          console.log("onAction:", value);
         },
         onRegistrationError: function (value) {
           if (APP.SHOW_LOG) {
-            console.log('onRegistrationError:', value);
+            console.log("onRegistrationError:", value);
           }
         },
         onRemoteFetch: function (value) {
-          console.log('onRemoteFetch:', value);
+          console.log("onRemoteFetch:", value);
         },
         // popInitialNotification: true,
         requestPermissions: true,
@@ -225,7 +223,7 @@ const Route = () => {
         },
       });
     } catch (e) {
-      console.log('configureTPushNotification: Error', e);
+      console.log("configureTPushNotification: Error", e);
     }
   };
 
@@ -258,18 +256,22 @@ const Route = () => {
           <Stack.Screen name={SCREEN.LandingScreen} component={LandingScreen} />
           <Stack.Screen name={SCREEN.homeScreen} component={HomeScreen} />
           <Stack.Screen name={SCREEN.LoginScreen} component={LoginScreen} />
+          <Stack.Screen name={SCREEN.SignupScreen} component={SignupScreen} />
+          <Stack.Screen name={SCREEN.UserProfileScreen} component={UserProfileScreen} />
+          <Stack.Screen name={SCREEN.SettingsController} component={SettingsController} />
+          <Stack.Screen name={SCREEN.ChangeLanguageScreen} component={ChangeLanguageScreen} />
           <Stack.Screen
             name={SCREEN.WebContentController}
             component={WebContentController}
           />
           <Stack.Screen
-          name={SCREEN.CustomerOnboardingScreen}
-          component={CustomerOnboardingScreen}
-        />
+            name={SCREEN.CustomerOnboardingScreen}
+            component={CustomerOnboardingScreen}
+          />
           <Stack.Screen
-          name={SCREEN.AdminDashboardScreen}
-          component={AdminDashboardScreen}
-        />
+            name={SCREEN.AdminDashboardScreen}
+            component={AdminDashboardScreen}
+          />
         </Stack.Navigator>
       )}
     </NavigationContainer>

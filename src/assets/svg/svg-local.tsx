@@ -1,19 +1,20 @@
 import React from "react";
 import { LocalSvg } from "react-native-svg/css";
 
-const SvgBack: React.FC<IconProps> = ({
-  width = 26,
-  height = 26,
+const SvgLocal: React.FC<IconProps> = ({
+  src,
+  width = 24,
+  height = 24,
   fill = "#111111",
   ...props
 }) => {
   return (
     <LocalSvg
-      asset={require("./raw/ic-back.svg")}
+      asset={src}
       width={width}
       height={height}
     />
   );
 };
 
-export { SvgBack };
+export { SvgLocal };

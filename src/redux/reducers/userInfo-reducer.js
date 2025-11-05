@@ -12,6 +12,7 @@ const userInfoReducer = createSlice({
     userRole: null, // User Role
     loginToken: null, // Login Token
     masterData: null, // Master data
+    appUsersData: null,
   },
   reducers: {
     // User Info
@@ -50,6 +51,9 @@ const userInfoReducer = createSlice({
     setMasterData(state, action) {
       state.masterData = action.payload;
     },
+    setAppUserData: (state, action) => {
+      state.appUsersData = action.payload;
+    },
   },
 });
 
@@ -65,6 +69,7 @@ export const {
   setUserRole,
   setLoginToken,
   setMasterData,
+  setAppUserData
 } = actions;
 
 export default reducer;

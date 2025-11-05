@@ -1,12 +1,10 @@
 // src/theme/typography.ts
 export const FONTS = {
-  Bold: 'Outfit-Bold',
-  Light: 'Outfit-Light',
-  Medium: 'Outfit-Medium',
-  Regular: 'Outfit-Regular',
-  SemiBold: 'Outfit-SemiBold',
-  Thin: 'Outfit-Thin',
-  ExtraBold: 'Outfit-ExtraBold',
+  Bold: 'Comfortaa-Bold',
+  Light: 'Comfortaa-Light',
+  Medium: 'Comfortaa-Medium',
+  Regular: 'Comfortaa-Regular',
+  SemiBold: 'Comfortaa-SemiBold'
 };
 
 export const FONT_SIZE = {

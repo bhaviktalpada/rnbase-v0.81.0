@@ -33,7 +33,7 @@ import { SvgStock } from "@/assets/svg/svg-stock";
 export default function AdminDashboardScreen({ navigation }) {
   const { screenTitle, alerts, general } = LocalizeText;
   const dispatch = useDispatch();
-  const userInfo = useSelector((v) => v.userInfoReducer.loggedInUser);
+  const userInfo = useSelector((v) => v.userInfoReducer.userInfo);
   const userRole = useSelector((v) => v.userInfoReducer.userRole);
   const [artistStatistics, setArtistStatistics] = useState([]);
 

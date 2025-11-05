@@ -387,7 +387,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray_Superlite,
   },
   doneButton: {
-    color: COLORS.primary,
+    
     fontSize: normalizeText(15),
     paddingHorizontal: scale(15),
   },

@@ -17,6 +17,8 @@ import Route from "@/navigation";
 import BootSplash from "react-native-bootsplash";
 import { STATUSBAR_TYPE } from "@/utils/app-enum";
 import { COLORS } from "@/theme";
+import LanguageHelper from "@/utils/LanguageHelper";
+import LocalizeText from "@/utils/text-localize";
 
 function App(): React.JSX.Element {
   const barStyle = "light-content";
@@ -29,6 +31,11 @@ function App(): React.JSX.Element {
     init().finally(async () => {
       await BootSplash.hide({ fade: true });
       console.log("BootSplash has been hidden successfully");
+
+      console.log("***Start Language initializing***");
+      let lang = await LanguageHelper.getCurrentLanguage();
+      console.log("*** App Language", lang);
+      LocalizeText.setLanguage(lang);
     });
   }, []);
 

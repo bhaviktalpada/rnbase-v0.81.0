@@ -332,6 +332,7 @@ const LocalizeText = new LocalizedStrings({
       ownerDashboard: "Owner Dashboard",
       languages: "ભાષાઓ",
       settings: "સેટિંગ્સ",
+      addMonthlyFund: "માસિક દાન ઉમેરો",
       selectDonors: "દાતા ને પસંદ કરો",
     },
     messageKey: {

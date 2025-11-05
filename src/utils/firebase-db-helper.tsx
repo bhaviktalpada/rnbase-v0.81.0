@@ -28,6 +28,7 @@ const getUserDetail = (userId, onUserDetailCallBack) => {
 };
 
 const saveUserDetail = (info, userId) => {
+  
   console.log('info****', info);
   database()
     .ref(`/users/${userId}`)

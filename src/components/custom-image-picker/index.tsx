@@ -56,7 +56,6 @@ export default function CustomImagePicker({
   const [cameraAlert, setCameraAlert] = useState(false);
 
   const inset = useSafeAreaInsets();
-  //const loggedInUserInfo = useSelector(state => state.appReducer.loggedInUser) || {};
 
   const {alerts} = LocalizeText;
 

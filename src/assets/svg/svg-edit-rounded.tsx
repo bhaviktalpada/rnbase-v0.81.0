@@ -37,4 +37,4 @@ const SvgEditRounded: React.FC<IconProps> = ({
   );
 };
 
-export { SvgFodder };
+export { SvgEditRounded };

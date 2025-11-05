@@ -4,12 +4,12 @@ import { CommonActions } from "@react-navigation/routers";
 
 //Hooks
 import { useDispatch, useSelector } from "react-redux";
-import * as types from '@redux/actions/action-list'
+import * as types from "@redux/actions/action-list";
 import { asyncStorageRemove, STORE_KEY } from "@/utils";
 
 // Firebase / API
 import { getAllUsers, getPostCategory } from "@/utils/firebase-db-helper";
-import {getRequest, TRAIL_URLS} from "@/api-services";
+import { getRequest, TRAIL_URLS } from "@/api-services";
 
 //Component
 import { BaseContainer } from "@/components/utilities";
@@ -19,6 +19,9 @@ import { USER_ROLE_NAME } from "@/utils/app-enum";
 import { SCREEN } from "@/utils/screen-name";
 import { APP } from "@/utils/constants";
 import { COLORS } from "@/theme";
+import LocalizeText from "@/utils/text-localize";
+import LanguageHelper from "@/utils/LanguageHelper";
+import { setAppUserData, setIsUserLogIn, setMasterData } from "@/redux/reducers/userInfo-reducer";
 
 export default function LandingScreen({ navigation, route }) {
   const dispatch = useDispatch();
@@ -27,9 +30,11 @@ export default function LandingScreen({ navigation, route }) {
   const [loading, setLoading] = useState(true);
   const netConnected = useSelector((v) => v.netInfoReducer.isConnected);
   const isUserLoginDone = useSelector((v) => v?.userInfoReducer?.isUserLogin);
-  const userRole = useSelector((v) => v?.appReducer?.userRole);
+  const userRole = useSelector((v) => v?.userInfoReducer?.userRole);
 
   useEffect(() => {
+    console.log("isUserLoginDone:::",isUserLoginDone);
+    
     checkLandingFlow();
   }, []);
 
@@ -40,7 +45,7 @@ export default function LandingScreen({ navigation, route }) {
       storageCleanUp();
       navigateTo(SCREEN.LoginScreen);
     } else {
-        console.log('isUserLoginDone', isUserLoginDone);
+      console.log("isUserLoginDone", isUserLoginDone);
       console.log("userRole", userRole);
       if (isUserLoginDone) {
         getMasterData();
@@ -56,26 +61,27 @@ export default function LandingScreen({ navigation, route }) {
   }
 
   function onResponse(res) {
-    console.log('*** On Master Data Res:', res);
+    console.log("*** On Master Data Res:", res);
     const allKeys = Object.keys(res);
     const allCategory = [];
     allKeys.forEach((key, index) => {
       const object = res[key];
       allCategory.push(object);
     });
-    dispatch({ type: types.APP_MASTER_DATA, data: allCategory });
+
+    dispatch(setMasterData(allCategory));
   }
 
   function onAllUserResponse(res) {
-    console.log('*** On All User res:', res);
-    dispatch({ type: types.APP_USERS_DATA, data: res });
+    console.log("*** On All User res:", res);
+
+    dispatch(setAppUserData(res));
 
     dbConnectionStart();
     if (userRole === USER_ROLE_NAME.Owner) {
       navigateTo(SCREEN.AdminDashboardScreen);
     } else {
-      navigateTo(SCREEN.AdminDashboardScreen);
-      //navigateTo(SCREEN.CustomerOnboardingScreen);
+      navigateTo(SCREEN.CustomerOnboardingScreen);
     }
   }
 
@@ -104,7 +110,7 @@ export default function LandingScreen({ navigation, route }) {
 
   async function cleanUp() {
     dispatch({ type: types.CLEAR_DATA });
-    dispatch({ type: types.IS_USER_LOGIN, data: false });
+    dispatch(setIsUserLogIn(false));
   }
 
   async function storageCleanUp() {

@@ -14,9 +14,13 @@ import { COLORS, FONT_SIZE } from "@/theme";
 import { APP } from "@/utils/constants";
 import AppMediumText from "../app-medium-text";
 import FastImage from "react-native-fast-image";
-import { IMAGES } from "@/utils/images-path";
+import { IMAGES, SVGFile } from "@/utils/images-path";
+import ImgSVG from "@/utils/image-svg";
+import { SvgBack } from "@/assets/svg/svg-back";
+import { SvgLocal } from "@/assets/svg/svg-local";
 
 type MainHeaderProps = {
+  showLeftIcon?: boolean;
   LeftSVGIcon?: any;
   iconColor?: string;
   leftTitle?: string;
@@ -67,7 +71,8 @@ type Style = {
 };
 
 const MainHeader: React.FC<MainHeaderProps> = ({
-  LeftSVGIcon,
+  showLeftIcon = false,
+  LeftSVGIcon = SVGFile.svgBack,
   iconColor = COLORS.black,
   leftTitle,
   firstRightIcon,
@@ -79,7 +84,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({
   showBottomBorder = false,
   profileSource,
   iconSize,
-  leftIconSize = 16,
+  leftIconSize = 20,
   filterIconSize = 14,
   totalNotifications,
   navigation,
@@ -108,7 +113,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({
         <View style={styles.mainSubContainer(inset)}>
           <View style={{ flex: 1, flexDirection: "row" }}>
             <View style={styles.innerViewLeft}>
-              {LeftSVGIcon && (
+              {showLeftIcon && (
                 <TouchableOpacity
                   onPress={() => {
                     backCallBack();
@@ -116,8 +121,8 @@ const MainHeader: React.FC<MainHeaderProps> = ({
                   }}
                   style={styles.leftIconContainer}
                 >
-                  <LeftSVGIcon
-                    fill={COLORS.black}
+                  <ImgSVG
+                    src={LeftSVGIcon}
                     height={leftIconSize}
                     width={leftIconSize}
                   />

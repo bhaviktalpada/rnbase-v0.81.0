@@ -32,6 +32,7 @@ const CheckBox = ({ children, style, source, onPress }) => {
 
         <AppMediumText
           onPress={onPressTandC}
+          color={COLORS.primary}
           extraTextStyle={styles.mediumText}
         >
           {`${labels.terms} `}
@@ -42,6 +43,7 @@ const CheckBox = ({ children, style, source, onPress }) => {
         <AppMediumText
           onPress={onPressPrivacyPolicy}
           extraTextStyle={styles.mediumText}
+          color={COLORS.primary}
         >{` ${settingsOptions.privacyPolicy}`}</AppMediumText>
       </AppRegularText>
     </View>
