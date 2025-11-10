@@ -23,7 +23,7 @@ import { COLORS } from "@/theme";
 import { screenWidth } from "@/utils/dimensions";
 import { ShowToast } from "@/components/toast";
 import { toastTypes } from "@/utils/app-enum";
-import { IMAGES } from "@/utils/images-path";
+import { IMAGES, SVGFile } from "@/utils/images-path";
 import { SvgAgiyaras } from "@/assets/svg/svg-agiyaras";
 import { SvgCemetery } from "@/assets/svg/svg-cemetery";
 import { SvgCows } from "@/assets/svg/svg-cows";
@@ -53,34 +53,34 @@ export default function AdminDashboardScreen({ navigation }) {
   function prepareData() {
     let statsData = [];
     let bannerMangeOption1 = {
-      icon: SvgStock,
+      icon: SVGFile.svgBanner,
       bgColor: COLORS.colorGreen,
       title: "",
       subTitle: general.manageBanner,
     };
 
     let monthlyManageOption3 = {
-      icon: SvgMonthly,
+      icon: SVGFile.svgMonthly,
       bgColor: COLORS.colorGreen,
       title: "",
       subTitle: general.manageMonthly,
     };
     let monthlyManageOption4 = {
-      icon: SvgCows,
+      icon: SVGFile.svgCows,
       bgColor: COLORS.colorGreen,
       title: "",
       subTitle: general.manageGausala,
     };
     let optionData4 = {
       id: general.op3SmasanExpanses,
-      icon: SvgCemetery,
+      icon: SVGFile.svgCemetery,
       bgColor: COLORS.colorGreen,
       title: "",
       subTitle: general.op3SmasanExpanses,
     };
     let optionData5 = {
       id: general.op5AgiyarasExpanses,
-      icon: SvgAgiyaras,
+      icon: SVGFile.svgAgiyaras,
       bgColor: COLORS.colorGreen,
       title: "",
       subTitle: general.op5AgiyarasExpanses,

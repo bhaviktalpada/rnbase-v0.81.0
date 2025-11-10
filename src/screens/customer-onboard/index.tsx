@@ -5,27 +5,23 @@ import Swiper from "react-native-swiper";
 import mobileAds, {
   BannerAd,
   BannerAdSize,
-  AdEventType,
 } from "react-native-google-mobile-ads";
-import { bannerAdUnitId } from "@/utils/constants";
-import LocalizeText from "@/utils/text-localize";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
-import { IMAGES } from "@/utils/images-path";
-import styles from "./styles";
-import { SCREEN } from "@/utils/screen-name";
-import { addGoogleAnalytics } from "@/utils/helper-function";
-import { COLORS } from "@/theme";
-import { ShowToast } from "@/components/toast";
-import { toastTypes } from "@/utils/app-enum";
-import { screenWidth } from "@/utils/dimensions";
-import { getAllBanners } from "@/utils/firebase-db-helper";
-import { SvgCemetery } from "@/assets/svg/svg-cemetery";
-import { SvgCows } from "@/assets/svg/svg-cows";
-import { SvgAgiyaras } from "@/assets/svg/svg-agiyaras";
-import { SvgMonthly } from "@/assets/svg/svg-monthly";
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import DashboardStatistics from "@/components/dashboard-statistics";
+import { addGoogleAnalytics } from "@/utils/helper-function";
+import { getAllBanners } from "@/utils/firebase-db-helper";
+import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@/components/utilities/header";
+import { IMAGES, SVGFile } from "@/utils/images-path";
+import { bannerAdUnitId } from "@/utils/constants";
+import LocalizeText from "@/utils/text-localize";
+import { screenWidth } from "@/utils/dimensions";
+import { ShowToast } from "@/components/toast";
+import { toastTypes } from "@/utils/app-enum";
+import { SCREEN } from "@/utils/screen-name";
+
+import { COLORS } from "@/theme";
+import styles from "./styles";
 
 // import {
 //   ImgCemeteryManage,
@@ -63,28 +59,28 @@ export default function CustomerOnboardingScreen({ navigation }) {
     let statsData = [];
     let optionData1 = {
       id: general.op1MonthlyExpanse,
-      icon: SvgMonthly,
+      icon: SVGFile.svgMonthly,
       bgColor: COLORS.colorBlue,
       title: general.op1MonthlyExpanse,
       subTitle: "",
     };
     let optionData2 = {
       id: screenTitle.gausalaExpanses,
-      icon: SvgCows,
+      icon: SVGFile.svgCows,
       bgColor: COLORS.colorBlue,
       title: general.op2GausalaExpanses,
       subTitle: "",
     };
     let optionData3 = {
       id: general.op3SmasanExpanses,
-      icon: SvgCemetery,
+      icon: SVGFile.svgCemetery,//SvgCemetery
       bgColor: COLORS.colorBlue,
       title: general.op3SmasanExpanses,
       subTitle: "",
     };
     let optionData4 = {
       id: general.op5AgiyarasExpanses,
-      icon: SvgAgiyaras,
+      icon: SVGFile.svgAgiyaras,
       bgColor: COLORS.colorBlue,
       title: general.op5AgiyarasExpanses,
       subTitle: "",

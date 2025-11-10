@@ -101,7 +101,7 @@ export default function LandingScreen({ navigation, route }) {
           }
         })
         .catch((e) => {
-          console.log("*** Error", e);
+          console.log("*** Start connection Error", e);
         });
     } else {
       console.log("*** INTERNET NOT AVAILABLE");

@@ -1,5 +1,5 @@
 import { Platform, StyleSheet } from "react-native";
-import { scale } from "react-native-size-matters";
+import { moderateScale, scale } from "react-native-size-matters";
 import { normalizeText } from "./text-normalize";
 import { COLORS } from "../theme/colors";
 import { FONTS } from "../theme/typography";
@@ -72,3 +72,19 @@ export default styles = StyleSheet.create({
     shadowRadius: 3.84,
   },
 });
+
+
+function getModerateScaleValue(value = 0) {
+  return moderateScale(value);
+}
+
+const SPACING = {
+  SPACE_5: getModerateScaleValue(5),
+  SPACE_10: getModerateScaleValue(10),
+  SPACE_15: getModerateScaleValue(15), // Using this as app vertical app
+  SPACE_20: getModerateScaleValue(20),
+  customSpace: (v = 0) => getModerateScaleValue(v),
+  SPACE_5_PCT: "5%", // Using this as app horizontal app
+};
+
+export { SPACING, getModerateScaleValue };

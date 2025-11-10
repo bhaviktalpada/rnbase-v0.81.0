@@ -19,11 +19,10 @@ import { COLORS } from "../../theme/colors";
 import { IMAGES } from "../../utils/images-path";
 import SVGImage from "../../utils/image-svg";
 import { isStringNull } from "../../utils/helper-function";
-import AppRegularText from "./../utilities/app-regular-text";
-import AppMediumText from "./../utilities/app-medium-text";
+import AppRegularText from "../utilities/app-regular-text";
+import AppMediumText from "../utilities/app-medium-text";
 import LocalizeText from "../../utils/text-localize";
 import SvgClose from "../../assets/svg/svg-close";
-import SvgPasswordHide from "../../assets/svg/svg-password-hide";
 
 
 const CustomTextField = ({
@@ -39,7 +38,6 @@ const CustomTextField = ({
   maxLength,
   showEye,
   eyeIcon,
-  eyeIconType = "Entypo",
   hideClearButton,
   onPressEye,
   onChange,
@@ -72,9 +70,10 @@ const CustomTextField = ({
   const [isEditing, setEditing] = useState(false);
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
   const [, setRefresh] = useState();
+  let enterText = LocalizeText.placeholder.enter
 
   const inputAccessoryViewID = "uniqueID";
-  var textPlaceholder = placeholder ? placeholder : "Enter " + label;
+  var textPlaceholder = placeholder ? placeholder : `${enterText} `  + label;
 
   is_editing(isEditing);
   // const keyboardDidShowListener = Keyboard.addListener(
@@ -252,9 +251,9 @@ const CustomTextField = ({
             >
               {eyeIcon ? (
                 <SVGImage
-                icon={eyeIcon}
-                height={24}
-                width={24}
+                src={eyeIcon}
+                height={20}
+                width={20}
                 fill={COLORS.gray_Dark}
                 />
               ) : (
@@ -279,7 +278,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     borderColor: isEditing ? COLORS.primary : COLORS.textFieldBorderColor,
     borderWidth: 1,
-    borderBottomWidth: 1,
+    // borderBottomWidth: 1,
     borderRadius: APP.TEXT_FIELD_BORDER_RADIUS,
     backgroundColor: COLORS.white,
     flexDirection: "row",
@@ -318,7 +317,7 @@ const styles = StyleSheet.create({
     marginLeft: scale(10),
     marginRight:
       Platform.OS == "android" && !hideClearButton ? scale(30) : scale(10),
-    fontFamily: FONTS.AppRegularFont,
+    fontFamily: FONTS.Regular,
     fontSize: APP.DEFAULT_INPUT_FONT_SIZE,
     color: COLORS.textColor,
     marginTop: Platform.OS == "ios" ? 0 : 0,
@@ -331,7 +330,6 @@ const styles = StyleSheet.create({
   },
   eyeIconStyle: {
     tintColor: "gray",
-    width: 25,
     width: 25,
     resizeMode: "contain",
   },

@@ -34,7 +34,8 @@ export default function DashboardStatistics({
         <View style={styles.subView}>
           <View style={styles.leftImgView(iconSize, iconBGColor)}>
             <ImgSVG
-              icon={icon}
+              //icon={icon}
+              src={icon}
               height={iconSize * 0.8}
               width={iconSize * 0.8}
               fill={iconColor}

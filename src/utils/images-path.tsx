@@ -23,6 +23,23 @@ export const SVGFile = {
   svgSettingCL: require(`${svg_path}ic-setting-language.svg`),
   svgSettingPrivacy: require(`${svg_path}ic-setting-privacy.svg`),
   svgSettingProfile: require(`${svg_path}ic-setting-profile.svg`),
+  svgPlus: require(`${svg_path}ic-plus.svg`),
+  svgSearch: require(`${svg_path}ic-search.svg`),
+  svgAddList: require(`${svg_path}ic-add.svg`),
+  svgDonation: require(`${svg_path}ic-donation.svg`),
+  svgFodder: require(`${svg_path}ic-fodder.svg`),
+  svgMonthly: require(`${svg_path}ic-monthly.svg`),
+  svgCows: require(`${svg_path}ic-cows.svg`),
+  svgCemetery: require(`${svg_path}ic-cemetery.svg`),
+  svgAgiyaras: require(`${svg_path}ic-agiyaras.svg`),
+  svgStock: require(`${svg_path}ic-stock.svg`),
+  svgStatistics: require(`${svg_path}ic-staticsts.svg`),
+  svgDownArrow: require(`${svg_path}ic_donw_arrow.svg`),
+  svgUser: require(`${svg_path}ic-user.svg`),
+  svgBanner: require(`${svg_path}ic-banner.svg`),
+  svgCost: require(`${svg_path}ic-cost.svg`),
+  svgFillCheckBox: require(`${svg_path}ic_fill_checkbox.svg`),
+  svgEmptyCheckBox: require(`${svg_path}ic_unfill_checkbox.svg`),
 }
 
 export const LOTTIE = {

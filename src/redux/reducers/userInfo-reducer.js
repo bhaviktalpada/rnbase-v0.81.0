@@ -54,6 +54,15 @@ const userInfoReducer = createSlice({
     setAppUserData: (state, action) => {
       state.appUsersData = action.payload;
     },
+    setUserLogout: (state, action) => {
+      state.appUsersData = null;
+      state.loginToken = null;
+      state.userRole = null;
+      state.notificationCount = null;
+      state.isUserLogin = false;
+      state.userToken = null;
+      state.userInfo = null;
+    },
   },
 });
 
@@ -69,7 +78,8 @@ export const {
   setUserRole,
   setLoginToken,
   setMasterData,
-  setAppUserData
+  setAppUserData,
+  setUserLogout
 } = actions;
 
 export default reducer;

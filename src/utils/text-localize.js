@@ -170,6 +170,9 @@ const LocalizeText = new LocalizedStrings({
       keyForeGroundState: "FOREGROUND_STATE",
       keyBackGroundOrKilledState: "BACK_GROUND_OR_KILLED_STATE",
     },
+    noData: {
+      ndNoDataFound: "No dat found"
+    }
   },
   gu: {
     auth: {
@@ -339,6 +342,9 @@ const LocalizeText = new LocalizedStrings({
       keyForeGroundState: "FOREGROUND_STATE",
       keyBackGroundOrKilledState: "BACK_GROUND_OR_KILLED_STATE",
     },
+    noData: {
+      ndNoDataFound: "કોઈ ડેટા મળ્યો નથી"
+    }
   },
 });
 

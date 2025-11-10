@@ -131,7 +131,6 @@ const MainHeader: React.FC<MainHeaderProps> = ({
               {!isSearchActive && (
                 <AppMediumText
                   size={FONT_SIZE[20]}
-                  fontFamily={"Medium"}
                   color={COLORS.black}
                 >
                   {leftTitle}

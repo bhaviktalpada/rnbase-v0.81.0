@@ -7,7 +7,16 @@ import {
   check,
   openSettings,
   request,
+  Permission,
+  Rationale,
 } from 'react-native-permissions';
+import {
+  ImagePickerResponse,
+  PhotoQuality,
+  Asset,
+  CameraOptions,
+  ImageLibraryOptions,
+} from 'react-native-image-picker';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import ImagePicker from 'react-native-image-crop-picker';
@@ -36,6 +45,13 @@ import {FONTS} from '../../theme/typography';
 import {COLORS} from '../../theme/colors';
 import ShowToast from '../toast/app-toast';
 import CustomModel from '../custom-model';
+
+// Add interfaces for props
+interface CustomImagePickerProps {
+  asVisible: boolean;
+  onVisibleChange: (visible: boolean) => void;
+  onFilePathSelect: (files: ImagePickerResponse[]) => void;
+}
 
 export default function CustomImagePicker({
   asVisible,

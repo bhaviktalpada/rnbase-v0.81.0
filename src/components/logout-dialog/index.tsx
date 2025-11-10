@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import {  StyleSheet, View } from "react-native";
 import { scale } from "react-native-size-matters";
 import Modal from "react-native-modal";
 import { APP } from "@/utils/constants";
@@ -35,12 +35,7 @@ export default function LogoutCustomModel({
         onBackButtonPress={handleBackButtonPress}
       >
         <View style={styles.mainContainer}>
-          <ImageBackground
-            source={IMAGES.app_bg_container}
-            resizeMode="cover"
-            style={{ flex: 1 }}
-            imageStyle={{ borderRadius: APP.TEXT_FIELD_BORDER_RADIUS }}
-          >
+          
             <View style={styles.subView}>
               {iconName && (
                 <View style={styles.imgIcon}>
@@ -89,7 +84,7 @@ export default function LogoutCustomModel({
                 />
               </View>
             </View>
-          </ImageBackground>
+          
         </View>
       </Modal>
     )
@@ -102,6 +97,7 @@ const styles = StyleSheet.create({
     width: screenWidth - 60,
     alignSelf: "center",
     borderRadius: APP.TEXT_FIELD_BORDER_RADIUS,
+    backgroundColor: COLORS.white
   },
   subView: {
     flex: 1,

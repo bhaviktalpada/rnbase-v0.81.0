@@ -29,4 +29,4 @@ const SvgAdd: React.FC<IconProps> = ({
   );
 };
 
-export { SvgFodder };
+export { SvgAdd };

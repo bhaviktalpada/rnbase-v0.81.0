@@ -16,7 +16,7 @@ import { updateUserDetail } from "@/utils/firebase-db-helper";
 import { ShowToast } from "@/components/toast";
 import { toastTypes } from "@/utils/app-enum";
 import * as types from "@redux/actions/action-list";
-import { setIsUserLogIn } from "@/redux/reducers/userInfo-reducer";
+import { setIsUserLogIn, setUserLogout } from "@/redux/reducers/userInfo-reducer";
 import { addGoogleAnalytics } from "@/utils/helper-function";
 import { SVGFile } from "@/utils/images-path";
 import ImgSVG from "@/utils/image-svg";
@@ -144,7 +144,8 @@ export default function SettingsController({ navigation, route }) {
     setIsLogoutVisible(false);
     dispatch(setIsUserLogIn(true));
 
-    dispatch({ type: types.CLEAR_DATA });
+    dispatch(setUserLogout(true));
+    
     navigation.navigate(SCREEN.LoginScreen);
   };
 

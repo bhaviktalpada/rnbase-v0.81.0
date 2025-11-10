@@ -13,7 +13,6 @@ import { screenWidth } from "../../utils/dimensions";
 import AppCustomButton from "../app-custom-button";
 import { COLORS } from "../../theme/colors";
 import ImgSVG from "../../utils/image-svg";
-// import VectorIcon, { VICON_TYPE } from "../custom-vector-icon";
 
 export default function CustomModel({
   isVisible,

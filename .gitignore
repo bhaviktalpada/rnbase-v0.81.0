@@ -70,6 +70,7 @@ Podfile.lock
 yarn.lock
 
 # Android
+/android/app/.cxx/
 .gradle
 local.properties
 *.iml

@@ -40,6 +40,16 @@ import LoginScreen from "@/screens/auth/login";
 import { FCMToken } from "@/redux/actions/app-actions";
 import { NoInternet } from "@/components/utilities";
 import { APP } from "@/utils/constants";
+import DonationListController from "@/screens/donation-lists";
+import GenericFundManageScreen from "@/screens/generic-fund-manage";
+import GenericStatisticsScreen from "@/screens/generic-statistics-screen";
+import AddBannerView from "@/screens/admin/add-banner";
+import AddMonthlyController from "@/screens/admin/add-monthly-fund";
+import SelectUserController from "@/screens/admin/select-user-screen";
+import AddGeneralExpensesVC from "@/screens/admin/add-general-expenses";
+import ChartScreen from "@/screens/chart";
+import { STORE_KEY, storeJsonValueAsync } from "@/utils";
+import { addGoogleAnalytics } from "@/utils/helper-function";
 
 const Route = () => {
   const Stack = createNativeStackNavigator();
@@ -185,8 +195,12 @@ const Route = () => {
       appVersion,
       deviceModel,
     };
+    console.log("======== Device Info =======");
+    console.log("Info", deviceInfo);
 
     dispatch(setDeviceInfo(deviceInfo));
+    await storeJsonValueAsync(STORE_KEY.DEVICE_INFO, deviceInfo);
+    await addGoogleAnalytics("ga_device_Info", { info: deviceInfo });
   };
 
   const configureTPushNotification = () => {
@@ -257,9 +271,45 @@ const Route = () => {
           <Stack.Screen name={SCREEN.homeScreen} component={HomeScreen} />
           <Stack.Screen name={SCREEN.LoginScreen} component={LoginScreen} />
           <Stack.Screen name={SCREEN.SignupScreen} component={SignupScreen} />
-          <Stack.Screen name={SCREEN.UserProfileScreen} component={UserProfileScreen} />
-          <Stack.Screen name={SCREEN.SettingsController} component={SettingsController} />
-          <Stack.Screen name={SCREEN.ChangeLanguageScreen} component={ChangeLanguageScreen} />
+          <Stack.Screen
+            name={SCREEN.UserProfileScreen}
+            component={UserProfileScreen}
+          />
+          <Stack.Screen
+            name={SCREEN.SettingsController}
+            component={SettingsController}
+          />
+          <Stack.Screen
+            name={SCREEN.ChangeLanguageScreen}
+            component={ChangeLanguageScreen}
+          />
+          <Stack.Screen
+            name={SCREEN.DonationListViewScreen}
+            component={DonationListController}
+          />
+          <Stack.Screen
+            name={SCREEN.GenericFundManageScreen}
+            component={GenericFundManageScreen}
+          />
+          <Stack.Screen
+            name={SCREEN.GenericStatisticsScreen}
+            component={GenericStatisticsScreen}
+          />
+          <Stack.Screen name={SCREEN.AddBannerView} component={AddBannerView} />
+          <Stack.Screen
+            name={SCREEN.AddMonthlyDonationScreen}
+            component={AddMonthlyController}
+          />
+          <Stack.Screen
+            name={SCREEN.SelectUserController}
+            component={SelectUserController}
+          />
+          <Stack.Screen
+            name={SCREEN.AddGeneralExpensesVC}
+            component={AddGeneralExpensesVC}
+          />
+          <Stack.Screen name={SCREEN.ChartViewScreen} component={ChartScreen} />
+
           <Stack.Screen
             name={SCREEN.WebContentController}
             component={WebContentController}
