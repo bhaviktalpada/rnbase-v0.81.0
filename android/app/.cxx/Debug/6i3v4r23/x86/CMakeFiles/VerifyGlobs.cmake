@@ -5,6 +5,471 @@ cmake_policy(SET CMP0009 NEW)
 # input_SRC at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native/ReactAndroid/cmake-utils/ReactNative-application.cmake:55 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/generated/autolinking/src/main/jni/*.cpp")
 set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/rnasyncstorage-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/rnasyncstorageJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/lottiereactnative-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/react/renderer/components/lottiereactnative/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/react/renderer/components/lottiereactnative/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/react/renderer/components/lottiereactnative/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/react/renderer/components/lottiereactnative/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/react/renderer/components/lottiereactnative/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/react/renderer/components/lottiereactnative/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/lottie-react-native/android/build/generated/source/codegen/jni/react/renderer/components/lottiereactnative/lottiereactnativeJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/RNBootSplashSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/RNBootSplashSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/RNDatePickerSpecs-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNDatePickerSpecs/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNDatePickerSpecs/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNDatePickerSpecs/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNDatePickerSpecs/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNDatePickerSpecs/RNDatePickerSpecsJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNDatePickerSpecs/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNDatePickerSpecs/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/rngesturehandler_codegen-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/rngesturehandler_codegenJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/RNGoogleMobileAdsSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/RNGoogleMobileAdsSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/RNCImageCropPickerSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/RNCImageCropPickerSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNCImageCropPickerSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/RNImagePickerSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/RNImagePickerSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/react/renderer/components/RNImagePickerSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/pagerview-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/react/renderer/components/pagerview/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/react/renderer/components/pagerview/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/react/renderer/components/pagerview/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/react/renderer/components/pagerview/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/react/renderer/components/pagerview/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/react/renderer/components/pagerview/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-pager-view/android/build/generated/source/codegen/jni/react/renderer/components/pagerview/pagerviewJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/RNPermissionsSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/react/renderer/components/RNPermissionsSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/react/renderer/components/RNPermissionsSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/react/renderer/components/RNPermissionsSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/react/renderer/components/RNPermissionsSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/react/renderer/components/RNPermissionsSpec/RNPermissionsSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/react/renderer/components/RNPermissionsSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/react/renderer/components/RNPermissionsSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/rnreanimated-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/rnreanimatedJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CUSTOM_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt:12 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/*.cpp")
+set(OLD_GLOB
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CUSTOM_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt:12 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewState.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CODEGEN_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt:13 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/safeareacontext-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CODEGEN_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt:13 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/safeareacontextJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CUSTOM_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt:23 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/rnscreens.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CUSTOM_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt:23 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSBottomTabsShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSBottomTabsState.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSFullWindowOverlayShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSSafeAreaViewShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSSafeAreaViewState.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderConfigShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderConfigState.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderSubviewShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderSubviewState.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenState.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSSplitViewScreenShadowNode.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CUSTOM_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt:23 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/utils/*.cpp")
+set(OLD_GLOB
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# LIB_CODEGEN_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt:24 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens/rnscreensJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# rnsvg_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt:10 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/rnsvg.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# rnsvg_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt:10 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/RNSVGImageShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/RNSVGImageState.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/RNSVGLayoutableShadowNode.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/RNSVGShadowNodes.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# rnsvg_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt:11 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/*cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/rnsvgJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/RNCWebViewSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec/RNCWebViewSpecJSI-generated.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/rnworklets-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/Mackbook/Github/RN/rnbase-v0.81.0/android/app/.cxx/Debug/6i3v4r23/x86/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/*.cpp")
+set(OLD_GLOB
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/ComponentDescriptors.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/EventEmitters.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/Props.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/ShadowNodes.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/States.cpp"
+  "/Users/Mackbook/Github/RN/rnbase-v0.81.0/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/rnworkletsJSI-generated.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

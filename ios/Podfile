@@ -27,7 +27,7 @@ def node_require(script)
 node_require('react-native/scripts/react_native_pods.rb')
 node_require('react-native-permissions/scripts/setup.rb')
 
-target 'husmApp' do
+target 'husmmobi' do
   config = use_native_modules!
   
   use_frameworks! :linkage => :static

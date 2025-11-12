@@ -34,7 +34,6 @@ export default function DashboardStatistics({
         <View style={styles.subView}>
           <View style={styles.leftImgView(iconSize, iconBGColor)}>
             <ImgSVG
-              //icon={icon}
               src={icon}
               height={iconSize * 0.8}
               width={iconSize * 0.8}
@@ -70,7 +69,7 @@ export default function DashboardStatistics({
       </View>
       {rightIcon && (
         <ImgSVG
-          icon={rightIcon}
+          src={rightIcon}
           height={rightIconSize}
           width={rightIconSize}
           viewStyle={styles.selfCenterStyle}

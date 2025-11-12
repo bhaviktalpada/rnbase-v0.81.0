@@ -6,6 +6,7 @@ import AppBoldText from '../utilities/app-bold-text';
 import ImgSVG from '@/utils/image-svg';
 import { SvgBack } from '@/assets/svg/svg-back';
 import { COLORS } from '@/theme';
+import { SVGFile } from '@/utils/images-path';
 
 export const AuthHeader = ({
   title,
@@ -28,7 +29,8 @@ export const AuthHeader = ({
                 navigation.goBack();
               }}>
               <ImgSVG
-                icon={SvgBack}
+              src={SVGFile.svgBack}
+                //icon={SvgBack}
                 width={APP.BACK_ICON_SIZE}
                 height={APP.BACK_ICON_SIZE}
               />

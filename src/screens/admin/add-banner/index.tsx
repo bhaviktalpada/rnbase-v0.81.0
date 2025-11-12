@@ -1,37 +1,39 @@
-import React, {useState, useEffect} from 'react';
-import {View, ActivityIndicator, TouchableOpacity} from 'react-native';
-import {useSelector} from 'react-redux';
-import {scale} from 'react-native-size-matters';
-import FastImage from 'react-native-fast-image';
-import Swiper from 'react-native-swiper';
-import CustomImagePicker from '@/components/custom-image-picker';
-import AppCustomButton from '@/components/app-custom-button';
-import ImgSVG from '@/utils/image-svg';
-import { SvgClose } from '@/assets/svg/svg-close';
-import { APP } from '@/utils/constants';
-import AppMediumText from '@/components/utilities/app-medium-text';
-import { IMAGES, SVGFile } from '@/utils/images-path';
-import { ShowToast } from '@/components/toast';
-import { CAMERA_TYPE, toastTypes } from '@/utils/app-enum';
-import { createNewBannerRequest, firebaseDeleteBanner, getAllBanners, removeFileFromStorage, storeFilePath } from '@/utils/firebase-db-helper';
-import { BaseContainer } from '@/components/utilities';
-import MainHeader from '@/components/utilities/header';
-import { styles } from './styles';
-import { COLORS } from '@/theme';
-import LogoutCustomModel from '@/components/logout-dialog';
-import LocalizeText from '@/utils/text-localize';
-import { SvgEditRounded } from '@/assets/svg/svg-edit-rounded';
+import React, { useState, useEffect } from "react";
+import { View, ActivityIndicator, TouchableOpacity } from "react-native";
+import { useSelector } from "react-redux";
+import { scale } from "react-native-size-matters";
+import FastImage from "react-native-fast-image";
+import Swiper from "react-native-swiper";
+import CustomImagePicker from "@/components/custom-image-picker";
+import AppCustomButton from "@/components/app-custom-button";
+import ImgSVG from "@/utils/image-svg";
+import { SvgClose } from "@/assets/svg/svg-close";
+import { APP } from "@/utils/constants";
+import AppMediumText from "@/components/utilities/app-medium-text";
+import { IMAGES, SVGFile } from "@/utils/images-path";
+import { ShowToast } from "@/components/toast";
+import { CAMERA_TYPE, toastTypes } from "@/utils/app-enum";
+import {
+  createNewBannerRequest,
+  firebaseDeleteBanner,
+  getAllBanners,
+  removeFileFromStorage,
+  storeFilePath,
+} from "@/utils/firebase-db-helper";
+import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@/components/utilities/header";
+import { styles } from "./styles";
+import { COLORS } from "@/theme";
+import LogoutCustomModel from "@/components/logout-dialog";
+import LocalizeText from "@/utils/text-localize";
 
 
-// import {ICON_NAME} from '../../../components/custom-vector-icon';
-
-
-export default function AddBannerView({navigation, route}) {
-  const {screenTitle, alerts, auth, general} = LocalizeText;
-  const netConnected = useSelector(v => v.netInfoReducer.isConnected);
+export default function AddBannerView({ navigation, route }) {
+  const { screenTitle, alerts, auth, general } = LocalizeText;
+  const netConnected = useSelector((v) => v.netInfoReducer.isConnected);
   const [imagePickerShow, setImagePickerShow] = useState(false);
   const [previousFile, setPreviousFile] = useState(null);
-  const [imageUri, setImageUri] = useState('');
+  const [imageUri, setImageUri] = useState("");
   const [filePath, setFilePath] = useState(null);
   const [updating, setUpdating] = useState(false);
   const [deleteBanner, setDeleteBanner] = useState(null);
@@ -50,7 +52,7 @@ export default function AddBannerView({navigation, route}) {
   }
 
   function onResponse(banners) {
-    console.log('on all Banner', banners);
+    console.log("on all Banner", banners);
     if (banners) {
       setPhotos(banners);
     }
@@ -61,7 +63,7 @@ export default function AddBannerView({navigation, route}) {
   }
 
   function onFilePathSelect(child) {
-    console.log('**** File Select', child);
+    console.log("**** File Select", child);
     setImageUri(child.uri);
 
     if (netConnected) {
@@ -81,8 +83,8 @@ export default function AddBannerView({navigation, route}) {
   }
 
   const onFileUpload = (fullPath, downloadUrl) => {
-    console.log('**** F Path', fullPath);
-    console.log('**** downloadUrl', downloadUrl);
+    console.log("**** F Path", fullPath);
+    console.log("**** downloadUrl", downloadUrl);
     setFilePath(fullPath);
     setImageUri(downloadUrl);
     setUpdating(false);
@@ -95,8 +97,8 @@ export default function AddBannerView({navigation, route}) {
     }
   }
 
-  const onClickDelete = routeName => {
-    console.log('deleteBanner', deleteBanner.filePath);
+  const onClickDelete = (routeName) => {
+    console.log("deleteBanner", deleteBanner.filePath);
     if (deleteBanner) {
       removeFileFromStorage(deleteBanner.filePath, onFileDeleted);
       setDeleteBanner(null);
@@ -114,11 +116,11 @@ export default function AddBannerView({navigation, route}) {
   };
 
   const onFileDeleted = () => {
-    console.log('File deleted callback');
+    console.log("File deleted callback");
   };
 
   const onDeleteDbRecord = () => {
-    console.log('Firebase db banner deleted');
+    console.log("Firebase db banner deleted");
   };
 
   function onPressSubmitHandler() {
@@ -129,8 +131,8 @@ export default function AddBannerView({navigation, route}) {
         const bannerInfo = {
           bannerUrl: imageUri,
           filePath: filePath,
-          redirect: 'webView',
-          type: 'normal',
+          redirect: "webView",
+          type: "normal",
         };
         createNewBannerRequest(bannerInfo, onRecordUpdate);
         ShowToast(toastTypes.success, alerts.bannerAddedSuccess);
@@ -142,7 +144,7 @@ export default function AddBannerView({navigation, route}) {
   }
 
   function onRecordUpdate(snap) {
-    console.log('on all Banner', snap);
+    console.log("on all Banner", snap);
   }
 
   return (
@@ -159,22 +161,23 @@ export default function AddBannerView({navigation, route}) {
           <View style={styles.swiperContainer}>
             <Swiper showsButtons={false}>
               {photos?.map((item, index) => {
-                const source = {uri: item?.bannerUrl};
+                const source = { uri: item?.bannerUrl };
                 return (
                   <View key={index} style={styles.imageSwiper}>
                     <FastImage
                       defaultSource={IMAGES.ic_user_avatar}
                       key={index}
-                      style={{flex: 1}}
+                      style={{ flex: 1 }}
                       source={source}
                     />
                     <TouchableOpacity
                       onPress={() => {
                         setDeleteBanner(item);
                         setIsModalVisible(true);
-                      }}>
+                      }}
+                    >
                       <ImgSVG
-                        icon={SvgEditRounded}
+                        src={SVGFile.svgEditRounded}
                         height={20}
                         width={20}
                         viewStyle={styles.editIconStyle}
@@ -189,16 +192,17 @@ export default function AddBannerView({navigation, route}) {
         <View style={styles.chooseFileView}>
           <TouchableOpacity
             onPress={onPressEditImage}
-            style={styles.bannerContainer}>
+            style={styles.bannerContainer}
+          >
             <View>
               <FastImage
                 defaultSource={IMAGES.ic_avtar_image}
                 style={styles.imgStyle}
-                source={{uri: imageUri}}
+                source={{ uri: imageUri }}
                 resizeMode="cover"
               />
               <ImgSVG
-                icon={SvgEditRounded}
+                src={SVGFile.svgEditRounded}
                 height={16}
                 width={16}
                 viewStyle={styles.editIconStyle}
@@ -206,25 +210,27 @@ export default function AddBannerView({navigation, route}) {
             </View>
 
             {updating && (
-              <ActivityIndicator size={'small'} style={styles.imageIndicator} />
+              <ActivityIndicator size={"small"} style={styles.imageIndicator} />
             )}
           </TouchableOpacity>
           <AppMediumText
-            style={{marginLeft: 10}}
+            style={{ marginLeft: 10 }}
             sizeFont={APP.DEFAULT_TEXT_INPUT_LABEL_SIZE}
-            color={COLORS.colorGray6C}>
+            color={COLORS.colorGray6C}
+          >
             {general.chooseBanner}
           </AppMediumText>
           {filePath && (
             <TouchableOpacity
               activeOpacity={APP.ACTIVE_OPACITY}
               style={styles.deleteView}
-              onPress={onChooseFileDelete}>
-              <ImgSVG icon={SvgClose} width={13} height={13} />
+              onPress={onChooseFileDelete}
+            >
+              <ImgSVG src={SVGFile.svgClose}  width={13} height={13} />
             </TouchableOpacity>
           )}
         </View>
-        <View style={{marginHorizontal: scale(20), marginTop: scale(10)}}>
+        <View style={{ marginHorizontal: scale(20), marginTop: scale(10) }}>
           <AppCustomButton
             isLoading={updating}
             onPress={onPressSubmitHandler}

@@ -39,7 +39,7 @@ export default function LogoutCustomModel({
             <View style={styles.subView}>
               {iconName && (
                 <View style={styles.imgIcon}>
-                  <ImgSVG src={SVGFile.svgLogout} size={scale(20)} />
+                  <ImgSVG src={iconName} size={scale(20)} />
                 </View>
               )}
               <AppCustomText

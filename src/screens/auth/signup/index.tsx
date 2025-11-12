@@ -42,6 +42,7 @@ import {
   setUserInfo,
   setUserRole,
 } from "@/redux/reducers/userInfo-reducer";
+import { SVGFile } from "@/utils/images-path";
 
 // Component
 
@@ -60,6 +61,7 @@ export default function SignupScreen({ navigation }) {
   const [password, setPassword] = useState("");
   const [confPassword, setConfPassword] = useState("");
   const [isLoading, setLoading] = useState(false);
+const [isPasswordSecure, setPasswordSecure] = useState(true);
 
   const [phone, setPhone] = useState("");
   const [countryCode, setCountryCode] = useState(`+91`);
@@ -110,11 +112,13 @@ export default function SignupScreen({ navigation }) {
     console.log("userData", userData);
     var fcmToken = await asyncStorageGet(STORE_KEY.FCM_TOKEN);
     var deviceInfo = await readJsonValueAsync(STORE_KEY.DEVICE_INFO);
-    let actualPhoneNumber = userData.phoneNumber ?? "";
+    let actualPhoneNumber = phone ?? "";
+    let actualCountryCode = countryCode ?? "";
     const additionalData = res.additionalUserInfo;
     const userInfo = {
       displayName: userName,
       phoneNumber: actualPhoneNumber,
+      countryCode: actualCountryCode,
       fcmToken: fcmToken,
       email: userData.email,
       uid: userData.uid,
@@ -219,7 +223,7 @@ export default function SignupScreen({ navigation }) {
             }}
             isOptional={true}
           />
-
+ 
           <CustomTextField
             label={personalInfo.email}
             text={email}
@@ -235,10 +239,15 @@ export default function SignupScreen({ navigation }) {
             onChange={(v) => setPassword(v)}
             autoCapitalize="none"
             hideClearButton={true}
-            secureTextEntry={true}
+            eyeIcon={isPasswordSecure ? SVGFile.svgPasswordHide : SVGFile.svgPasswordShow}
             showEye={true}
+            secureTextEntry={isPasswordSecure}
             autoCorrect={true}
-            textContentType={"password"}
+            onPressEye={() => {
+              console.log("Tap Eye", isPasswordSecure);
+              setPasswordSecure(!isPasswordSecure);
+            }}
+            textContentType={isPasswordSecure ? "password" : null}
           />
 
           <CustomTextField

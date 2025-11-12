@@ -31,9 +31,8 @@ import { COLORS } from "@/theme";
 import globalStyles from "@/utils/global-styles";
 import { styles } from "./styles";
 import { textInputFilterFunction, VALIDATE_FILTER_TYPE } from "@/utils";
-import { IMAGES } from "@/utils/images-path";
+import { IMAGES, SVGFile } from "@/utils/images-path";
 import ImgSVG from "@/utils/image-svg";
-import { SvgEditRounded } from "@/assets/svg/svg-edit-rounded";
 import { useKeyboard } from "@/utils/helper-keyboard";
 import CustomImagePicker from "@/components/custom-image-picker";
 import { setMasterData, setUserInfo } from "@/redux/reducers/userInfo-reducer";
@@ -122,9 +121,11 @@ export default function UserProfileScreen({ navigation, route }) {
       ShowToast(toastTypes.error, alerts.phoneNumberRequired);
     } else {
       setUpdating(true);
+      
       const userInfo = {
         displayName: displayNm ?? "",
         phoneNumber: phone ?? "",
+        countryCode: countryCode ?? "",
         email: profileInfo.email,
         uid: profileInfo.uid,
         emailVerified: profileInfo.emailVerified,
@@ -199,7 +200,7 @@ export default function UserProfileScreen({ navigation, route }) {
                 />
               )}
               <ImgSVG
-                icon={SvgEditRounded}
+                src={SVGFile.svgEditRounded}
                 height={16}
                 width={16}
                 viewStyle={styles.editIconStyle}
@@ -249,6 +250,7 @@ export default function UserProfileScreen({ navigation, route }) {
           <CustomTextField
             label={personalInfo.email}
             text={email}
+            hideClearButton={true}
             onChange={(v) => setEmail(v)}
             isOptional={true}
             keyboardType={"email-address"}

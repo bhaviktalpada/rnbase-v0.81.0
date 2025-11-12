@@ -37,6 +37,7 @@ import {
   saveUserDetail,
 } from "@/utils/firebase-db-helper";
 import { setAppUserData, setIsUserLogIn, setMasterData, setUserInfo, setUserRole } from "@/redux/reducers/userInfo-reducer";
+import { SVGFile } from "@/utils/images-path";
 
 
 export default function LoginScreen({ navigation }) {
@@ -230,6 +231,7 @@ export default function LoginScreen({ navigation }) {
             onChange={(v) => setPassword(v)}
             autoCapitalize="none"
             hideClearButton={true}
+            eyeIcon={isPasswordSecure ? SVGFile.svgPasswordHide : SVGFile.svgPasswordShow}
             secureTextEntry={isPasswordSecure}
             showEye={true}
             autoCorrect={true}

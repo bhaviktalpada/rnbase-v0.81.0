@@ -16,7 +16,7 @@ import { APP } from "../../utils/constants";
 import { normalizeText } from "../../utils/text-normalize";
 import { FONTS } from "../../theme/typography";
 import { COLORS } from "../../theme/colors";
-import { IMAGES } from "../../utils/images-path";
+import { IMAGES, SVGFile } from "../../utils/images-path";
 import SVGImage from "../../utils/image-svg";
 import { isStringNull } from "../../utils/helper-function";
 import AppRegularText from "../utilities/app-regular-text";
@@ -65,7 +65,7 @@ const CustomTextField = ({
   is_editing = () => {},
 }) => {
   const refInput = React.useRef();
-  const [isSecure, setIsSecure] = useState(secureTextEntry);
+  //const [isSecure, setIsSecure] = useState(secureTextEntry);
   const [tempDividerViewStyle, setDividerViewStyle] = useState(dividerStyle);
   const [isEditing, setEditing] = useState(false);
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
@@ -179,7 +179,7 @@ const CustomTextField = ({
           autoCapitalize={autoCapitalize}
           value={text}
           keyboardType={keyboardType}
-          secureTextEntry={isSecure}
+          secureTextEntry={secureTextEntry}
           placeholder={showInlinePlaceholder ? textPlaceholder : ""}
           placeholderTextColor={COLORS.textPlaceholderColor}
           clearButtonMode={hideClearButton ? null : "always"}
@@ -234,9 +234,10 @@ const CustomTextField = ({
             >
               <View style={styles.clearBtnImageContainer}>
                 <SVGImage
-                icon={SvgClose}
-                height={10}
-                width={10}
+                viewStyle={{padding: 3}}
+                src={SVGFile.svgClose}
+                height={8}
+                width={8}
                 fill={COLORS.white}
                 />
               </View>
@@ -259,7 +260,7 @@ const CustomTextField = ({
               ) : (
                 <Image
                   style={styles.eyeIconStyle}
-                  source={isSecure ? IMAGES.eyeShow : IMAGES.eyeHide}
+                  //source={isSecure ? IMAGES.eyeShow : IMAGES.eyeHide}
                 />
               )}
             </TouchableOpacity>

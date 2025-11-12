@@ -40,6 +40,12 @@ export const SVGFile = {
   svgCost: require(`${svg_path}ic-cost.svg`),
   svgFillCheckBox: require(`${svg_path}ic_fill_checkbox.svg`),
   svgEmptyCheckBox: require(`${svg_path}ic_unfill_checkbox.svg`),
+  svgClose: require(`${svg_path}ic_close.svg`),
+  svgLogin: require(`${svg_path}ic-login.svg`),
+  svgUpload: require(`${svg_path}ic_upload.svg`),
+  svgEditRounded: require(`${svg_path}ic_edit_rounded.svg`),
+  svgPasswordHide: require(`${svg_path}ic_password_hide.svg`),
+  svgPasswordShow: require(`${svg_path}ic_password_show.svg`),
 }
 
 export const LOTTIE = {

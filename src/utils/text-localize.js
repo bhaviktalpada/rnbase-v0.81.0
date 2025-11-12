@@ -128,6 +128,7 @@ const LocalizeText = new LocalizedStrings({
       enterAmountDetails: "Please enter amount details.",
       entryRecAddedSuccess: 'Entries added successfully',
       entryRecUpdatedSuccess: 'Entries updated successfully',
+      userDeletedSuccess: 'User deleted successfully',
     },
     placeholder: {
       selectYear: "Select year",
@@ -299,6 +300,7 @@ const LocalizeText = new LocalizedStrings({
       enterAmountDetails: "કૃપા કરીને રકમની વિગતો દાખલ કરો.",
       entryRecAddedSuccess: 'એન્ટ્રીઓ સફળતાપૂર્વક ઉમેરી',
       entryRecUpdatedSuccess: 'એન્ટ્રીઓ સફળતાપૂર્વક અપડેટ થઈ',
+      userDeletedSuccess: 'વપરાશકર્તા સફળતાપૂર્વક કાઢી નાખ્યો',
     },
     placeholder: {
       selectYear: "વર્ષ પસંદ કરો",

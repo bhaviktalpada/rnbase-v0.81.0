@@ -5,8 +5,6 @@ import { COLORS, FONTS } from '@/theme';
 import { APP } from '@/utils/constants';
 import ImgSVG from '@/utils/image-svg';
 import AppCustomText from '../app-custom-text';
-import { SvgFillCheckbox } from '@/assets/svg/svg-fill-checkbox';
-import { SvgUnfillCheckbox } from '@/assets/svg/svg-dashboard';
 import { SVGFile } from '@/utils/images-path';
 
 export default function CheckListbox({

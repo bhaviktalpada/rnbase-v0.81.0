@@ -16,7 +16,10 @@ import { updateUserDetail } from "@/utils/firebase-db-helper";
 import { ShowToast } from "@/components/toast";
 import { toastTypes } from "@/utils/app-enum";
 import * as types from "@redux/actions/action-list";
-import { setIsUserLogIn, setUserLogout } from "@/redux/reducers/userInfo-reducer";
+import {
+  setIsUserLogIn,
+  setUserLogout,
+} from "@/redux/reducers/userInfo-reducer";
 import { addGoogleAnalytics } from "@/utils/helper-function";
 import { SVGFile } from "@/utils/images-path";
 import ImgSVG from "@/utils/image-svg";
@@ -37,6 +40,8 @@ export default function SettingsController({ navigation, route }) {
   const [isDeleteVisible, setIsDeleteVisible] = useState(false);
 
   useEffect(() => {
+    console.log("userInfo", userInfo);
+
     if (userInfo) {
       setSettingsOption([
         {
@@ -75,7 +80,7 @@ export default function SettingsController({ navigation, route }) {
           id: 6,
           icon: SVGFile.svgSettingPrivacy,
         },
-        { label: auth.signIn, id: 9, icon: SVGFile.svgLogout },
+        { label: auth.signIn, id: 9, icon: SVGFile.svgLogin },
       ]);
     }
   }, []);
@@ -129,11 +134,7 @@ export default function SettingsController({ navigation, route }) {
       style={[styles.option(item)]}
     >
       <View style={styles.sideImageContainer(item)}>
-        <ImgSVG
-          src={item.icon}
-          size={scale(24)}
-          color={COLORS.white}
-        /> 
+        <ImgSVG src={item.icon} size={scale(24)} color={COLORS.white} />
       </View>
 
       <Text style={[styles.optionText(item)]}>{item.label}</Text>
@@ -143,19 +144,18 @@ export default function SettingsController({ navigation, route }) {
   const onClickLogout = () => {
     setIsLogoutVisible(false);
     dispatch(setIsUserLogIn(true));
-
     dispatch(setUserLogout(true));
-    
+
     navigation.navigate(SCREEN.LoginScreen);
   };
 
   const onDeleteUserAccount = async () => {
     if (netConnected) {
-      console.log("Deleted User:", profileInfo.uid);
+      console.log("Deleted User:", userInfo.uid);
       const info = {
         isDeleted: true, // or any other field you want to update
       };
-      updateUserDetail(profileInfo.uid, info, (status, snap) => {
+      updateUserDetail(userInfo.uid, info, (status, snap) => {
         console.log("Update status:", status);
         console.log("Updated snapshot:", snap);
 
@@ -176,10 +176,13 @@ export default function SettingsController({ navigation, route }) {
         console.log("User deleted successfully");
 
         setIsDeleteVisible(false);
-        dispatch(setIsUserLogIn(false));
-        dispatch({ type: types.CLEAR_DATA });
+
+        dispatch(setIsUserLogIn(true));
+        dispatch(setUserLogout(true));
+
         navigation.navigate(SCREEN.LoginScreen);
 
+        ShowToast(toastTypes.success, alerts.userDeletedSuccess);
         addGoogleAnalytics("ga_delete_action", {});
       } catch (error) {
         console.error("Failed to delete user:", error);
@@ -220,7 +223,7 @@ export default function SettingsController({ navigation, route }) {
         isVisible={isLogoutVisible}
         handleBackDropPress={() => setIsLogoutVisible(false)}
         handleBackButtonPress={() => setIsLogoutVisible(false)}
-        iconName={SVGFile.svgLogout}
+        iconName={SVGFile.svgLogin}
         title={general.logout}
         subTitle={general.confirmLogout}
         firstButtonTitle={general.logout}
@@ -234,7 +237,7 @@ export default function SettingsController({ navigation, route }) {
         isVisible={isDeleteVisible}
         handleBackDropPress={() => setIsDeleteVisible(false)}
         handleBackButtonPress={() => setIsDeleteVisible(false)}
-        iconName={SVGFile.svgLogout}
+        iconName={SVGFile.svgLogin}
         title={general.confirm}
         subTitle={general.confirmDelete}
         firstButtonTitle={general.delete}

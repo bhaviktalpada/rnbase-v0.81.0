@@ -49,7 +49,8 @@ export default function CustomModel({
                     height={20}
                     width={20}
                     fill={COLORS.colorRed}
-                    icon={iconName}
+                    src={iconName}
+                    //icon={iconName}
                   />
                 </View>
               )}
