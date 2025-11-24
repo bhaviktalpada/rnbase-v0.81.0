@@ -10,26 +10,25 @@ import DeviceInfo from "react-native-device-info";
 import { scale } from "react-native-size-matters";
 import VersionCheck from "react-native-version-check";
 
-import { styles } from "./styles";
-import { IMAGES } from "@/utils/images-path";
-
+// Components
 import LogoContainer from "@/components/logo-component/logo-component";
 import AppRegularText from "@/components/utilities/app-regular-text";
 import AppCustomButton from "@/components/app-custom-button";
-import AppScrollView from "@/components/app-scrollview";
 import WhiteCard from "@/components/white-card/white-card";
 import { BaseContainer } from "@/components/utilities";
+import TitleContent from "@components/title-subtitle";
+import AppScrollView from "@/components/app-scrollview";
+// Utils
 import LocalizeText from "@utils/text-localize"
+import { IMAGES } from "@/utils/images-path";
+import {APP} from '@utils/constants';
 import { COLORS } from "@/theme";
-import {APP} from '../../utils/constants';
-import TitleContent from "../../components/title-subtitle";
-
+import { styles } from "./styles";
 
 const ForceUpdateScreen = () => {
-  const { button, messages, general } = LocalizeText;
+  const { button, general } = LocalizeText;
   
   const [latestVersion, setLatestVersion] = useState(0);
-  // const androidUrl = `market://details?id=${VersionCheck.getPackageName()}`;
   const androidUrl = `market://details?id=com.hinduutsavsamiti`;
   const iosUrl = "https://apps.apple.com/us/app/husm/id6740768429";
 

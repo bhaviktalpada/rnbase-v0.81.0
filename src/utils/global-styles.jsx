@@ -1,8 +1,8 @@
 import { Platform, StyleSheet } from "react-native";
 import { moderateScale, scale } from "react-native-size-matters";
 import { normalizeText } from "./text-normalize";
-import { COLORS } from "../theme/colors";
-import { FONTS } from "../theme/typography";
+import { COLORS } from "@theme/colors";
+import { FONTS } from "@theme/typography";
 
 const modalHeight = 320;
 

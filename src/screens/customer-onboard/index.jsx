@@ -6,30 +6,23 @@ import mobileAds, {
   BannerAd,
   BannerAdSize,
 } from "react-native-google-mobile-ads";
+// Components
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import DashboardStatistics from "@/components/dashboard-statistics";
-import { addGoogleAnalytics } from "@/utils/helper-function";
-import { getAllBanners } from "@/utils/firebase-db-helper";
 import { BaseContainer } from "@/components/utilities";
 import MainHeader from "@/components/utilities/header";
+import { ShowToast } from "@/components/toast";
+// Utils
+import { addGoogleAnalytics } from "@/utils/helper-function";
+import { getAllBanners } from "@/utils/firebase-db-helper";
 import { IMAGES, SVGFile } from "@/utils/images-path";
 import { bannerAdUnitId } from "@/utils/constants";
 import LocalizeText from "@/utils/text-localize";
 import { screenWidth } from "@/utils/dimensions";
-import { ShowToast } from "@/components/toast";
 import { toastTypes } from "@/utils/app-enum";
 import { SCREEN } from "@/utils/screen-name";
-
 import { COLORS } from "@/theme";
 import styles from "./styles";
-
-// import {
-//   ImgCemeteryManage,
-//   ImgAGiyaras,
-//   ImgCowsManage,
-//   ImgMonthlyManage,
-// } from "../../utils/svg-img-path";
-
 
 export default function CustomerOnboardingScreen({ navigation }) {
   const { screenTitle, general, alerts } = LocalizeText;
@@ -92,7 +85,7 @@ export default function CustomerOnboardingScreen({ navigation }) {
     statsData.push(optionData4);
     setArtistStatistics(statsData);
 
-    addGoogleAnalytics("ga_customer_dashboard", { info: statsData });
+    addGoogleAnalytics("husm_customer_dashboard", { info: statsData });
   }
 
   function onResponse(banners) {
@@ -118,7 +111,7 @@ export default function CustomerOnboardingScreen({ navigation }) {
         iconColor={COLORS.white}
         titleFontSize={14}
         onPressHandler={() => {
-          addGoogleAnalytics("ga_home_action", { click: stats });
+          addGoogleAnalytics("husm_home_action", { click: stats });
           if (stats.title === general.op1MonthlyExpanse) {
             // Monthly Donation mange
             navigation.navigate(SCREEN.GenericFundManageScreen, { type: 1 });

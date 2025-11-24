@@ -4,15 +4,35 @@ import { scale } from "react-native-size-matters";
 import auth from "@react-native-firebase/auth";
 import { CommonActions } from "@react-navigation/native";
 import { CountryPicker } from "react-native-country-codes-picker";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 //Hooks
 import { useDispatch, useSelector } from "react-redux";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import * as types from "@redux/actions/action-list";
-import { useKeyboard } from "../../../utils/helper-keyboard";
+import {
+  setAppUserData,
+  setIsUserLogIn,
+  setMasterData,
+  setUserInfo,
+  setUserRole,
+} from "@/redux/reducers/userInfo-reducer";
+
+// Component
+import { BaseContainer } from "@/components/utilities";
+import AppScrollView from "@/components/app-scrollview";
 import AppCustomButton from "@/components/app-custom-button";
 import CustomTextField from "@/components/text-input/textfield";
+import { AuthHeader } from "@/components/auth-header";
+import { ShowToast } from "@/components/toast";
+
+//Util | Constants
+import { FIREBASE_ERROR, toastTypes, USER_ROLE_NAME } from "@/utils/app-enum";
+import { useKeyboard } from "@utils/helper-keyboard";
+import { isStringNull } from "@/utils/helper-function";
+import globalStyles from "@/utils/global-styles";
 import LocalizeText from "@/utils/text-localize";
+import { SCREEN } from "@/utils/screen-name";
+import { SVGFile } from "@/utils/images-path";
+import { COLORS } from "@/theme";
 import {
   asyncStorageGet,
   readJsonValueAsync,
@@ -21,32 +41,11 @@ import {
   VALIDATE_FILTER_TYPE,
   validateEmailString,
 } from "@/utils";
-import { BaseContainer } from "@/components/utilities";
-import AppScrollView from "@/components/app-scrollview";
 import {
   getAllUsers,
   getPostCategory,
   saveUserDetail,
 } from "@/utils/firebase-db-helper";
-import { FIREBASE_ERROR, toastTypes, USER_ROLE_NAME } from "@/utils/app-enum";
-import { ShowToast } from "@/components/toast";
-import { isStringNull } from "@/utils/helper-function";
-import { SCREEN } from "@/utils/screen-name";
-import { COLORS } from "@/theme";
-import globalStyles from "@/utils/global-styles";
-import { AuthHeader } from "@/components/auth-header";
-import {
-  setAppUserData,
-  setIsUserLogIn,
-  setMasterData,
-  setUserInfo,
-  setUserRole,
-} from "@/redux/reducers/userInfo-reducer";
-import { SVGFile } from "@/utils/images-path";
-
-// Component
-
-//Constant
 
 export default function SignupScreen({ navigation }) {
   const { alerts, placeholder, personalInfo } = LocalizeText;
@@ -61,7 +60,7 @@ export default function SignupScreen({ navigation }) {
   const [password, setPassword] = useState("");
   const [confPassword, setConfPassword] = useState("");
   const [isLoading, setLoading] = useState(false);
-const [isPasswordSecure, setPasswordSecure] = useState(true);
+  const [isPasswordSecure, setPasswordSecure] = useState(true);
 
   const [phone, setPhone] = useState("");
   const [countryCode, setCountryCode] = useState(`+91`);

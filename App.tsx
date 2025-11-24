@@ -4,7 +4,6 @@
  */
 
 import React, { useEffect } from "react";
-
 import { StatusBar, StyleSheet, View } from "react-native";
 import { Provider as StoreProvider } from "react-redux";
 import { MenuProvider } from "react-native-popup-menu";
@@ -12,13 +11,14 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistedStore, store } from "@/redux/store/store";
 import Toast from "react-native-toast-message";
-import { toastConfig } from "@/utils";
-import Route from "@/navigation";
 import BootSplash from "react-native-bootsplash";
+
 import { STATUSBAR_TYPE } from "@/utils/app-enum";
-import { COLORS } from "@/theme";
 import LanguageHelper from "@/utils/LanguageHelper";
 import LocalizeText from "@/utils/text-localize";
+import { toastConfig } from "@/utils";
+import { COLORS } from "@/theme";
+import Route from "@/navigation";
 
 function App(): React.JSX.Element {
   const barStyle = "light-content";

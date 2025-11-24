@@ -5,30 +5,24 @@ import { useDispatch, useSelector } from "react-redux";
 import mobileAds, {
   BannerAd,
   BannerAdSize,
-  AdEventType,
 } from "react-native-google-mobile-ads";
-import MainHeader from "@/components/utilities/header";
 
 //Component
+import DashboardStatistics from "@/components/dashboard-statistics";
+import MainHeader from "@/components/utilities/header";
 import { BaseContainer } from "@/components/utilities";
 import AppScrollView from "@/components/app-scrollview";
-import DashboardStatistics from "@/components/dashboard-statistics";
-import LocalizeText from "@/utils/text-localize";
 
 // Const
-import styles from "./styles";
-import { SCREEN } from "@/utils/screen-name";
+import { IMAGES, SVGFile } from "@/utils/images-path";
+import LocalizeText from "@/utils/text-localize";
 import { bannerAdUnitId } from "@/utils/constants";
-import { COLORS } from "@/theme";
 import { screenWidth } from "@/utils/dimensions";
 import { ShowToast } from "@/components/toast";
 import { toastTypes } from "@/utils/app-enum";
-import { IMAGES, SVGFile } from "@/utils/images-path";
-import { SvgAgiyaras } from "@/assets/svg/svg-agiyaras";
-import { SvgCemetery } from "@/assets/svg/svg-cemetery";
-import { SvgCows } from "@/assets/svg/svg-cows";
-import { SvgMonthly } from "@/assets/svg/svg-monthly";
-import { SvgStock } from "@/assets/svg/svg-stock";
+import { SCREEN } from "@/utils/screen-name";
+import { COLORS } from "@/theme";
+import styles from "./styles";
 
 export default function AdminDashboardScreen({ navigation }) {
   const { screenTitle, alerts, general } = LocalizeText;

@@ -4,8 +4,8 @@ import {scale} from 'react-native-size-matters';
 import { COLORS, FONTS } from '@/theme';
 import { APP } from '@/utils/constants';
 import ImgSVG from '@/utils/image-svg';
-import AppCustomText from '../app-custom-text';
 import { SVGFile } from '@/utils/images-path';
+import AppCustomText from '../app-custom-text';
 
 export default function CheckListbox({
   index,

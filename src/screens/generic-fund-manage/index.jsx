@@ -4,13 +4,16 @@ import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
 import { useSelector } from "react-redux";
 import { scale } from "react-native-size-matters";
 
-import { addGoogleAnalytics, formatToINR } from "@/utils/helper-function";
+// Components
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import DashboardStatistics from "@/components/dashboard-statistics";
-import { APP, bannerAdUnitId } from "@/utils/constants";
 import { BaseContainer } from "@/components/utilities";
 import MainHeader from "@/components/utilities/header";
 import AppScrollView from "@/components/app-scrollview";
+
+// Utils
+import { addGoogleAnalytics, formatToINR } from "@/utils/helper-function";
+import { APP, bannerAdUnitId } from "@/utils/constants";
 import { getRequest, TRAIL_URLS } from "@/api-services";
 import LanguageHelper from "@/utils/LanguageHelper";
 import { screenWidth } from "@/utils/dimensions";
@@ -20,14 +23,6 @@ import { toastTypes } from "@/utils/app-enum";
 import { SVGFile } from "@/utils/images-path";
 import { SCREEN } from "@/utils/screen-name";
 import { COLORS } from "@/theme";
-
-// import {
-//   ImgDonation,
-//   ImgSTATISTICS,
-//   ImgStock,
-//   ImgAddEntry,
-//   ImgFodders,
-// } from "../../utils/svg-img-path";
 
 export default function GenericFundManageScreen({ navigation, route }) {
   const { screenTitle, general, alerts, auth } = LocalizeText;
@@ -226,7 +221,7 @@ export default function GenericFundManageScreen({ navigation, route }) {
                       // Funds
                       if (fundType == 1) {
                         // Temple funds
-                        addGoogleAnalytics("ga_month_action", {
+                        addGoogleAnalytics("husm_month_action", {
                           click: "OpenTempleFund",
                         });
                         navigation.navigate(SCREEN.DonationListViewScreen, {
@@ -234,7 +229,7 @@ export default function GenericFundManageScreen({ navigation, route }) {
                         });
                       } else {
                         // Generic fund | Gausala and Smashan
-                        addGoogleAnalytics("ga_month_action", {
+                        addGoogleAnalytics("husm_month_action", {
                           click: "OpenGausalaFund",
                         });
 
@@ -256,7 +251,7 @@ export default function GenericFundManageScreen({ navigation, route }) {
                       }
                     } else if (idx == 1) {
                       // Expanses
-                      addGoogleAnalytics("ga_month_action", {
+                      addGoogleAnalytics("husm_month_action", {
                         click: "OpenGausalaFund",
                       });
 
@@ -282,7 +277,7 @@ export default function GenericFundManageScreen({ navigation, route }) {
                       });
                     } else if (idx == 2) {
                       // type 2 = Monthly data, 1 = Gausala fund Chart
-                      addGoogleAnalytics("ga_month_action", {
+                      addGoogleAnalytics("husm_month_action", {
                         click: "OpenChart",
                       });
                       if (fundType == 1) {

@@ -9,10 +9,10 @@ import AppScrollView from "@/components/app-scrollview";
 import DashboardStatistics from "@/components/dashboard-statistics";
 import { BaseContainer } from "@/components/utilities";
 import AppRegularText from "@/components/utilities/app-regular-text";
+import MainHeader from "@/components/utilities/header";
 import ActionSheetList from "@/components/action-sheet-list";
 import { getRequest, TRAIL_URLS } from "@/api-services";
 import { formatToINR } from "@/utils/helper-function";
-import MainHeader from "@/components/utilities/header";
 import { format_Date } from "@/utils/date-helper";
 import LocalizeText from "@/utils/text-localize";
 import { toastTypes } from "@/utils/app-enum";
@@ -101,49 +101,9 @@ export default function ChartScreen({ navigation, route }) {
     }
   }, [allSheetData, selectedYear]);
 
-  /*
-  function getSummery() {
-    if (netConnected) {
-      const sheetId = APP.SHEET_ID;
-      const sheetRange = "A25:B";
-      const sheetTab = fundType == 1 ? "Summery" : "Summery2";
-      const readType = "COLUMN";
-      let api = `${TRAIL_URLS.getSheetData}?id=${sheetId}&range=${sheetRange}&tab=${sheetTab}&readType=${readType}`;
-
-      getRequest(api)
-        .then((response) => {
-          if (APP.SHOW_LOG) {
-            console.log("Get Summery data ==>", JSON.stringify(response));
-          }
-          if (response?.success == true) {
-            const resData = response?.data || [];
-            if (resData.length != 0) {
-              let firstSubTitle = resData[0].subtitle;
-              let strCurrency = formatToINR(`${firstSubTitle}`);
-              console.log("strCurrency", strCurrency);
-              resData[0].subtitle = strCurrency;
-              setFundStatus(resData[0]);
-            } else {
-              setFundStatus(null);
-            }
-          }
-        })
-        .catch((e) => {
-          setLoading(false);
-          console.log("Error", e);
-        });
-    } else {
-      ShowToast(toastTypes.error, alerts.internetConnection);
-    }
-  }
-  */
-
   function getDashboardData() {
     if (netConnected) {
-      // const sheetId = APP.SHEET_ID;
-      // const sheetRange = "E1:F";
-      // const sheetTab = fundType == 1 ? "Statistics" : "Statistics2";
-      // const readType = "COLUMN";
+      
       let api = "";
       if (fundType == 1) {
         api = `${TRAIL_URLS.monthlyStatistics}`;
@@ -177,7 +137,6 @@ export default function ChartScreen({ navigation, route }) {
 
   function prepareSheetData() {
     const yearlyValue = [];
-    //console.log("Selected Year", selectedYear);
 
     let totalThisYearFund = 0;
     let ttFund = 0;

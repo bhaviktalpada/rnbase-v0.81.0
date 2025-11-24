@@ -1,25 +1,25 @@
+import React, { useEffect, useState } from "react";
+import { View, FlatList, Text, TouchableOpacity } from "react-native";
+const { scale } = require("react-native-size-matters");
+import { useSelector } from "react-redux";
+
+// Components
 import NodataFound from "@/components/no-data-found";
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import CustomTextField from "@/components/text-input/textfield";
 import { BaseContainer } from "@/components/utilities";
 import MainHeader from "@/components/utilities/header";
-import { IMAGES, SVGFile } from "@/utils/images-path";
-import React, { useEffect, useState } from "react";
-import { View, FlatList, Text, TouchableOpacity } from "react-native";
-const { scale } = require("react-native-size-matters");
-import { useSelector } from "react-redux";
-import styles from "./styles";
 import { ShowToast } from "@/components/toast";
+
+// Utils
+import { IMAGES, SVGFile } from "@/utils/images-path";
 import { toastTypes } from "@/utils/app-enum";
 import { getRequest, TRAIL_URLS } from "@/api-services";
-import { APP } from "@/utils/constants";
 import LocalizeText from "@/utils/text-localize";
-import { COLORS } from "@/theme";
+import { APP } from "@/utils/constants";
 import ImgSVG from "@/utils/image-svg";
-
-//Hooks
-// import VectorIcon, { ICON_NAME, VICON_TYPE } from "../../../components/custom-vector-icon";
-// import InputField from "../../../components/general-input-field";
+import { COLORS } from "@/theme";
+import styles from "./styles";
 
 export default function SelectUserController({ navigation, route }) {
   const { screenTitle, noData, general, alerts, placeholder } = LocalizeText;
@@ -82,8 +82,6 @@ export default function SelectUserController({ navigation, route }) {
           if (response?.success == true) {
             const resData = response?.data || [];
             if (resData.length != 0) {
-              //let filterArray = resData.slice(0, -4);
-
               setAllDonateData(resData);
             }
           }
@@ -181,7 +179,6 @@ export default function SelectUserController({ navigation, route }) {
       totalThisYearFund += parseFloat(totalAmount);
     });
     setCurrentYearFund(totalThisYearFund);
-
     setFilteredData(allDonateData);
   }
 

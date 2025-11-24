@@ -4,15 +4,22 @@ import { useSelector } from "react-redux";
 import { scale } from "react-native-size-matters";
 import FastImage from "react-native-fast-image";
 import Swiper from "react-native-swiper";
+
+// Components
 import CustomImagePicker from "@/components/custom-image-picker";
-import AppCustomButton from "@/components/app-custom-button";
-import ImgSVG from "@/utils/image-svg";
-import { SvgClose } from "@/assets/svg/svg-close";
-import { APP } from "@/utils/constants";
 import AppMediumText from "@/components/utilities/app-medium-text";
+import AppCustomButton from "@/components/app-custom-button";
+import LogoutCustomModel from "@/components/logout-dialog";
+import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@/components/utilities/header";
 import { IMAGES, SVGFile } from "@/utils/images-path";
 import { ShowToast } from "@/components/toast";
+
+// Utils
 import { CAMERA_TYPE, toastTypes } from "@/utils/app-enum";
+import LocalizeText from "@/utils/text-localize";
+import ImgSVG from "@/utils/image-svg";
+import { APP } from "@/utils/constants";
 import {
   createNewBannerRequest,
   firebaseDeleteBanner,
@@ -20,12 +27,11 @@ import {
   removeFileFromStorage,
   storeFilePath,
 } from "@/utils/firebase-db-helper";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+
 import { styles } from "./styles";
 import { COLORS } from "@/theme";
-import LogoutCustomModel from "@/components/logout-dialog";
-import LocalizeText from "@/utils/text-localize";
+
+
 
 
 export default function AddBannerView({ navigation, route }) {

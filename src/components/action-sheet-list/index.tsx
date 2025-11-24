@@ -3,13 +3,14 @@ import { View, ScrollView, StyleSheet, Platform } from "react-native";
 import ActionSheet, { useScrollHandlers } from "react-native-actions-sheet";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { scale } from "react-native-size-matters";
+
+// Utils & Components
 import LocalizeText from "@/utils/text-localize";
 import MainHeader from "../utilities/header";
 import { screenHeight } from "@/utils/dimensions";
 import { PLATFORM_MOBILE } from "@/utils/app-enum";
-import CheckListbox from "../check-list";
 import { SVGFile } from "@/utils/images-path";
-
+import CheckListbox from "../check-list";
 
 export default function ActionSheetList({
   refFromParent,

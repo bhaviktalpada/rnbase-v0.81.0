@@ -4,40 +4,30 @@ import { View, FlatList, Text, TouchableOpacity, Keyboard } from "react-native";
 const { scale } = require("react-native-size-matters");
 import { useSelector } from "react-redux";
 
-// Component
-// import VectorIcon, {
-//   ICON_NAME,
-//   VICON_TYPE,
-// } from "../../components/custom-vector-icon";
-
-// import InputField from "../../components/general-input-field";
-
-// //Utils
-
-// import { ImgDownArrow } from "../../utils/svg-img-path";
-
-
-import styles from "./styles";
-import { DATE_FORMAT, format_Date } from "@/utils/date-helper";
-import LocalizeText from "@/utils/text-localize";
-import { getRequest, TRAIL_URLS } from "@/api-services";
-import { APP } from "@/utils/constants";
-import { ShowToast } from "@/components/toast";
-import { toastTypes, USER_ROLE_NAME } from "@/utils/app-enum";
-import { SCREEN } from "@/utils/screen-name";
-import AppBoldText from "@/components/utilities/app-bold-text";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
-import ActionTextField from "@/components/action-text-field";
-import { IMAGES, SVGFile } from "@/utils/images-path";
-import AppRegularText from "@/components/utilities/app-regular-text";
-import { COLORS } from "@/theme";
-import ImgSVG from "@/utils/image-svg";
+// Components
 import CustomTextField from "@/components/text-input/textfield";
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import NodataFound from "@/components/no-data-found";
 import ActionSheetList from "@/components/action-sheet-list";
 import FloatingButton from "@/components/floating-button";
+import { ShowToast } from "@/components/toast";
+import AppBoldText from "@/components/utilities/app-bold-text";
+import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@/components/utilities/header";
+import ActionTextField from "@/components/action-text-field";
+import AppRegularText from "@/components/utilities/app-regular-text";
+
+// Util | Constants
+import { DATE_FORMAT, format_Date } from "@/utils/date-helper";
+import { toastTypes, USER_ROLE_NAME } from "@/utils/app-enum";
+import { IMAGES, SVGFile } from "@/utils/images-path";
+import LocalizeText from "@/utils/text-localize";
+import { SCREEN } from "@/utils/screen-name";
+import { APP } from "@/utils/constants";
+import ImgSVG from "@/utils/image-svg";
+import { getRequest, TRAIL_URLS } from "@/api-services";
+import { COLORS } from "@/theme";
+import styles from "./styles";
 
 export default function GenericStatisticsScreen({ navigation, route }) {
   const { screenTitle, placeholder, general, alerts, noData } = LocalizeText;
@@ -131,7 +121,6 @@ export default function GenericStatisticsScreen({ navigation, route }) {
       // Month
       setSelectedMonth(allMonths[index]);
     }
-
     handleToggleSheet(false);
     setDropDownType(0);
   }
@@ -305,25 +294,6 @@ export default function GenericStatisticsScreen({ navigation, route }) {
             rightImage={SVGFile.svgDownArrow}
           />
         </View>
-
-        {/* <View style={styles.yearContainer}>
-          <ActionTextField
-            bottomSpacing={0}
-            label={placeholder.selectMonth}
-            selectedItem={selectedMonth === null ? "Month" : selectedMonth.name}
-            placeholderItem={"Month"}
-            isActive={openSheet}
-            value={selectedMonth === null ? "Month" : selectedMonth.name}
-            onPress={() => {
-              console.log("allMonth", allMonths);
-              if (dropDownType == 2) {
-                handleToggleSheet(true);
-              }
-              setDropDownType(2);
-            }}
-            rightImage={ImgDownArrow}
-          />
-        </View> */}
 
         <View style={styles.middleView}>
           <AppRegularText numberOfLines={1} style={styles.thisYearStyle}>

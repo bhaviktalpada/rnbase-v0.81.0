@@ -1,6 +1,7 @@
 import {globNavigationRef} from './helper-navigation';
 import {CommonActions} from '@react-navigation/native';
 import RNFS from 'react-native-fs';
+import analytics from '@react-native-firebase/analytics';
 import {SCREEN} from './screen-name';
 import {FILE_MIME_TYPES, FILE_TYPE} from './constants';
 import {
@@ -675,9 +676,9 @@ export const getFilterDateTime = date => {
 export async function addGoogleAnalytics(eventName, param) {
   console.log("=======START=========");
   console.log("GoogleAnalytics:", eventName);
-  console.log("Info:", param);
+  console.log("Info:", param.toJson());
   console.log("=======END==========");
-  //await analytics().logEvent(eventName, param)
+  await analytics().logEvent(eventName, param)
 }
 
 export const formatToINR = (value) => {

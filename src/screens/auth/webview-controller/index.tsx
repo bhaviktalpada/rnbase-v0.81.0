@@ -5,13 +5,11 @@ import { BaseContainer } from "@/components/utilities";
 
 import { COLORS } from "@/theme";
 import MainHeader from "@/components/utilities/header";
-import LocalizeText from "@/utils/text-localize";
-import styles from "./styles";
 
 export default function WebContentController({ navigation, route }) {
-  const { headerTitle, general } = LocalizeText;
   const [loading, setLoading] = useState(true);
   const { uri = null } = route.params;
+
   useState(() => {
     console.log("route.params.option", route.params.option);
   }, []);

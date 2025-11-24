@@ -2,28 +2,32 @@ import { Keyboard, Text, TouchableOpacity, View } from "react-native";
 import { useRef, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { scale } from "react-native-size-matters";
-import LocalizeText from "@/utils/text-localize";
-import { format_Date } from "@/utils/date-helper";
-import { getRequest, postRequest, TRAIL_URLS } from "@/api-services";
-import { APP } from "@/utils/constants";
-import { ShowToast } from "@/components/toast";
-import { toastTypes } from "@/utils/app-enum";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
-import AppScrollView from "@/components/app-scrollview";
+
+// Components
 import DashboardStatistics from "@/components/dashboard-statistics";
-import styles from "./styles";
-import { COLORS } from "@/theme";
-import { SCREEN } from "@/utils/screen-name";
 import ActionTextField from "@/components/action-text-field";
 import CustomTextField from "@/components/text-input/textfield";
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import AppCustomButton from "@/components/app-custom-button";
 import ActionSheetList from "@/components/action-sheet-list";
-import { isStringNull } from "@/utils/helper-function";
-import { SVGFile } from "@/utils/images-path";
+import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@/components/utilities/header";
+import AppScrollView from "@/components/app-scrollview";
+import { ShowToast } from "@/components/toast";
 
-// import { ImgDownArrow, ImgUser } from "../../../utils/svg-img-path";
+// Utils
+import { isStringNull } from "@/utils/helper-function";
+import LocalizeText from "@/utils/text-localize";
+import { format_Date } from "@/utils/date-helper";
+import { toastTypes } from "@/utils/app-enum";
+import { SVGFile } from "@/utils/images-path";
+import { SCREEN } from "@/utils/screen-name";
+import { APP } from "@/utils/constants";
+import { COLORS } from "@/theme";
+import styles from "./styles";
+import { getRequest, TRAIL_URLS } from "@/api-services";
+import AppRegularText from "@/components/utilities/app-regular-text";
+import AppBoldText from "@/components/utilities/app-bold-text";
 
 export default function AddMonthlyController({ navigation, route }) {
   const { placeholder, general, personalInfo, alerts, screenTitle, auth } =
@@ -82,7 +86,7 @@ export default function AddMonthlyController({ navigation, route }) {
   }, []);
 
   useEffect(() => {
-    console.log("useEffect Call2",selectedYear);
+    console.log("**** useEffect Call2",selectedYear);
     if (selectedUser != null && selectedYear != null) {
       setSelectedMonths({});
       fetchUserData();
@@ -203,9 +207,9 @@ export default function AddMonthlyController({ navigation, route }) {
           isSelected && styles.selected,
         ]}
       >
-        <Text style={styles.monthText}>
+        <AppRegularText style={styles.monthText}>
           {month} {isSelected ? `₹${selectedMonths[monthKey]}` : ""}
-        </Text>
+        </AppRegularText>
       </TouchableOpacity>
     );
   };
@@ -354,9 +358,9 @@ export default function AddMonthlyController({ navigation, route }) {
                   {monthsList.map(renderMonth)}
                 </View>
                 <View style={{ marginTop: 20 }}>
-                  <Text style={{ fontSize: 16, fontWeight: "bold" }}>
+                  <AppBoldText style={{ fontSize: 16}}>
                     Total Amount: ₹{totalAmount}
-                  </Text>
+                  </AppBoldText>
                 </View>
               </View>
             )

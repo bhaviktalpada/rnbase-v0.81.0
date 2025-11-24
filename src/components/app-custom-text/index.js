@@ -1,9 +1,8 @@
 import {StyleSheet, Text} from 'react-native';
 //Constant
-import { COLORS } from '../../theme/colors';
-import { FONTS } from '../../theme/typography';
-import { normalizeText } from '../../utils/text-normalize';
-
+import { COLORS } from '@theme/colors';
+import { FONTS } from '@theme/typography';
+import { normalizeText } from '@utils/text-normalize';
 
 const AppCustomText = ({
   children,

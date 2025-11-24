@@ -18,7 +18,6 @@ import CheckBox from "@/components/checkbox";
 import { FIREBASE_ERROR, toastTypes, USER_ROLE_NAME } from "@/utils/app-enum";
 import { addGoogleAnalytics, isStringNull } from "@/utils/helper-function";
 import { useDispatch, useSelector } from "react-redux";
-import * as types from "@redux/actions/action-list";
 import LocalizeText from "@/utils/text-localize";
 import { ShowToast } from "@/components/toast";
 import { SCREEN } from "@/utils/screen-name";
@@ -67,7 +66,7 @@ export default function LoginScreen({ navigation }) {
     }
 
     if (netConnected) {
-      addGoogleAnalytics("ga_login_action", {
+      addGoogleAnalytics("husm_login_action", {
         email: email,
         password: password,
       });
@@ -144,7 +143,7 @@ export default function LoginScreen({ navigation }) {
 
   function handleLogin(res) {
     console.log("userData***>", res.user.uid);
-    addGoogleAnalytics("ga_login_response", { info: res.user });
+    addGoogleAnalytics("husm_login_response", { info: res.user });
     getUserDetail(res.user.uid, onUserDetailCallBack);
   }
 

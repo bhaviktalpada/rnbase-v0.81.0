@@ -6,6 +6,7 @@ import { COLORS, FONTS } from "@/theme";
 import { APP } from "@/utils/constants";
 import ImgSVG from "@/utils/image-svg";
 import { normalizeText } from "@/utils";
+import AppRegularText from "../utilities/app-regular-text";
 
 const ActionTextField = ({
   onPress,
@@ -14,7 +15,6 @@ const ActionTextField = ({
   value,
   viewStyle,
   textStyle,
-  rightBtnStyle,
   rightImage,
   showLeftButton,
   leftBtnStyle,
@@ -61,14 +61,14 @@ const ActionTextField = ({
             <View style={{ marginHorizontal: scale(10) }}></View>
           ) : null}
 
-          <Text
+          <AppRegularText
             style={{
               ...styles.textStyle(selectedItem, placeholderItem),
               ...textStyle,
             }}
           >
             {value}
-          </Text>
+          </AppRegularText>
           {rightImage ? (
             <ImgSVG
               src={rightImage}

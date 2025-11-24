@@ -1,4 +1,4 @@
-import { Keyboard, Text, TouchableOpacity, View, Button } from "react-native";
+import { Keyboard, View } from "react-native";
 import { useRef, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import DatePicker from "react-native-date-picker";
@@ -6,19 +6,20 @@ import { scale } from "react-native-size-matters";
 
 import MainHeader from "@/components/utilities/header";
 import { BaseContainer } from "@/components/utilities";
-import { isStringNull } from "@/utils/helper-function";
-import { postRequest, TRAIL_URLS } from "@/api-services";
 import ActionTextField from "@/components/action-text-field";
 import AppScrollView from "@/components/app-scrollview";
 import CustomTextField from "@/components/text-input/textfield";
 import ActionSheetList from "@/components/action-sheet-list";
 import AppCustomButton from "@/components/app-custom-button";
+
 import { format_Date } from "@/utils/date-helper";
 import LocalizeText from "@/utils/text-localize";
 import { SVGFile } from "@/utils/images-path";
 import { ShowToast } from "@/components/toast";
 import { toastTypes } from "@/utils/app-enum";
 import { APP } from "@/utils/constants";
+import { isStringNull } from "@/utils/helper-function";
+import { postRequest, TRAIL_URLS } from "@/api-services";
 import styles from "./styles";
 
 export default function AddGeneralExpensesVC({ navigation, route }) {

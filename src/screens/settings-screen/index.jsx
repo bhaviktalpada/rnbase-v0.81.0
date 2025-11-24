@@ -1,34 +1,32 @@
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
 import React, { useEffect, useState } from "react";
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, TouchableOpacity, View } from "react-native";
 import DeviceInfo from "react-native-device-info";
 import { getAuth } from "@react-native-firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { styles } from "./styles";
+import { scale } from "react-native-size-matters";
+
+// Components
 import AppRegularText from "@/components/utilities/app-regular-text";
 import LogoutCustomModel from "@/components/logout-dialog";
-import { COLORS } from "@/theme";
-import LocalizeText from "@/utils/text-localize";
-import { APP } from "@/utils/constants";
-import { SCREEN } from "@/utils/screen-name";
-import { updateUserDetail } from "@/utils/firebase-db-helper";
+import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@/components/utilities/header";
 import { ShowToast } from "@/components/toast";
+
+// Utils
+import { updateUserDetail } from "@/utils/firebase-db-helper";
+import { addGoogleAnalytics } from "@/utils/helper-function";
+import LocalizeText from "@/utils/text-localize";
 import { toastTypes } from "@/utils/app-enum";
-import * as types from "@redux/actions/action-list";
+import { SCREEN } from "@/utils/screen-name";
+import { SVGFile } from "@/utils/images-path";
+import { APP } from "@/utils/constants";
+import ImgSVG from "@/utils/image-svg";
+import { styles } from "./styles";
+import { COLORS } from "@/theme";
 import {
   setIsUserLogIn,
   setUserLogout,
 } from "@/redux/reducers/userInfo-reducer";
-import { addGoogleAnalytics } from "@/utils/helper-function";
-import { SVGFile } from "@/utils/images-path";
-import ImgSVG from "@/utils/image-svg";
-import { scale } from "react-native-size-matters";
-
-// import VectorIcon, {
-//   ICON_NAME,
-//   VICON_TYPE,
-// } from "../../components/custom-vector-icon";
 
 export default function SettingsController({ navigation, route }) {
   const { screenTitle, settingsOptions, general, auth, alerts } = LocalizeText;
@@ -136,8 +134,9 @@ export default function SettingsController({ navigation, route }) {
       <View style={styles.sideImageContainer(item)}>
         <ImgSVG src={item.icon} size={scale(24)} color={COLORS.white} />
       </View>
-
-      <Text style={[styles.optionText(item)]}>{item.label}</Text>
+      <AppRegularText style={[styles.optionText(item)]}>
+        {item.label}
+      </AppRegularText>
     </TouchableOpacity>
   );
 
@@ -145,7 +144,6 @@ export default function SettingsController({ navigation, route }) {
     setIsLogoutVisible(false);
     dispatch(setIsUserLogIn(true));
     dispatch(setUserLogout(true));
-
     navigation.navigate(SCREEN.LoginScreen);
   };
 
@@ -183,10 +181,9 @@ export default function SettingsController({ navigation, route }) {
         navigation.navigate(SCREEN.LoginScreen);
 
         ShowToast(toastTypes.success, alerts.userDeletedSuccess);
-        addGoogleAnalytics("ga_delete_action", {});
+        addGoogleAnalytics("husm_delete_action", {});
       } catch (error) {
         console.error("Failed to delete user:", error);
-
         // If recent login is required
         if (error.code === "auth/requires-recent-login") {
           // Ask user to re-authenticate and try again
@@ -205,7 +202,7 @@ export default function SettingsController({ navigation, route }) {
         showLeftIcon
         navigation={navigation}
       />
-
+      
       <FlatList
         data={SETTING_OPTIONS}
         keyExtractor={(_, index) => index}

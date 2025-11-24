@@ -1,6 +1,6 @@
 {
   "extends": "@react-native/typescript-config",
-  "include": ["**/*.ts", "**/*.tsx", "**.jsx", "**.js", "src/utils/images-path.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "**.jsx", "**.js", "src/utils/images-path.tsx", "src/screens/auth/signup/index.jsx", "src/screens/customer-onboard/index.jsx", "src/screens/generic-statistics-screen/styles.jsx", "src/screens/generic-statistics-screen/index.jsx", "src/screens/generic-fund-manage/styles.jsx", "src/screens/generic-fund-manage/index.jsx", "src/screens/force-update-screen/index.jsx", "src/screens/donation-lists/index.jsx", "src/screens/chart/styles.jsx", "src/screens/chart/index.jsx", "src/screens/change-language/styles.jsx", "src/screens/change-language/index.jsx", "src/screens/admin/owner-dashboard/index.jsx", "src/screens/auth/login/index.jsx", "src/screens/auth/profile/index.jsx", "src/utils/helper-keyboard.jsx", "src/utils/helper-function.jsx", "src/screens/admin/add-banner/index.jsx", "src/screens/admin/select-user-screen/index.jsx", "src/screens/admin/add-monthly-fund/index.jsx", "src/screens/settings-screen/styles.jsx", "src/screens/settings-screen/index.jsx", "src/utils/global-styles.jsx", "src/components/action-text-field/index.jsx"],
   "exclude": ["**/node_modules", "**/Pods"],
   "compilerOptions": {
     "baseUrl": "./src",
@@ -15,7 +15,8 @@
       "@routes/*": ["routes/*"],
       "@screens/*": ["screens/*"],
       "@theme/*": ["theme/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@utilities/*": ["components/utilities/*"]
     }
   }
 }

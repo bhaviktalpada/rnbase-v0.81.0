@@ -1,19 +1,17 @@
 import React from 'react';
 import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import { scale } from 'react-native-size-matters';
-import {APP} from '../../utils/constants';
-import AppBoldText from '../utilities/app-bold-text';
+import {APP} from '@utils/constants';
 import ImgSVG from '@/utils/image-svg';
-import { SvgBack } from '@/assets/svg/svg-back';
 import { COLORS } from '@/theme';
 import { SVGFile } from '@/utils/images-path';
+import AppBoldText from '../utilities/app-bold-text';
 
 export const AuthHeader = ({
   title,
   titleCenter = true,
   numberOfLines,
   isBackOption = false,
-  colorIcon = COLORS.black,
   navigation,
   isUnderBarOption = false,
   backCallBack = () => {},

@@ -1,8 +1,14 @@
 import { Appearance, Platform } from "react-native";
 import React, { useEffect, useState } from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import PushNotificationIOS from "@react-native-community/push-notification-ios";
+import { NavigationContainer } from "@react-navigation/native";
+import PushNotification from "react-native-push-notification";
 import { getApp } from "@react-native-firebase/app";
+import { useDispatch, useSelector } from "react-redux";
+import NetInfo from "@react-native-community/netinfo";
+import VersionCheck from "react-native-version-check";
+import DeviceInfo from "react-native-device-info";
 import {
   getMessaging,
   requestPermission,
@@ -10,46 +16,46 @@ import {
   onTokenRefresh,
   AuthorizationStatus,
 } from "@react-native-firebase/messaging";
-import PushNotification from "react-native-push-notification";
-import PushNotificationIOS from "@react-native-community/push-notification-ios";
-import NetInfo from "@react-native-community/netinfo";
-import DeviceInfo from "react-native-device-info";
-import { useDispatch, useSelector } from "react-redux";
-import VersionCheck from "react-native-version-check";
+
+// Utils
 import { globalNavigationRef } from "@/utils/helper-navigation";
+import { addGoogleAnalytics } from "@/utils/helper-function";
 import { SCREEN } from "@/utils/screen-name";
 import { show_log } from "@/utils/logger";
+import { APP } from "@/utils/constants";
+
+// Redux actions
 import {
   setConnectionType,
   setDeviceInfo,
   toggleNetState,
-} from "../redux/reducers/netInfo-reducer";
-import { setColorScheme } from "../redux/reducers/color-theme-reducer";
+} from "@/redux/reducers/netInfo-reducer";
+import { FCMToken } from "@/redux/actions/app-actions";
+import { setColorScheme } from "@redux/reducers/color-theme-reducer";
+import { STORE_KEY, storeJsonValueAsync } from "@/utils";
+
+// Screens
+import GenericStatisticsScreen from "@/screens/generic-statistics-screen";
+import AddGeneralExpensesVC from "@/screens/admin/add-general-expenses";
+import SelectUserController from "@/screens/admin/select-user-screen";
 import WebContentController from "@/screens/auth/webview-controller";
+import AddMonthlyController from "@/screens/admin/add-monthly-fund";
+import GenericFundManageScreen from "@/screens/generic-fund-manage";
 import AdminDashboardScreen from "@/screens/admin/owner-dashboard";
 import CustomerOnboardingScreen from "@/screens/customer-onboard";
 import ForceUpdateScreen from "@/screens/force-update-screen";
-import HomeScreen from "@/screens/home-screen/home-screen";
-import SettingsController from "@/screens/settings-screen";
+import DonationListController from "@/screens/donation-lists";
 import ChangeLanguageScreen from "@/screens/change-language";
+import SettingsController from "@/screens/settings-screen";
+import AddBannerView from "@/screens/admin/add-banner";
 import UserProfileScreen from "@/screens/auth/profile";
 import LandingScreen from "@/screens/auth/landing";
 import SignupScreen from "@/screens/auth/signup";
 import LoginScreen from "@/screens/auth/login";
-
-import { FCMToken } from "@/redux/actions/app-actions";
-import { NoInternet } from "@/components/utilities";
-import { APP } from "@/utils/constants";
-import DonationListController from "@/screens/donation-lists";
-import GenericFundManageScreen from "@/screens/generic-fund-manage";
-import GenericStatisticsScreen from "@/screens/generic-statistics-screen";
-import AddBannerView from "@/screens/admin/add-banner";
-import AddMonthlyController from "@/screens/admin/add-monthly-fund";
-import SelectUserController from "@/screens/admin/select-user-screen";
-import AddGeneralExpensesVC from "@/screens/admin/add-general-expenses";
 import ChartScreen from "@/screens/chart";
-import { STORE_KEY, storeJsonValueAsync } from "@/utils";
-import { addGoogleAnalytics } from "@/utils/helper-function";
+
+// Components
+import { NoInternet } from "@/components/utilities";
 
 const Route = () => {
   const Stack = createNativeStackNavigator();
@@ -200,7 +206,7 @@ const Route = () => {
 
     dispatch(setDeviceInfo(deviceInfo));
     await storeJsonValueAsync(STORE_KEY.DEVICE_INFO, deviceInfo);
-    await addGoogleAnalytics("ga_device_Info", { info: deviceInfo });
+    await addGoogleAnalytics("husm_device_Info", { info: deviceInfo });
   };
 
   const configureTPushNotification = () => {
@@ -268,7 +274,7 @@ const Route = () => {
           screenOptions={{ headerShown: false, orientation: "portrait" }}
         >
           <Stack.Screen name={SCREEN.LandingScreen} component={LandingScreen} />
-          <Stack.Screen name={SCREEN.homeScreen} component={HomeScreen} />
+          
           <Stack.Screen name={SCREEN.LoginScreen} component={LoginScreen} />
           <Stack.Screen name={SCREEN.SignupScreen} component={SignupScreen} />
           <Stack.Screen

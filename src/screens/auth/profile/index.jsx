@@ -6,36 +6,38 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { CountryPicker } from "react-native-country-codes-picker";
-
-//Hooks
-// import * as types from "../../../redux/actions/action-list";
 import { useDispatch, useSelector } from "react-redux";
 import { scale } from "react-native-size-matters";
 import FastImage from "react-native-fast-image";
-import AppCustomButton from "@/components/app-custom-button";
+
+//Component
+import CustomImagePicker from "@/components/custom-image-picker";
 import CustomTextField from "@/components/text-input/textfield";
+import AppCustomButton from "@/components/app-custom-button";
+import AppScrollView from "@/components/app-scrollview";
 import MainHeader from "@/components/utilities/header";
 import { BaseContainer } from "@/components/utilities";
 import { ShowToast } from "@/components/toast";
+
+// Hooks
+import { setUserInfo } from "@/redux/reducers/userInfo-reducer";
+
+// Util | Constants
+import { textInputFilterFunction, VALIDATE_FILTER_TYPE } from "@/utils";
 import { CAMERA_TYPE, toastTypes } from "@/utils/app-enum";
+import { isStringNull } from "@/utils/helper-function";
+import { useKeyboard } from "@/utils/helper-keyboard";
+import { IMAGES, SVGFile } from "@/utils/images-path";
+import globalStyles from "@/utils/global-styles";
+import LocalizeText from "@/utils/text-localize";
+import ImgSVG from "@/utils/image-svg";
 import {
   removeFileFromStorage,
   saveUserDetail,
   storeFilePath,
 } from "@/utils/firebase-db-helper";
-import * as types from "@redux/actions/action-list";
-import { isStringNull } from "@/utils/helper-function";
-import LocalizeText from "@/utils/text-localize";
-import AppScrollView from "@/components/app-scrollview";
 import { COLORS } from "@/theme";
-import globalStyles from "@/utils/global-styles";
 import { styles } from "./styles";
-import { textInputFilterFunction, VALIDATE_FILTER_TYPE } from "@/utils";
-import { IMAGES, SVGFile } from "@/utils/images-path";
-import ImgSVG from "@/utils/image-svg";
-import { useKeyboard } from "@/utils/helper-keyboard";
-import CustomImagePicker from "@/components/custom-image-picker";
-import { setMasterData, setUserInfo } from "@/redux/reducers/userInfo-reducer";
 
 export default function UserProfileScreen({ navigation, route }) {
   const { personalInfo, screenTitle, auth, alerts } = LocalizeText;

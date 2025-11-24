@@ -24,5 +24,4 @@ export const SCREEN = {
   //General Screens
   bottomTab: 'bottom-tab',
   drawerTab: 'drawer-tab',
-  homeScreen: 'home-screen',
 };

@@ -2,7 +2,6 @@
 import React from 'react';
 import {
   View,
-  Text,
   TouchableOpacity,
   Image,
   ActivityIndicator,
@@ -12,6 +11,7 @@ import {
 import {APP} from '../../utils/constants';
 import { COLORS, FONTS } from '@/theme';
 import { normalizeText } from '@/utils';
+import AppBoldText from '../utilities/app-bold-text';
 
 const AppCustomButton = ({
   onPress,
@@ -63,9 +63,9 @@ const AppCustomButton = ({
             />
           ) : null}
 
-          <Text style={{...styles.textStyle(fontSize), ...textStyle}}>
+          <AppBoldText style={{...styles.textStyle(fontSize), ...textStyle}}>
             {title}
-          </Text>
+          </AppBoldText>
           {showRightButton ? (
             <Image
               style={[styles.lrButtonImageStyle, rightBtnStyle]}

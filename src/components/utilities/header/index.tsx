@@ -9,15 +9,15 @@ import {
 } from "react-native";
 import { scale } from "react-native-size-matters";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import AppRegularText from "../app-regular-text";
-import { COLORS, FONT_SIZE } from "@/theme";
-import { APP } from "@/utils/constants";
-import AppMediumText from "../app-medium-text";
 import FastImage from "react-native-fast-image";
+
+// Utils & Components
 import { IMAGES, SVGFile } from "@/utils/images-path";
+import AppRegularText from "../app-regular-text";
+import AppMediumText from "../app-medium-text";
+import { APP } from "@/utils/constants";
+import { COLORS, FONT_SIZE } from "@/theme";
 import ImgSVG from "@/utils/image-svg";
-import { SvgBack } from "@/assets/svg/svg-back";
-import { SvgLocal } from "@/assets/svg/svg-local";
 
 type MainHeaderProps = {
   showLeftIcon?: boolean;

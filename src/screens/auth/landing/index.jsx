@@ -19,8 +19,7 @@ import { USER_ROLE_NAME } from "@/utils/app-enum";
 import { SCREEN } from "@/utils/screen-name";
 import { APP } from "@/utils/constants";
 import { COLORS } from "@/theme";
-import LocalizeText from "@/utils/text-localize";
-import LanguageHelper from "@/utils/LanguageHelper";
+
 import { setAppUserData, setIsUserLogIn, setMasterData } from "@/redux/reducers/userInfo-reducer";
 
 export default function LandingScreen({ navigation, route }) {
