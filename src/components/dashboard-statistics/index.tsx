@@ -6,8 +6,8 @@ import { COLORS } from "@/theme";
 import ImgSVG from "@/utils/image-svg";
 import { APP } from "@/utils/constants";
 import { SvgNavigateArrow } from "@/assets/svg/svg-navigate-arrow";
-import AppRegularText from "../utilities/app-regular-text";
-import AppBoldText from "../utilities/app-bold-text";
+import AppRegularText from "@utilities/app-regular-text";
+import AppBoldText from "@utilities/app-bold-text";
 import AppScreenLoader from "../screen-loader/screen-loader";
 
 export default function DashboardStatistics({

@@ -6,7 +6,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { scale } from "react-native-size-matters";
-import AppRegularText from "../utilities/app-regular-text"
+import AppRegularText from "@utilities/app-regular-text"
 import {normalizeText} from "../../utils/text-normalize"
 import {APP} from "../../utils/constants"
 import {COLORS} from "../../theme/colors"

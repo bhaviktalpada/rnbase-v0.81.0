@@ -11,7 +11,7 @@ import {
 import {APP} from '../../utils/constants';
 import { COLORS, FONTS } from '@/theme';
 import { normalizeText } from '@/utils';
-import AppBoldText from '../utilities/app-bold-text';
+import AppBoldText from '@utilities/app-bold-text';
 
 const AppCustomButton = ({
   onPress,

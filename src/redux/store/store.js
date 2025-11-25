@@ -28,7 +28,6 @@ const store = configureStore({
     }),
 });
 
-// const store = createStore(perReducer, applyMiddleware(...middleWare))
 const persistedStore = persistStore(store);
 
 export {store, persistedStore};

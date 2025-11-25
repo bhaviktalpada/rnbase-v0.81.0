@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FlatList, TouchableOpacity } from "react-native";
 
 // Components
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import AppCustomButton from "@/components/app-custom-button";
 
 // Utils
@@ -11,7 +11,7 @@ import LocalizeText from "@/utils/text-localize";
 import { SCREEN } from "@/utils/screen-name";
 import LanguageHelper from "@/utils/LanguageHelper";
 import { styles } from "./styles";
-import AppRegularText from "@/components/utilities/app-regular-text";
+import AppRegularText from "@utilities/app-regular-text";
 
 export default function ChangeLanguageScreen({ navigation, route }) {
   const { screenTitle, auth } = LocalizeText;

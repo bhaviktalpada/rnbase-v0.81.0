@@ -19,8 +19,8 @@ import { COLORS } from "../../theme/colors";
 import { IMAGES, SVGFile } from "../../utils/images-path";
 import SVGImage from "../../utils/image-svg";
 import { isStringNull } from "../../utils/helper-function";
-import AppRegularText from "../utilities/app-regular-text";
-import AppMediumText from "../utilities/app-medium-text";
+import AppRegularText from "@utilities/app-regular-text";
+import AppMediumText from "@utilities/app-medium-text";
 import LocalizeText from "../../utils/text-localize";
 import SvgClose from "../../assets/svg/svg-close";
 

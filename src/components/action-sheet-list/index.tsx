@@ -6,7 +6,7 @@ import { scale } from "react-native-size-matters";
 
 // Utils & Components
 import LocalizeText from "@/utils/text-localize";
-import MainHeader from "../utilities/header";
+import MainHeader from "@utilities/header";
 import { screenHeight } from "@/utils/dimensions";
 import { PLATFORM_MOBILE } from "@/utils/app-enum";
 import { SVGFile } from "@/utils/images-path";

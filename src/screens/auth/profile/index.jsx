@@ -15,8 +15,8 @@ import CustomImagePicker from "@/components/custom-image-picker";
 import CustomTextField from "@/components/text-input/textfield";
 import AppCustomButton from "@/components/app-custom-button";
 import AppScrollView from "@/components/app-scrollview";
-import MainHeader from "@/components/utilities/header";
-import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@utilities/header";
+import { BaseContainer } from "@utilities";
 import { ShowToast } from "@/components/toast";
 
 // Hooks

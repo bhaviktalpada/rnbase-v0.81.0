@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { scale } from "react-native-size-matters";
 
 // Components
-import AppRegularText from "@/components/utilities/app-regular-text";
+import AppRegularText from "@utilities/app-regular-text";
 import LogoutCustomModel from "@/components/logout-dialog";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import { ShowToast } from "@/components/toast";
 
 // Utils

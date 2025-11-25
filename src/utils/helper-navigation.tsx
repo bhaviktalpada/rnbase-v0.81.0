@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {StackActions} from '@react-navigation/native';
 
-
 export const globalNavigationRef = React.createRef();
 
 export function globalNavigate(name, param) {

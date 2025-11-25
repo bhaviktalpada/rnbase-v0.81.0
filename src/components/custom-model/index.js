@@ -7,7 +7,7 @@ import Modal from "react-native-modal";
 import { IMAGES } from "../../utils/images-path";
 import { APP } from "../../utils/constants";
 import { FONTS } from "../../theme/typography";
-import AppBoldText from "../utilities/app-bold-text";
+import AppBoldText from "@utilities/app-bold-text";
 import AppCustomText from "../app-custom-text";
 import { screenWidth } from "../../utils/dimensions";
 import AppCustomButton from "../app-custom-button";

@@ -12,10 +12,10 @@ import VersionCheck from "react-native-version-check";
 
 // Components
 import LogoContainer from "@/components/logo-component/logo-component";
-import AppRegularText from "@/components/utilities/app-regular-text";
+import AppRegularText from "@utilities/app-regular-text";
 import AppCustomButton from "@/components/app-custom-button";
 import WhiteCard from "@/components/white-card/white-card";
-import { BaseContainer } from "@/components/utilities";
+import { BaseContainer } from "@utilities";
 import TitleContent from "@components/title-subtitle";
 import AppScrollView from "@/components/app-scrollview";
 // Utils

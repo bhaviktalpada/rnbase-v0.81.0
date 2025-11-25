@@ -1,7 +1,7 @@
 import {StyleSheet, View} from 'react-native';
 import { scale } from 'react-native-size-matters';
-import AppBoldText from '../utilities/app-bold-text';
-import AppRegularText from '../utilities/app-regular-text';
+import AppBoldText from '@utilities/app-bold-text';
+import AppRegularText from '@utilities/app-regular-text';
 import { normalizeText } from '@/utils';
 import { COLORS } from '@/theme';
 

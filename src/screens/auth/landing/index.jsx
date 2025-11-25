@@ -12,7 +12,7 @@ import { getAllUsers, getPostCategory } from "@/utils/firebase-db-helper";
 import { getRequest, TRAIL_URLS } from "@/api-services";
 
 //Component
-import { BaseContainer } from "@/components/utilities";
+import { BaseContainer } from "@utilities";
 
 // Utils | Constants
 import { USER_ROLE_NAME } from "@/utils/app-enum";

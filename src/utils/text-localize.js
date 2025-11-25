@@ -86,11 +86,8 @@ const LocalizeText = new LocalizedStrings({
       privacyPolicy: "Privacy Policy",
       termsConditions: "Terms and Conditions",
     },
-    noData: {
-      noDataFound: "No data found.",
-    },
     alerts: {
-      
+      networkUnavailable: 'Network Unavailable',
       internetConnection:
         "Please check your internet connection or try again later",        
       somethingWentWrong: "Something went wrong",
@@ -259,10 +256,8 @@ const LocalizeText = new LocalizedStrings({
       privacyPolicy: "ગોપનીયતા નીતિ",
       termsConditions: "શરતો અને નિયમો",
     },
-    noData: {
-      noDataFound: "કોઈ ડેટા મળ્યો નથી.",
-    },
     alerts: {
+      networkUnavailable: 'નેટવર્ક ઉપલબ્ધ નથી',
       internetConnection:
         "કૃપા કરીને તમારું ઇન્ટરનેટ કનેક્શન તપાસો અથવા પછીથી ફરી પ્રયાસ કરો.",
       somethingWentWrong: "કંઈક ખોટું થયું.",

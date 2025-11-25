@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
-import styles from './styles';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import BaseContainer from '../base-container';
 import { NoInternetSvgComponent } from '@/assets/svg';
 import LocalizeText from "@/utils/text-localize";
 import AppRegularText from '../app-regular-text';
+import styles from './styles';
 import { COLORS } from '@/theme';
 
 type NoInternetType = {};
 
 const NoInternet: React.FC<NoInternetType> = ({}) => {
-  const { labels, buttons } = LocalizeText;
+  const { alerts } = LocalizeText;
   const [loading, setLoading] = useState(false);
 
   return (
     <SafeAreaProvider>
-      <BaseContainer>
+      <BaseContainer isBottomSafeArea={false}>
         <View
           style={{
             ...styles.container,
@@ -35,14 +35,14 @@ const NoInternet: React.FC<NoInternetType> = ({}) => {
               color={COLORS.primary}
               style={styles.textTitle}
             >
-              {labels.networkUnavailable}
+              {alerts.networkUnavailable}
             </AppRegularText>
 
             <AppRegularText
               style={styles.textSubTitle}
               color={COLORS.colorRed}
             >
-              {labels.checkInternetConnection}
+              {alerts.internetConnection}
             </AppRegularText>
           </View>
         </View>

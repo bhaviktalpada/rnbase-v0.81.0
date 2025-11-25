@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 import DatePicker from "react-native-date-picker";
 import { scale } from "react-native-size-matters";
 
-import MainHeader from "@/components/utilities/header";
-import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@utilities/header";
+import { BaseContainer } from "@utilities";
 import ActionTextField from "@/components/action-text-field";
 import AppScrollView from "@/components/app-scrollview";
 import CustomTextField from "@/components/text-input/textfield";

@@ -55,7 +55,7 @@ import LoginScreen from "@/screens/auth/login";
 import ChartScreen from "@/screens/chart";
 
 // Components
-import { NoInternet } from "@/components/utilities";
+import { NoInternet } from "@utilities";
 
 const Route = () => {
   const Stack = createNativeStackNavigator();

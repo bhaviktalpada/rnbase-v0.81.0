@@ -1,9 +1,12 @@
+import {Platform} from 'react-native';
+import {PERMISSIONS, RESULTS, request} from 'react-native-permissions';
 import {globNavigationRef} from './helper-navigation';
 import {CommonActions} from '@react-navigation/native';
-import RNFS from 'react-native-fs';
 import analytics from '@react-native-firebase/analytics';
-import {SCREEN} from './screen-name';
 import {FILE_MIME_TYPES, FILE_TYPE} from './constants';
+import {DATE_FORMAT, format_Date} from './date-helper';
+import {SCREEN} from './screen-name';
+import RNFS from 'react-native-fs';
 import {
   setIsUserLogIn,
   setNotificationCount,
@@ -11,14 +14,8 @@ import {
   setUserRefreshToken,
   setUserToken,
 } from '../redux/reducers/userInfo-reducer';
-
-import {store} from '../redux/store/store';
+import {store} from '@redux/store/store';
 import {NavigateTo} from './helper-navigation';
-import {PERMISSIONS, RESULTS, request} from 'react-native-permissions';
-import {Platform} from 'react-native';
-
-
-import {DATE_FORMAT, format_Date} from './date-helper';
 import { show_log } from './logger';
 
 export function getFileType(mimeType) {
@@ -54,9 +51,7 @@ export function apiResMsg(url) {
 }
 
 export function isStringNull(string) {
-  if (string == null) {
-    return true;
-  }
+  return string == null;
 }
 
 export function isEmptyObject(obj) {
@@ -141,7 +136,6 @@ export function logoutHelper() {
   dispatch(setUserToken(null));
   dispatch(setNotificationCount(null));
   dispatch(setUserRefreshToken(null));
-
   NavigateTo(SCREEN.LandingScreen);
 }
 

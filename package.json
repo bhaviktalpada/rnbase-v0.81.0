@@ -5,6 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "openiOS": "xed ios",
+    "openAndroid": "open -a \"Android Studio\" android/",
     "pod_install": "yarn install && cd ios && pod install && cd ..",
     "bundle-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "makeApk": "npm run gClean && npm run bundle-android && npm run debug && npm run open-debug-folder",

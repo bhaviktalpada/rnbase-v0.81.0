@@ -7,8 +7,8 @@ import { APP } from "@/utils/constants";
 import { COLORS } from "@/theme";
 import { normalizeText } from "@/utils";
 import LocalizeText from "@/utils/text-localize";
-import AppRegularText from "../utilities/app-regular-text";
-import AppMediumText from "../utilities/app-medium-text";
+import AppRegularText from "@utilities/app-regular-text";
+import AppMediumText from "@utilities/app-medium-text";
 
 const CheckBox = ({ children, style, source, onPress }) => {
   const navigation = useNavigation();

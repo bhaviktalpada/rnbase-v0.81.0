@@ -17,7 +17,7 @@ import {
 } from "@/redux/reducers/userInfo-reducer";
 
 // Component
-import { BaseContainer } from "@/components/utilities";
+import { BaseContainer } from "@utilities";
 import AppScrollView from "@/components/app-scrollview";
 import AppCustomButton from "@/components/app-custom-button";
 import CustomTextField from "@/components/text-input/textfield";

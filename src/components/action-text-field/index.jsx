@@ -6,7 +6,7 @@ import { COLORS, FONTS } from "@/theme";
 import { APP } from "@/utils/constants";
 import ImgSVG from "@/utils/image-svg";
 import { normalizeText } from "@/utils";
-import AppRegularText from "../utilities/app-regular-text";
+import AppRegularText from "@utilities/app-regular-text";
 
 const ActionTextField = ({
   onPress,

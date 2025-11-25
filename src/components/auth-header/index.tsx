@@ -5,7 +5,7 @@ import {APP} from '@utils/constants';
 import ImgSVG from '@/utils/image-svg';
 import { COLORS } from '@/theme';
 import { SVGFile } from '@/utils/images-path';
-import AppBoldText from '../utilities/app-bold-text';
+import AppBoldText from '@utilities/app-bold-text';
 
 export const AuthHeader = ({
   title,
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
   iconContainer: {
     position: 'absolute',
     height: scale(24),
-    width: scale(24),
     paddingLeft: scale(15),
     width: '10%',
     alignSelf: 'flex-start',

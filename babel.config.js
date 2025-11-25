@@ -18,6 +18,7 @@ module.exports = {
           '@screens': './src/screens',
           '@theme': './src/theme',
           '@utils': './src/utils',
+          '@utilities': './src/components/utilities',
         },
       },
     ],

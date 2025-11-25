@@ -1,10 +1,10 @@
 import { View } from "react-native";
 import React, { useState } from "react";
 import {WebView} from 'react-native-webview';
-import { BaseContainer } from "@/components/utilities";
+import { BaseContainer } from "@utilities";
 
 import { COLORS } from "@/theme";
-import MainHeader from "@/components/utilities/header";
+import MainHeader from "@utilities/header";
 
 export default function WebContentController({ navigation, route }) {
   const [loading, setLoading] = useState(true);

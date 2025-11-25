@@ -11,11 +11,11 @@ import NodataFound from "@/components/no-data-found";
 import ActionSheetList from "@/components/action-sheet-list";
 import FloatingButton from "@/components/floating-button";
 import { ShowToast } from "@/components/toast";
-import AppBoldText from "@/components/utilities/app-bold-text";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import AppBoldText from "@utilities/app-bold-text";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import ActionTextField from "@/components/action-text-field";
-import AppRegularText from "@/components/utilities/app-regular-text";
+import AppRegularText from "@utilities/app-regular-text";
 
 // Util | Constants
 import { DATE_FORMAT, format_Date } from "@/utils/date-helper";

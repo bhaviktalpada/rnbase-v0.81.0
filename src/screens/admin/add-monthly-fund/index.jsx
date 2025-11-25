@@ -10,8 +10,8 @@ import CustomTextField from "@/components/text-input/textfield";
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import AppCustomButton from "@/components/app-custom-button";
 import ActionSheetList from "@/components/action-sheet-list";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import AppScrollView from "@/components/app-scrollview";
 import { ShowToast } from "@/components/toast";
 
@@ -26,8 +26,8 @@ import { APP } from "@/utils/constants";
 import { COLORS } from "@/theme";
 import styles from "./styles";
 import { getRequest, TRAIL_URLS } from "@/api-services";
-import AppRegularText from "@/components/utilities/app-regular-text";
-import AppBoldText from "@/components/utilities/app-bold-text";
+import AppRegularText from "@utilities/app-regular-text";
+import AppBoldText from "@utilities/app-bold-text";
 
 export default function AddMonthlyController({ navigation, route }) {
   const { placeholder, general, personalInfo, alerts, screenTitle, auth } =

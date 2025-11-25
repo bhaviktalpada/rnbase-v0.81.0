@@ -9,8 +9,8 @@ import mobileAds, {
 // Components
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import DashboardStatistics from "@/components/dashboard-statistics";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import { ShowToast } from "@/components/toast";
 // Utils
 import { addGoogleAnalytics } from "@/utils/helper-function";

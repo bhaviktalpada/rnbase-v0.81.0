@@ -10,8 +10,8 @@ import CustomTextField from "@/components/text-input/textfield";
 import CustomTextHeading from "@components/custom-text-heading";
 import AppCustomButton from "@/components/app-custom-button";
 import AppScrollView from "@/components/app-scrollview";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import CheckBox from "@/components/checkbox";
 
 // Util | Constants

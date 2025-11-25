@@ -8,7 +8,7 @@ import LocalizeText from '@/utils/text-localize';
 import React from 'react';
 
 import styles from './styles';
-import AppRegularText from '../utilities/app-regular-text';
+import AppRegularText from '@utilities/app-regular-text';
 
 export default function NodataFound({
   title,

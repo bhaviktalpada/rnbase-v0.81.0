@@ -9,8 +9,8 @@ import mobileAds, {
 
 //Component
 import DashboardStatistics from "@/components/dashboard-statistics";
-import MainHeader from "@/components/utilities/header";
-import { BaseContainer } from "@/components/utilities";
+import MainHeader from "@utilities/header";
+import { BaseContainer } from "@utilities";
 import AppScrollView from "@/components/app-scrollview";
 
 // Const

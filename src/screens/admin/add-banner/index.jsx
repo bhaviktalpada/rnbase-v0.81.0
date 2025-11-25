@@ -7,11 +7,11 @@ import Swiper from "react-native-swiper";
 
 // Components
 import CustomImagePicker from "@/components/custom-image-picker";
-import AppMediumText from "@/components/utilities/app-medium-text";
+import AppMediumText from "@utilities/app-medium-text";
 import AppCustomButton from "@/components/app-custom-button";
 import LogoutCustomModel from "@/components/logout-dialog";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import { IMAGES, SVGFile } from "@/utils/images-path";
 import { ShowToast } from "@/components/toast";
 

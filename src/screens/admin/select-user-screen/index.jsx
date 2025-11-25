@@ -7,8 +7,8 @@ import { useSelector } from "react-redux";
 import NodataFound from "@/components/no-data-found";
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
 import CustomTextField from "@/components/text-input/textfield";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import { ShowToast } from "@/components/toast";
 
 // Utils

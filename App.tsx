@@ -12,8 +12,6 @@ import { PersistGate } from "redux-persist/integration/react";
 import { persistedStore, store } from "@/redux/store/store";
 import Toast from "react-native-toast-message";
 import BootSplash from "react-native-bootsplash";
-
-import { STATUSBAR_TYPE } from "@/utils/app-enum";
 import LanguageHelper from "@/utils/LanguageHelper";
 import LocalizeText from "@/utils/text-localize";
 import { toastConfig } from "@/utils";
@@ -45,7 +43,7 @@ function App(): React.JSX.Element {
         <PersistGate persistor={persistedStore} loading={null}>
           <StatusBar
             translucent={true}
-            barStyle={STATUSBAR_TYPE.DARK}
+            barStyle={'dark-content'}
             backgroundColor={COLORS.colorTransparent}
           />
           <View style={styles.mainContainer}>

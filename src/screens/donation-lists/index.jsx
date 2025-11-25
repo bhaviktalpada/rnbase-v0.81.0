@@ -7,10 +7,10 @@ import { useSelector } from "react-redux";
 
 // Components
 import AppScreenLoader from "@/components/screen-loader/screen-loader";
-import AppRegularText from "@/components/utilities/app-regular-text";
+import AppRegularText from "@utilities/app-regular-text";
 import CustomTextField from "@/components/text-input/textfield";
-import { BaseContainer } from "@/components/utilities";
-import MainHeader from "@/components/utilities/header";
+import { BaseContainer } from "@utilities";
+import MainHeader from "@utilities/header";
 import NodataFound from "@/components/no-data-found";
 import ActionTextField from "@/components/action-text-field";
 import ActionSheetList from "@/components/action-sheet-list";
